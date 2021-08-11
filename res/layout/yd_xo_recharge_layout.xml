@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/yd_xo_common_white_header_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_47"
+                    android:gravity="center_vertical"
+                    android:text="充值金额"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="@dimen/sp_16" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥"
+                        android:textColor="@color/color_FF333333"
+                        android:textSize="@dimen/sp_33" />
+
+                    <com.jdqy.zqyd.widget.ClearEditText
+                        android:id="@+id/ed_recharge_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:background="@color/transparent"
+                        android:hint="0.00"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:textColorHint="@color/color_cccccc"
+                        android:textCursorDrawable="@drawable/yd_xo_cursor_bg"
+                        android:textSize="@dimen/sp_37" />
+                </LinearLayout>
+
+                <View
+                    style="@style/line"
+                    android:layout_marginTop="@dimen/dp_16" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcy_pay_method"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_agree"
+                    style="@style/add_task_row"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/yd_xo_check_bg" />
+
+                    <TextView
+                        android:id="@+id/tv_agree_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:textColor="@color/color_FF999999"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_recharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_27"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:layout_marginRight="@dimen/dp_27"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:background="@drawable/yd_xo_login_btn_bg"
+                    android:enabled="true"
+                    android:gravity="center"
+                    android:text="充值"
+                    android:textColor="@drawable/yd_xo_common_btn_bg"
+                    android:textSize="@dimen/sp_17" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_11"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/tv_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="2dp"
+                    android:textColor="@color/color_9a9a9a"
+                    android:textSize="@dimen/sp_13" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

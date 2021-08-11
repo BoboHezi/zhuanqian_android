@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="16dp">
+
+    <ImageView
+        android:id="@+id/img_user_header"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_FF999999"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/yd_xo_red_hall">
+
+            <ImageView
+                android:id="@+id/img_red"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:src="@mipmap/yd_xo_hall_red" />
+
+            <TextView
+                android:id="@+id/tv_task_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/img_red"
+                android:layout_toRightOf="@+id/img_red"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_red_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/img_red"
+                android:layout_toRightOf="@+id/img_red"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_red_money"
+                android:layout_toRightOf="@+id/tv_red_money"
+                android:text="元"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="240dp"
+            android:layout_height="27dp"
+            android:background="@drawable/yd_xo_item_hall_white"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/red_package_title"
+                android:textColor="@color/color_FF999999"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="19dp"
+                android:background="@color/color_66FFA3A5"
+                android:gravity="center"
+                android:text="人气奖"
+                android:textColor="@color/color_FF4343"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_max_price"
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/color_FF4343"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

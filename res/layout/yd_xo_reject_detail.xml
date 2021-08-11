@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/yd_xo_common_white_header_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingTop="14dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="14dp">
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="3dp"
+            android:src="@mipmap/yd_xo_reply" />
+
+        <TextView
+            android:id="@+id/tv_fail_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text=""
+            android:textColor="#ff333333"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recy_ver_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:paddingLeft="@dimen/dp_16" />
+    </RelativeLayout>
+</LinearLayout>

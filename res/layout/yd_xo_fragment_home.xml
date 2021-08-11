@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="331dp"
+        android:background="@drawable/yd_xo_top_home" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:layout_width="52dp"
+                android:layout_height="@dimen/dp_25"
+                android:src="@mipmap/yd_xo_home_make_money" />
+
+            <TextView
+                android:id="@+id/btn_search"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/yd_xo_new_home_search"
+                android:drawableLeft="@mipmap/yd_xo_search_1"
+                android:drawablePadding="2dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="任务标题、编号，用户ID、昵称"
+                android:textColor="#80ffffff"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/srl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnableLoadMore="false">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recy_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+</RelativeLayout>

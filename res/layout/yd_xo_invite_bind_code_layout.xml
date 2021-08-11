@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f4f4f6"
+    android:orientation="vertical">
+
+    <include layout="@layout/yd_xo_common_white_header_layout" />
+
+    <EditText
+        android:id="@+id/ed_code"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/white"
+        android:maxLength="300"
+        android:paddingLeft="@dimen/dp_16"
+        android:textColor="@color/color_FF333333"
+        android:textSize="@dimen/sp_16" />
+
+    <View style="@style/line" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_16"
+        android:text="请输入您的邀请人推广码"
+        android:textColor="@color/color_FF999999"
+        android:textSize="13sp" />
+</LinearLayout>

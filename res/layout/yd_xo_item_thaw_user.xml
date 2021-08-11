@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_15"
+    android:layout_marginTop="@dimen/dp_15"
+    android:layout_marginRight="@dimen/dp_15"
+    android:background="@drawable/yd_xo_white_shape"
+    android:paddingLeft="12dp"
+    android:paddingTop="@dimen/dp_16"
+    android:paddingRight="@dimen/dp_12"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="冻结原因1"
+        android:textColor="#ff333333"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_5"
+        android:text="[167005]由于[单号191080赏金8.14元，审核通过后密码找回举报人35BCAB]已被冻结，不能提现。"
+        android:textColor="@color/color_FF999999"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <LinearLayout
+        android:id="@+id/ll_pay_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="0"
+        app:layout_constraintTop_toBottomOf="@+id/tv_reason">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_5"
+            android:text="需支付"
+            android:textColor="@color/color_FF333333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_pay_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_5"
+            android:text="10元"
+            android:textColor="@color/color_FF4343"
+            android:textSize="14sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

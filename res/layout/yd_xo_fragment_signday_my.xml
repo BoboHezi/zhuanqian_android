@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/yd_xo_sign_day_record_top"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_24"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:text="我的战绩"
+            android:textColor="@color/white"
+            android:textSize="21sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_30">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_total_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="累计投入（元）"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_get_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="累计赚取（元）"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_sign_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="成功打卡（天）"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_32"
+        android:background="@drawable/yd_xo_signday_tip"
+        android:gravity="center"
+        android:text="当日完成报名任务，次日09:00~16:00瓜分奖池"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_13" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:background="#bfdeff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="打卡时间"
+            android:textColor="@color/color_10264B"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="打卡状态"
+            android:textColor="@color/color_10264B"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="奖金"
+            android:textColor="@color/color_10264B"
+            android:textSize="@dimen/sp_15" />
+    </LinearLayout>
+
+    <include layout="@layout/yd_xo_common_recycler_view" />
+</LinearLayout>

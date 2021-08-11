@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/yd_xo_common_white_header_layout" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_46"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="任务基数："
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_task_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/color_FF4343"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个"
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:text="已提交："
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_task_commit_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/color_FF4343"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个"
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#f3f3f3" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="提交人信息"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/ed_commit_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:background="@color/transparent"
+                android:gravity="top|left|center_vertical|center_horizontal|center"
+                android:hint="请输入提交人信息，以便任务通过你的奖金发放以及任务驳回你的追溯工作。"
+                android:maxLength="50"
+                android:paddingTop="@dimen/dp_10"
+                android:text=""
+                android:textColor="@color/color_FF333333"
+                android:textColorHint="@color/color_FF999999"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#f3f3f3" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcy_commit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_30" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/btn_commit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/btn_task_dark"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/text_color_btn"
+        android:textSize="17sp" />
+</LinearLayout>

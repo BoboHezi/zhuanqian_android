@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/yd_xo_member_info_sel"
+        android:state_selected="true" />
+    <item android:drawable="@drawable/yd_xo_member_info_default" />
+</selector>

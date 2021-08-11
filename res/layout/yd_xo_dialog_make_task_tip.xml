@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/yd_xo_white_shape_2"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@mipmap/yd_xo_task_tip_top">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="赚赏金，三步走"
+                android:textColor="@color/white"
+                android:textSize="21sp" />
+
+            <ImageView
+                android:id="@+id/btn_close"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="7dp"
+                android:padding="@dimen/dp_5"
+                android:src="@mipmap/yd_xo_close_5"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/tv_step_number"
+                android:text="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="浏览悬赏"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="16dp"
+            android:text="请仔细阅读悬赏限制条件及要求，确保能完成后点击页面底部的“点击报名”按钮，先报名再做单，还可以查看做单视频，更加全面了解做单要求。"
+            android:textColor="@color/color_FF666666"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/tv_step_number"
+                android:text="2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="按步骤操作"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="16dp"
+            android:text="请根据步骤要求进行操作，并在验证图步骤截图上传提交验证。"
+            android:textColor="@color/color_FF666666"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/tv_step_number"
+                android:text="3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="正确提交"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="16dp"
+            android:text="检查上传截图及验证文字内容，确认无误后点击页面底部“提交验证”按钮提交，等待审核通过，发放赏金。"
+            android:textColor="@color/color_FF666666"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_agree"
+            style="@style/add_task_row"
+            android:orientation="horizontal"
+            android:paddingLeft="44dp"
+            android:paddingTop="@dimen/dp_16"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:id="@+id/iv_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/yd_xo_check_bg" />
+
+            <TextView
+                android:id="@+id/tv_agree_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:text="不再提示"
+                android:textColor="@color/color_FF333333"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/btn_new_tip"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/yd_xo_task_light"
+                android:gravity="center"
+                android:text="新人须知"
+                android:textColor="@color/text_color_1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/btn_video"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/yd_xo_task_light"
+                android:gravity="center"
+                android:text="新手视频"
+                android:textColor="@color/text_color_1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/btn_start"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/yd_xo_chat_btn_send"
+                android:gravity="center"
+                android:text="开始赚钱"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

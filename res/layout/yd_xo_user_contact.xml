@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/yd_xo_common_header_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/btn_phone"
+            android:layout_width="match_parent"
+            android:layout_height="74dp">
+
+            <ImageView
+                android:id="@+id/img_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_12"
+                android:src="@mipmap/yd_xo_contact_mobile" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_toRightOf="@+id/img_phone"
+                android:text="手机号"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:layout_toRightOf="@+id/img_phone"
+                android:text=""
+                android:textColor="#ff67696b"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/btn_open_phone"
+                android:layout_width="80dp"
+                android:layout_height="34dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_16"
+                android:background="@drawable/yd_xo_task_public"
+                android:gravity="center"
+                android:text="复制拨号"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/line"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/img_phone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_wx"
+            android:layout_width="match_parent"
+            android:layout_height="74dp">
+
+            <ImageView
+                android:id="@+id/img_wx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_12"
+                android:src="@mipmap/yd_xo_contact_wx" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_toRightOf="@+id/img_wx"
+                android:text="客服微信"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_wx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:layout_toRightOf="@+id/img_wx"
+                android:text=""
+                android:textColor="#ff67696b"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/btn_open_wx"
+                android:layout_width="80dp"
+                android:layout_height="34dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_16"
+                android:background="@drawable/yd_xo_task_public"
+                android:gravity="center"
+                android:text="复制打开"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/line"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/img_wx" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_qq"
+            android:layout_width="match_parent"
+            android:layout_height="74dp">
+
+            <ImageView
+                android:id="@+id/img_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_12"
+                android:src="@mipmap/yd_xo_contact_qq" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_toRightOf="@+id/img_qq"
+                android:text="客服QQ"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:layout_toRightOf="@+id/img_qq"
+                android:text=""
+                android:textColor="#ff67696b"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/btn_open_qq"
+                android:layout_width="80dp"
+                android:layout_height="34dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_16"
+                android:background="@drawable/yd_xo_task_public"
+                android:gravity="center"
+                android:text="复制打开"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/line"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/img_qq" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f7fa" />
+</LinearLayout>

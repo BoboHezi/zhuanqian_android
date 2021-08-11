@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="71dp"
+    android:orientation="vertical"
+    android:paddingLeft="16dp">
+
+    <ImageView
+        android:id="@+id/img_user_header"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="14dp"
+        android:src="@mipmap/yd_xo_user_default" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_user_header"
+        android:layout_toRightOf="@+id/img_user_header">
+
+        <TextView
+            android:id="@+id/tv_height_flag"
+            android:layout_width="49dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/color_66FFA3A5"
+            android:gravity="center"
+            android:text="人气王"
+            android:textColor="@color/color_FF4343"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_task_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img_user_header"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/color_9D9C9C"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_user_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img_user_header"
+        android:layout_toRightOf="@+id/img_user_header"
+        android:textColor="@color/color_9D9C9C"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_user_header"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/color_FF333333"
+        android:textSize="16sp" />
+
+    <TextView
+        style="@style/line"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

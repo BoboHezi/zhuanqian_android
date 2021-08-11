@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/yd_xo_common_white_header_layout" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_16"
+        android:src="@mipmap/yd_xo_verification_result_failure" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="账号已被封号"
+        android:textColor="@color/color_FF333333"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_black_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginRight="23dp"
+        android:lineSpacingExtra="@dimen/dp_5"
+        android:textColor="#ff999999"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="@dimen/dp_16"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ff333333"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/btn_copy"
+            android:layout_width="56dp"
+            android:layout_height="@dimen/dp_24"
+            android:layout_marginLeft="@dimen/dp_27"
+            android:background="@drawable/yd_xo_login_btn_bg"
+            android:gravity="center"
+            android:text="复制"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:gravity="center"
+        android:text="距解封还剩："
+        android:textColor="#ffff4343"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/btn_apply_frozen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_27"
+        android:layout_marginTop="27dp"
+        android:layout_marginRight="@dimen/dp_27"
+        android:background="@drawable/yd_xo_login_btn_bg"
+        android:gravity="center"
+        android:text="申请解封"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_17" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_27"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginRight="@dimen/dp_27"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_task_publish"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_weight="1"
+            android:background="@drawable/yd_xo_login_btn_bg"
+            android:gravity="center"
+            android:text="待审核"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_17" />
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/btn_apply"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_weight="1"
+            android:background="@drawable/yd_xo_login_btn_bg"
+            android:gravity="center"
+            android:text="我的申诉"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_17"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/btn_recharge"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_weight="1"
+            android:background="@drawable/yd_xo_login_btn_bg"
+            android:gravity="center"
+            android:text="交罚金/欠款"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_17" />
+    </LinearLayout>
+</LinearLayout>

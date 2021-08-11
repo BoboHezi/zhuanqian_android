@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#283962"
+                android:paddingLeft="@dimen/dp_25"
+                android:paddingTop="@dimen/dp_25"
+                android:paddingBottom="@dimen/dp_16">
+
+                <ImageView
+                    android:id="@+id/img_user_header"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:src="@mipmap/yd_xo_user_default" />
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_user_header"
+                    android:text=""
+                    android:textColor="#ff8bacff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_user_name"
+                    android:layout_alignLeft="@+id/tv_user_name"
+                    android:text=""
+                    android:textColor="#fff7cdae"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_member_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#283962"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/img_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/yd_xo_member_vip" />
+
+                    <TextView
+                        android:id="@+id/tv_member_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="48dp"
+                        android:layout_marginTop="32dp"
+                        android:text="年卡会员"
+                        android:textColor="#fff7cdae"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:id="@+id/tv_member_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_member_level"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="10dp"
+                        android:text="年卡会员"
+                        android:textColor="#f7cdae"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/btn_continue_open"
+                        android:layout_width="86dp"
+                        android:layout_height="28dp"
+                        android:layout_alignRight="@+id/img_info"
+                        android:layout_marginTop="@dimen/dp_50"
+                        android:layout_marginRight="35dp"
+                        android:background="@drawable/yd_xo_member_open"
+                        android:gravity="center"
+                        android:text="立即续费"
+                        android:textColor="@color/color_FF666666"
+                        android:textSize="@dimen/sp_14" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <com.jdqy.zqyd.widget.TextBoldStyle
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="23dp"
+                android:text="会员套餐"
+                android:textColor="@color/color_FF333333"
+                android:textSize="19sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcy_sb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_11"
+                    android:layout_marginRight="@dimen/dp_11"
+                    android:nestedScrollingEnabled="false" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:gravity="center"
+        android:text="说明：会员开通后不做退费处理，请认真阅读后再开通。"
+        android:textColor="#ff7a492f"
+        android:textSize="12sp" />
+
+    <TextView style="@style/line" />
+
+    <com.jdqy.zqyd.widget.TextBoldStyle
+        android:id="@+id/btn_open_member"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/dp_18"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_18"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/yd_xo_open_member"
+        android:gravity="center"
+        android:text="开通会员"
+        android:textColor="#764e1a"
+        android:textSize="17sp" />
+</LinearLayout>

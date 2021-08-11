@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/yd_xo_common_white_header_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/srl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnableAutoLoadMore="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recy_contact_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_contact_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_27"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_27"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/yd_xo_login_btn_bg"
+        android:gravity="center"
+        android:text="联系客服"
+        android:textColor="@drawable/yd_xo_login_text_bg"
+        android:textSize="@dimen/sp_17" />
+</LinearLayout>

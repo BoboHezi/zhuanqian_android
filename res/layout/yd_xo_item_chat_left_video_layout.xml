@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#dddddf"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/img_user_header"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/tv_date"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:src="@mipmap/yd_xo_user_default" />
+
+    <TextView
+        android:id="@+id/tv_user_flag"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_user_header"
+        android:layout_alignLeft="@+id/img_user_header"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:textSize="9sp" />
+
+    <ImageView
+        android:id="@+id/img_chat"
+        android:layout_width="90dp"
+        android:layout_height="160dp"
+        android:layout_alignTop="@+id/img_user_header"
+        android:layout_toRightOf="@+id/img_user_header" />
+
+    <ImageView
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_alignTop="@+id/img_chat"
+        android:layout_alignRight="@+id/img_chat"
+        android:layout_marginTop="61dp"
+        android:layout_marginRight="26dp"
+        android:src="@mipmap/yd_xo_chat_video_play" />
+
+    <TextView
+        android:id="@+id/tv_unread_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_chat"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/img_chat"
+        android:text="未读消息"
+        android:textColor="@color/color_FC5F44"
+        android:textSize="11sp"
+        android:visibility="gone" />
+</RelativeLayout>

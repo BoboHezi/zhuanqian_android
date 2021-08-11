@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="312dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/yd_xo_white_shape"
+    android:minWidth="312dp"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="收集信息"
+        android:textColor="@color/color_FF333333"
+        android:textSize="@dimen/sp_16" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/yd_xo_step_title_ed"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/ed_des"
+            style="@style/edit_step_content"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="13dp"
+            android:gravity="top"
+            android:hint="适用于收集手机号、用户名、姓名、ID等。输入内容，详细说明你要收集什么。"
+            android:paddingTop="10dp" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/yd_xo_add_step_operate_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/yd_xo_common_header_layout" />
+
+    <com.jdqy.zqyd.widget.tablayout.CommonTabLayout
+        android:id="@+id/commonTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/bg_top"
+        app:tl_iconVisible="false"
+        app:tl_indicator_color="@color/white"
+        app:tl_indicator_corner_radius="1dp"
+        app:tl_indicator_height="2dp"
+        app:tl_indicator_width="30dp"
+        app:tl_tab_space_equal="true"
+        app:tl_textSelectColor="@color/white"
+        app:tl_textUnselectColor="@color/white"
+        app:tl_textsize="@dimen/sp_16" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/bg_top" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadMore="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcy_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

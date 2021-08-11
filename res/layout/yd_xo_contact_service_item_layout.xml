@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_17"
+        android:paddingRight="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_17">
+
+        <TextView
+            android:id="@+id/contact_service_item_title"
+            style="@style/tv_style_1"
+            android:text="得到的" />
+
+        <TextView
+            android:id="@+id/contact_service_item_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contact_service_item_title"
+            android:layout_marginTop="@dimen/dp_6"
+            android:text="怎么登录注册？"
+            android:textColor="@color/color_FF666666"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/yd_xo_me_arrow_icon" />
+    </RelativeLayout>
+
+    <View
+        style="@style/line"
+        android:layout_marginLeft="@dimen/dp_16" />
+</LinearLayout>

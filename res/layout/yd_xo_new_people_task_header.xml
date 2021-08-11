@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_top_banner"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="325dp"
+        android:background="@mipmap/yd_xo_bg2"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="14dp"
+                android:layout_height="1dp"
+                android:background="@color/color_FF333333" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="新人福利活动"
+                android:textColor="#ff333333"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="14dp"
+                android:layout_height="1dp"
+                android:background="@color/color_FF333333" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@drawable/yd_xo_red_new_person"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingTop="4dp"
+            android:paddingRight="@dimen/dp_16"
+            android:paddingBottom="4dp"
+            android:text="完成新人福利，即可参与每日福利活动"
+            android:textColor="#ffff4343"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_reward_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="今日已发放每日福利奖励 1288元"
+            android:textColor="@color/color_FF333333"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_28"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="290dp"
+        android:background="@drawable/yd_xo_new_person_tip"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16"
+        android:text="0投入  0门槛  提现实时到账 "
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <include
+        layout="@layout/yd_xo_msg_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="260dp" />
+</RelativeLayout>

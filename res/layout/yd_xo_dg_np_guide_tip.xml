@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/img_risk_tip"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/yd_xo_np_tip_banner"
+            android:gravity="bottom|center_vertical|center_horizontal|center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/btn_go"
+                android:layout_width="120dp"
+                android:layout_height="32dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="32dp"
+                android:background="@mipmap/yd_xo_np_tip_btn"
+                android:gravity="center"
+                android:text="立即参加"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/img_risk_tip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_20"
+            android:src="@mipmap/yd_xo_close_7" />
+    </RelativeLayout>
+</RelativeLayout>

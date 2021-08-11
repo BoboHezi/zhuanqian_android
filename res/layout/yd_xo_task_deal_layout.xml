@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f4f4f6">
+
+    <include
+        android:id="@+id/ll_top"
+        layout="@layout/yd_xo_common_white_header_layout" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcy_msg_deal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_top"
+        android:background="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/btn_send_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="50dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/yd_xo_add_task" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="34dp"
+            android:text="发布"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+</RelativeLayout>

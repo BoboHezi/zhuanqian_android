@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/yd_xo_bottom_line"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_reward_lab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_15"
+        android:paddingBottom="@dimen/dp_15"
+        android:text=""
+        android:textColor="@color/color_FF333333" />
+
+    <TextView
+        android:id="@+id/tv_space"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_BBBBBB" />
+</LinearLayout>

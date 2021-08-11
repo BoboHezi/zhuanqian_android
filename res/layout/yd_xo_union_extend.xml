@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/yd_xo_common_white_header_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/yd_xo_union">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/yd_xo_union_lignt_top" />
+
+            <ImageView
+                android:id="@+id/img_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_40"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/yd_xo_union_photo_girl" />
+
+            <RelativeLayout
+                android:id="@+id/ll_feel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_title"
+                android:layout_marginLeft="@dimen/dp_13"
+                android:layout_marginRight="@dimen/dp_13"
+                android:background="@drawable/yd_xo_union_frame"
+                android:paddingBottom="@dimen/dp_20">
+
+                <TextView
+                    android:id="@+id/tv_fee_title"
+                    android:layout_width="186dp"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/yd_xo_union_tiitle"
+                    android:gravity="center"
+                    android:text="我的联盟战队"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_17" />
+
+                <RelativeLayout
+                    android:id="@+id/ll_set_feel"
+                    android:layout_width="match_parent"
+                    android:layout_height="92dp"
+                    android:layout_below="@+id/tv_fee_title"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_12"
+                    android:background="@mipmap/yd_xo_union_length_white"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:paddingRight="@dimen/dp_20">
+
+                    <ImageView
+                        android:id="@+id/img_union_proportion"
+                        android:layout_width="@dimen/dp_44"
+                        android:layout_height="@dimen/dp_44"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/yd_xo_union_proportion" />
+
+                    <TextView
+                        android:id="@+id/tv_fee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/img_union_proportion"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_toRightOf="@+id/img_union_proportion"
+                        android:text=""
+                        android:textColor="#3b3839"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/tv_fee"
+                        android:layout_alignBottom="@+id/img_union_proportion"
+                        android:layout_toRightOf="@+id/img_union_proportion"
+                        android:text="我的分佣比例"
+                        android:textColor="#b7b0b3"
+                        android:textSize="@dimen/sp_13" />
+
+                    <TextView
+                        android:id="@+id/btn_set_fee"
+                        android:layout_width="80dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/yd_xo_union_btn"
+                        android:gravity="center"
+                        android:text="设置"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:layout_below="@+id/ll_set_feel"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:layout_marginRight="12dp">
+
+                    <TextView
+                        android:id="@+id/btn_share_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/yd_xo_union_btn"
+                        android:gravity="center"
+                        android:text="联盟链接"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/btn_share_qr"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/yd_xo_union_btn"
+                        android:gravity="center"
+                        android:text="联盟二维码"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/btn_share_partner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/yd_xo_union_btn"
+                        android:gravity="center"
+                        android:text="渠道合伙人"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_feel"
+                android:layout_marginLeft="@dimen/dp_13"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_13"
+                android:background="@drawable/yd_xo_union_frame"
+                android:paddingBottom="@dimen/dp_20">
+
+                <TextView
+                    android:id="@+id/tv_fee_data"
+                    android:layout_width="186dp"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/yd_xo_union_tiitle"
+                    android:gravity="center"
+                    android:text="我的联盟数据"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_17" />
+
+                <LinearLayout
+                    android:id="@+id/ll_data_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_fee_data"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_12">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@mipmap/yd_xo_union_small_white"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_union_people"
+                            android:layout_width="@dimen/dp_44"
+                            android:layout_height="@dimen/dp_44"
+                            android:src="@mipmap/yd_xo_union_people" />
+
+                        <TextView
+                            android:id="@+id/tv_union_people"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:layout_toRightOf="@+id/img_union_people"
+                            android:text=""
+                            android:textColor="#ff3b3839"
+                            android:textSize="21sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_union_people"
+                            android:layout_alignLeft="@+id/tv_union_people"
+                            android:text="联盟人数"
+                            android:textColor="#ffb7b0b3"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="@dimen/dp_12"
+                        android:layout_height="wrap_content" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@mipmap/yd_xo_union_small_white"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_union_task_money"
+                            android:layout_width="@dimen/dp_44"
+                            android:layout_height="@dimen/dp_44"
+                            android:src="@mipmap/yd_xo_union_money2" />
+
+                        <TextView
+                            android:id="@+id/tv_union_task_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:layout_toRightOf="@+id/img_union_task_money"
+                            android:text=""
+                            android:textColor="#ff3b3839"
+                            android:textSize="21sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_union_task_money"
+                            android:layout_alignLeft="@+id/tv_union_task_money"
+                            android:text="做单金额"
+                            android:textColor="#ffb7b0b3"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_data_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_data_1"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_12">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@mipmap/yd_xo_union_small_white"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_union_finish_count"
+                            android:layout_width="@dimen/dp_44"
+                            android:layout_height="@dimen/dp_44"
+                            android:src="@mipmap/yd_xo_union_finish" />
+
+                        <TextView
+                            android:id="@+id/tv_union_finish_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:layout_toRightOf="@+id/img_union_finish_count"
+                            android:text=""
+                            android:textColor="#ff3b3839"
+                            android:textSize="21sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_union_finish_count"
+                            android:layout_alignLeft="@+id/tv_union_finish_count"
+                            android:text="完成单数"
+                            android:textColor="#ffb7b0b3"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="@dimen/dp_12"
+                        android:layout_height="wrap_content" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@mipmap/yd_xo_union_small_white"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_union_money_fee"
+                            android:layout_width="@dimen/dp_44"
+                            android:layout_height="@dimen/dp_44"
+                            android:src="@mipmap/yd_xo_union_money" />
+
+                        <TextView
+                            android:id="@+id/tv_union_money_fee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:layout_toRightOf="@+id/img_union_money_fee"
+                            android:text=""
+                            android:textColor="#ff3b3839"
+                            android:textSize="21sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_union_money_fee"
+                            android:layout_alignLeft="@+id/tv_union_money_fee"
+                            android:text="我的返佣"
+                            android:textColor="#ffb7b0b3"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btn_data"
+                    android:layout_width="240dp"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_below="@+id/ll_data_2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:background="@drawable/yd_xo_union_btn"
+                    android:gravity="center"
+                    android:text="我的分佣明细"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_data"
+                android:layout_marginLeft="@dimen/dp_13"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_13"
+                android:layout_marginBottom="@dimen/dp_62"
+                android:background="@drawable/yd_xo_union_frame"
+                android:paddingBottom="@dimen/dp_20">
+
+                <TextView
+                    android:id="@+id/tv_fee_rule_title"
+                    android:layout_width="186dp"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/yd_xo_union_tiitle"
+                    android:gravity="center"
+                    android:text="赚钱联盟规则"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_17" />
+
+                <TextView
+                    android:id="@+id/tv_fee_rule_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_fee_rule_title"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_12"
+                    android:text="dsfdfsfsdfsdf"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_13" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

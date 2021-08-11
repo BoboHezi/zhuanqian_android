@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/yd_xo_coupon_banner" />
+
+    <LinearLayout
+        android:id="@+id/btn_more_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_11"
+        android:paddingBottom="@dimen/dp_10">
+
+        <com.jdqy.zqyd.widget.TextBoldStyle
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="推荐优惠"
+            android:textColor="@color/color_FF333333"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/yd_xo_me_arrow_icon"
+            android:text="更多优惠"
+            android:textColor="@color/color_FF999999"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

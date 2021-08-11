@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="286dp"
+        android:layout_height="356dp"
+        android:background="@mipmap/yd_xo_sign_reward">
+
+        <TextView
+            android:id="@+id/tv_money_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="124dp"
+            android:text="¥"
+            android:textColor="#ff4242"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_money_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:layout_toRightOf="@+id/tv_money_symbol"
+            android:text=""
+            android:textColor="#ff4242"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="129dp"
+            android:layout_marginTop="110dp"
+            android:text="@string/sign_title"
+            android:textColor="@color/color_FF333333"
+            android:textSize="@dimen/sp_17" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_des"
+            android:layout_alignLeft="@+id/tv_des"
+            android:text="现金红包"
+            android:textColor="@color/color_FF999999"
+            android:textSize="@dimen/sp_17" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_money"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:text="恭喜您，抽到了现金红包"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_17" />
+
+        <LinearLayout
+            android:id="@+id/ll_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_sure"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:gravity="bottom"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="213dp"
+            android:layout_height="32dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/yd_xo_yellow"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</LinearLayout>

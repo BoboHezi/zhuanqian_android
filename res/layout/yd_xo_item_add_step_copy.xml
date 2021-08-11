@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="312dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/yd_xo_white_shape"
+    android:minWidth="312dp"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="复制数据"
+            android:textColor="@color/color_FF333333"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="步骤说明"
+            android:textColor="@color/color_FF333333"
+            android:textSize="@dimen/sp_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/yd_xo_step_title_ed"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/ed_des"
+                style="@style/edit_step_content"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="13dp"
+                android:gravity="top"
+                android:hint="适用于需要复制数据，如填写邀请码，输入内容，提示会员复制数据，方便填写"
+                android:paddingTop="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/tv_text_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView style="@style/tv_step_word_number" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="填写数据"
+            android:textColor="@color/color_FF333333"
+            android:textSize="@dimen/sp_16" />
+
+        <EditText
+            android:id="@+id/ed_link"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/yd_xo_step_title_ed"
+            android:gravity="center_vertical"
+            android:hint="如邀请码，钱包地址之类"
+            android:maxLength="100"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/color_FF333333"
+            android:textColorHint="@color/color_BBBBBB"
+            android:textSize="13sp" />
+
+        <include
+            layout="@layout/yd_xo_add_step_operate_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:padding="4dp"
+        android:src="@mipmap/yd_xo_close" />
+</RelativeLayout>

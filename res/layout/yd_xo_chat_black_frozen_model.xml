@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/yd_xo_common_white_header_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/ed_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="left"
+                android:hint="请输入咨询内容（最少5个字）"
+                android:maxLength="200"
+                android:minHeight="@dimen/dp_100"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"
+                android:textColor="@color/color_FF333333"
+                android:textColorHint="@color/color_FF999999" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_16"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/tv_text_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#ff333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" /200"
+                    android:textColor="@color/color_FF999999"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcy_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/line"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="温馨提示"
+                android:textColor="@color/color_FF333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_16"
+                android:text="只能发送一条消息，避免发送一些没用信息，如在吗，你好等，请提供充分信息说明，客服收到后会尽快处理，客服处理时间为：8:00~23:00。"
+                android:textColor="@color/color_FF999999"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/btn_send"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:background="@color/btn_task_dark"
+            android:gravity="center"
+            android:text="确认提交"
+            android:textColor="@color/text_color_btn"
+            android:textSize="17sp" />
+    </LinearLayout>
+</LinearLayout>

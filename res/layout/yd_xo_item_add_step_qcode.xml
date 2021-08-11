@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="312dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/yd_xo_white_shape"
+    android:minWidth="312dp"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上传二维码"
+            android:textColor="@color/color_FF333333"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="步骤说明"
+            android:textColor="@color/color_FF333333"
+            android:textSize="@dimen/sp_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/yd_xo_step_title_ed"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/ed_des"
+                style="@style/edit_step_content"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="13dp"
+                android:gravity="top"
+                android:hint="适用于需要扫描二维码的操作。输入内容，详细说明如何扫描二维码。"
+                android:paddingTop="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/tv_text_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView style="@style/tv_step_word_number" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="二维码"
+                android:textColor="@color/color_FF333333"
+                android:textSize="@dimen/sp_16" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_qcode"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/yd_xo_step_camera" />
+
+                <LinearLayout
+                    android:id="@+id/ll_load"
+                    android:layout_width="67dp"
+                    android:layout_height="67dp"
+                    android:layout_centerInParent="true"
+                    android:background="#99000000"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:id="@+id/pb_load"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:cpb_background_progressbar_color="#838383"
+                        app:cpb_background_progressbar_width="2dp"
+                        app:cpb_progress="0"
+                        app:cpb_progress_max="100"
+                        app:cpb_progressbar_color="#dcdcdc"
+                        app:cpb_progressbar_width="2dp" />j
+
+                    <TextView
+                        android:id="@+id/tv_pb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_15" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <include
+            layout="@layout/yd_xo_add_step_operate_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:padding="4dp"
+        android:src="@mipmap/yd_xo_close" />
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/yd_xo_common_white_header_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcy_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                style="@style/line_space"
+                android:layout_marginTop="@dimen/dp_16" />
+
+            <EditText
+                android:id="@+id/ed_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="top|left|center_vertical|center_horizontal|center"
+                android:hint="请补充说明举报原因（最少5个字）"
+                android:maxLength="50"
+                android:minHeight="60dp"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_16"
+                android:textColor="@color/color_FF333333"
+                android:textColorHint="#ffbcbfc2"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_16"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/tv_content_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/50"
+                    android:textColor="@color/color_FF999999"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcy_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/btn_sure"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/yd_xo_task_public"
+        android:gravity="center"
+        android:text="提交举报"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+</LinearLayout>

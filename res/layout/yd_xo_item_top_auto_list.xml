@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.jdqy.zqyd.widget.EasySwipeMenuLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:contentView="@+id/content"
+        app:rightMenuView="@+id/right">
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="邀请好友任务自动刷新"
+                    android:textColor="@color/color_FF333333" />
+
+                <TextView
+                    android:id="@+id/tv_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_title"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="邀请好友任务自动刷新"
+                    android:textColor="@color/color_FF999999"
+                    android:textSize="@dimen/sp_13" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btn_start"
+                android:layout_width="65dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/btn_task_dark"
+                android:gravity="center"
+                android:text="开始"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_deleted"
+                android:layout_width="63dp"
+                android:layout_height="match_parent"
+                android:background="@color/btn_task_dark"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </com.jdqy.zqyd.widget.EasySwipeMenuLayout>
+
+    <TextView
+        style="@style/line"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

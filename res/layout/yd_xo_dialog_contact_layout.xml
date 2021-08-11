@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="@color/color_f4f4f6"
+    android:orientation="vertical">
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/dialog_common_cencel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/color_FF4343"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_17" />
+</LinearLayout>

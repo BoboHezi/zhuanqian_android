@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/yd_xo_task_search_header_layout" />
+
+    <RelativeLayout
+        android:id="@+id/rl_search_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜索历史"
+            android:textColor="@color/color_FF333333"
+            android:textSize="@dimen/sp_17" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_delete" />
+    </RelativeLayout>
+
+    <com.jdqy.zqyd.widget.RecommendViewGroup
+        android:id="@+id/recommendViewGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcy_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recy_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

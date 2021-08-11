@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_contact"
+    android:layout_width="122dp"
+    android:layout_height="51dp"
+    android:background="@mipmap/yd_xo_drag"
+    android:gravity="center"
+    android:minWidth="122dp"
+    android:minHeight="51dp">
+
+    <ImageView
+        android:id="@+id/img_order_icon"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/yd_xo_contact" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="-2dp"
+        android:gravity="center"
+        android:text="联系TA"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_15" />
+</LinearLayout>

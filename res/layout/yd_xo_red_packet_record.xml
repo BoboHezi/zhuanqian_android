@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_FFFBF2">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="140dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/yd_xo_packet_own_record" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadMore="true">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/yd_xo_red_top" />
+
+                    <ImageView
+                        android:id="@+id/img_user_header"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="110dp"
+                        android:src="@mipmap/yd_xo_user_default" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/color_FF999999"
+                    android:textSize="15sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_FF999999"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_money"
+                        android:layout_marginBottom="3dp"
+                        android:layout_toRightOf="@+id/tv_money"
+                        android:text="元"
+                        android:textColor="@color/color_FF999999"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:paddingLeft="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:textColor="@color/color_FF999999"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="49dp"
+                        android:layout_height="20dp"
+                        android:background="@color/color_66FFA3A5"
+                        android:gravity="center"
+                        android:text="人气奖"
+                        android:textColor="@color/color_FF4343"
+                        android:textSize="@dimen/sp_13" />
+
+                    <TextView
+                        android:id="@+id/tv_max_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="16dp"
+                        android:textColor="@color/color_FF333333"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <TextView style="@style/line" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recy_packet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/color_FF4343" />
+
+    <include
+        layout="@layout/yd_xo_common_header_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
+        android:layout_below="@+id/tv_status" />
+</RelativeLayout>

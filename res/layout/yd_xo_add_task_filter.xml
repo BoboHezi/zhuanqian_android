@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="7dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_15"
+            android:text="请选择类型"
+            android:textColor="@color/color_FF333333"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_type_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:drawableLeft="@mipmap/yd_xo_i1"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="类型说明"
+            android:textColor="@color/color_FF666666"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recy_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:nestedScrollingEnabled="false"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_f4f4f6" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_15"
+        android:paddingBottom="7dp"
+        android:text="支持设备"
+        android:textColor="@color/color_FF333333"
+        android:textSize="@dimen/sp_16" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recy_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:nestedScrollingEnabled="false"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_16"
+        android:text="请明确好做单设备，若因设备选择不对带来的纠纷由悬赏主承担；"
+        android:textColor="@color/color_FF4343"
+        android:textSize="12sp" />
+</LinearLayout>

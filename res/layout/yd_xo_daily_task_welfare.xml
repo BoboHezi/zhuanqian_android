@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/yd_xo_daily_task_bg">
+
+    <include
+        android:id="@+id/ll_top_layout"
+        layout="@layout/yd_xo_common_white_header_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_top_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ll_banner"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:background="@mipmap/yd_xo_banner_daily_task" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_banner"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="-80dp"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/yd_xo_white_shape_8"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/yd_xo_daily_space" />
+
+                    <com.jdqy.zqyd.widget.TextBoldStyle
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:text="完成任务额外奖励"
+                        android:textColor="#ff333333"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/yd_xo_daily_space" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_reward_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="今日已发放每日福利奖励 1288元"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="13sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcy_new_people"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+                <LinearLayout
+                    android:id="@+id/ll_game_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/yd_xo_daily_space" />
+
+                    <com.jdqy.zqyd.widget.TextBoldStyle
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:text="完成游戏额外奖励"
+                        android:textColor="#ff333333"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/yd_xo_daily_space" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ll_game"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_logo"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:src="@mipmap/yd_xo_cash_1" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@+id/img_logo"
+                        android:orientation="vertical">
+
+                        <com.jdqy.zqyd.widget.TextBoldStyle
+                            android:id="@+id/tv_game_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="每天完成3个91游戏"
+                            android:textColor="@color/color_FF333333"
+                            android:textSize="16sp" />
+
+                        <com.jdqy.zqyd.widget.TextBoldStyle
+                            android:id="@+id/tv_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/tv_game_title"
+                            android:text="1元"
+                            android:textColor="@color/color_FF4343"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_game_bar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_game_title"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:text="今日已经完成：0/3"
+                            android:textColor="#ff67696b"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_game_status"
+                        android:layout_width="88dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:gravity="center"
+                        android:textSize="@dimen/dp_16" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <include
+                layout="@layout/yd_xo_msg_roll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="190dp" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

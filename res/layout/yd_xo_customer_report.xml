@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/yd_xo_common_white_header_layout" />
+
+    <com.jdqy.zqyd.widget.tablayout.CommonTabLayout
+        android:id="@+id/commonTabLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_47"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        tl:tl_iconVisible="false"
+        tl:tl_indicator_color="@color/color_FF4343"
+        tl:tl_indicator_corner_radius="1dp"
+        tl:tl_indicator_height="2dp"
+        tl:tl_indicator_width="30dp"
+        tl:tl_tab_width="80dp"
+        tl:tl_textSelectColor="@color/color_FF4343"
+        tl:tl_textUnselectColor="@color/color_FF333333"
+        tl:tl_textsize="@dimen/sp_16" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_report"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#5c000000"
+    android:minWidth="215dp"
+    android:orientation="vertical"
+    android:paddingLeft="25dp"
+    android:paddingTop="16dp"
+    android:paddingRight="25dp"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上传进度"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_17" />
+
+    <ProgressBar
+        android:id="@+id/upload_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="120dp"
+        android:layout_height="3dp"
+        android:layout_below="@+id/tv_message"
+        android:layout_marginTop="10dp"
+        android:progressDrawable="@drawable/yd_xo_bar_upload_video" />
+
+    <TextView
+        android:id="@+id/tv_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_message"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/upload_progress"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_15" />
+</RelativeLayout>

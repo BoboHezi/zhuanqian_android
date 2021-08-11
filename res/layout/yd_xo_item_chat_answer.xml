@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_16"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="@dimen/dp_16"
+    android:layout_marginBottom="16dp"
+    android:background="#dddddf"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_5">
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="5dp"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingRight="5dp"
+        android:paddingBottom="@dimen/dp_5"
+        android:text="请选择您想要问的问题，系统会自动回复，如果没有解决您的问题请留言。（不要问在吗之类的话，客服一直在，看到后会回复+处理）"
+        android:textColor="@color/color_FF333333"
+        android:textSize="12sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recy_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10" />
+</LinearLayout>

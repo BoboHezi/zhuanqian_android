@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/yd_xo_common_white_header_layout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="@dimen/dp_30"
+        android:text="支付宝账号"
+        android:textColor="@color/color_FF333333"
+        android:textSize="@dimen/sp_16" />
+
+    <com.jdqy.zqyd.widget.ClearEditText
+        android:id="@+id/et_alipay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/yd_xo_bottom_line"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="请输入支付宝账号"
+        android:paddingLeft="10dp"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:textColor="@color/color_FF333333"
+        android:textCursorDrawable="@drawable/yd_xo_common_cursor"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/btn_bind"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_27"
+        android:layout_marginTop="27dp"
+        android:layout_marginRight="@dimen/dp_27"
+        android:background="@drawable/yd_xo_login_btn_bg"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_17" />
+</LinearLayout>

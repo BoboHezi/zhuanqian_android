@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_activity"
+    android:orientation="vertical">
+
+    <include layout="@layout/yd_xo_common_white_header_layout" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="14dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="14dp"
+        android:text="设置自动刷新后按照刷新频率定时刷新您的悬赏单排名，最后刷新的排在前面"
+        android:textColor="@color/color_FF999999" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="@drawable/yd_xo_bottom_line"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:minEms="4"
+                android:text="刷新名称"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:hint="请输入自动刷新的名称"
+                android:maxLength="10"
+                android:textColor="@color/color_FF333333"
+                android:textColorHint="@color/color_FF999999"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:minEms="4"
+                android:text="每天重复"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/refresh_repeat_yes"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/img_refresh_repeat_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/yd_xo_radio_task_btn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:text="是"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="@dimen/sp_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/refresh_repeat_no"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/img_refresh_repeat_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/yd_xo_radio_task_btn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:text="否"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="@dimen/sp_16" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_16">
+
+        <LinearLayout
+            android:id="@+id/btn_start_time"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="@drawable/yd_xo_bottom_line"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minEms="4"
+                android:text="开始时间"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:drawableRight="@mipmap/yd_xo_arrow"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_end_time"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="@drawable/yd_xo_bottom_line"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minEms="4"
+                android:text="结束时间"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_end_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:drawableRight="@mipmap/yd_xo_arrow"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_refresh_time"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minEms="4"
+                android:text="频率"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_space_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:drawableRight="@mipmap/yd_xo_arrow"
+                android:text=""
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_16">
+
+        <LinearLayout
+            android:id="@+id/btn_refresh_total"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="@drawable/yd_xo_bottom_line"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dp_12"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minEms="4"
+                android:text="合计刷新次数"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_refresh_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="次"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_refresh_surplus_count"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="@drawable/yd_xo_bottom_line"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dp_12">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minEms="4"
+                android:text="剩余刷新次数"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_refresh_surplus_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="次"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_already"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="@drawable/yd_xo_bottom_line"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dp_12"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minEms="4"
+                android:text="已刷新次数"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_refresh_already"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_buy_time"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minEms="4"
+                android:text="购买刷新包"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:drawableRight="@mipmap/yd_xo_arrow"
+                android:text=""
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp">
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/common_dialog_cancel"
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/btn_sure"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/btn_task_dark"
+            android:gravity="center"
+            android:text="@string/common_dialog_confirm"
+            android:textColor="@color/text_color_btn"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

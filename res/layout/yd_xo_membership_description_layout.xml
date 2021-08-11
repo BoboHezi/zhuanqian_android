@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_48">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_16"
+        android:textColor="#ff7a492f"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_trans_fee"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#ff7a492f"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_withdrow_fee"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#ff7a492f"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_low_task_fee"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#ff7a492f"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_free_top_hours"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="-"
+        android:textColor="#ff7a492f"
+        android:textSize="13sp"
+        android:visibility="gone" />
+</LinearLayout>

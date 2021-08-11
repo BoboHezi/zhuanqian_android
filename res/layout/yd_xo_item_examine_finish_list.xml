@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_16"
+    android:background="@drawable/yd_xo_bottom_line"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_16">
+
+    <ImageView
+        android:id="@+id/img_user_header"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginRight="8dp" />
+
+    <TextView
+        android:id="@+id/tv_user_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_user_header"
+        android:layout_marginTop="-2dp"
+        android:layout_toRightOf="@+id/img_user_header"
+        android:text=" "
+        android:textColor="@color/color_FF333333"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_user_header"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-2dp"
+        android:layout_marginRight="@dimen/dp_16"
+        android:text=""
+        android:textColor="@color/color_FF4343"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_user_info"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/img_user_header"
+        android:text=" "
+        android:textColor="@color/color_FF999999"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_proday_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_time"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/img_user_header"
+        android:text=" "
+        android:textColor="@color/color_FF999999"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_proday_time"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/img_user_header"
+        android:background="@drawable/yd_xo_reason_shape"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingTop="@dimen/dp_3"
+        android:paddingRight="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_3"
+        android:text=" "
+        android:textColor="@color/color_FF4343"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/btn_back_money"
+        android:layout_width="60dp"
+        android:layout_height="21dp"
+        android:layout_below="@+id/tv_money"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_16"
+        android:background="@drawable/yd_xo_order_task_btn_bg"
+        android:gravity="center"
+        android:text="追回佣金"
+        android:textColor="#ffff4343"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/btn_pay_money"
+        android:layout_width="60dp"
+        android:layout_height="21dp"
+        android:layout_below="@+id/btn_back_money"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginRight="@dimen/dp_16"
+        android:background="@drawable/yd_xo_order_task_btn_bg"
+        android:gravity="center"
+        android:text="发放赏金"
+        android:textColor="#ffff4343"
+        android:textSize="12sp" />
+</RelativeLayout>

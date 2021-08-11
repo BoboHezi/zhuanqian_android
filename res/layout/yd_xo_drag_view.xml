@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_order"
+    android:layout_width="51dp"
+    android:layout_height="51dp"
+    android:background="@drawable/yd_xo_deal_bg">
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableTop="@mipmap/yd_xo_deal"
+        android:gravity="center"
+        android:text="待处理"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_11" />
+
+    <TextView
+        android:id="@+id/tv_order_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tv_status"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="-2dp"
+        android:background="@drawable/yd_xo_red_home_shape"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:visibility="gone" />
+</RelativeLayout>

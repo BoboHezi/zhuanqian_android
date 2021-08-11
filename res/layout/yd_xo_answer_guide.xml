@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/yd_xo_common_white_header_layout" />
+
+    <TextView
+        android:id="@+id/tv_answer_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_16"
+        android:textColor="@color/color_FF333333" />
+
+    <TextView
+        android:id="@+id/btn_sure"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginBottom="@dimen/dp_25"
+        android:background="@drawable/yd_xo_task_dark"
+        android:gravity="center"
+        android:text="马上答题"
+        android:textColor="@color/text_color_btn"
+        android:textSize="@dimen/sp_16" />
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_integral_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="• 信誉等级V0"
+        android:textColor="#ff333333"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_integral_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:text="所需积分：≤0，可以邀请好友、玩游戏、问卷、举报 他人，充值，不能做单、不能提现。"
+        android:textColor="#ff999999"
+        android:textSize="13sp" />
+</LinearLayout>

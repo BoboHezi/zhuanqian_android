@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40" />
+
+        <LinearLayout
+            android:id="@+id/ll_my_publish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_task_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-4dp"
+                android:textColor="#ff303030"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_text_row_1"
+                style="@style/my_publish_item_text" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_text_row_2"
+                    style="@style/my_publish_item_text"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_text_finish_number"
+                    style="@style/my_publish_item_text"
+                    android:textColor="@color/color_4FB2FF"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_text_row_3"
+                style="@style/my_publish_item_text"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_text_row_4"
+                style="@style/my_publish_item_text"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_text_row_5"
+                style="@style/my_publish_item_text"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_top_time"
+                style="@style/my_publish_item_text"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_auto_refresh_tip"
+                style="@style/my_publish_item_text"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="自动刷新进行中"
+                android:textColor="@color/text_color_1"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/btn_open_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="3dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/yd_xo_play_video"
+                    android:drawablePadding="5dp"
+                    android:text="做单视频"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="13sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_video_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="成功"
+                    android:textColor="@color/color_FF999999"
+                    android:textSize="13sp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_video_reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="3dp"
+                android:text=""
+                android:textColor="@color/color_FF999999"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/tv_btn_1"
+                    style="@style/my_publish_item_btn" />
+
+                <TextView
+                    android:id="@+id/tv_btn_2"
+                    style="@style/my_publish_item_btn"
+                    android:layout_marginLeft="@dimen/dp_4" />
+
+                <TextView
+                    android:id="@+id/tv_btn_3"
+                    style="@style/my_publish_item_btn"
+                    android:layout_marginLeft="@dimen/dp_4" />
+
+                <TextView
+                    android:id="@+id/tv_btn_4"
+                    style="@style/my_publish_item_btn"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_btn_5"
+                    style="@style/my_publish_item_btn"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_btn_6"
+                    style="@style/my_publish_item_btn"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_btn_7"
+                    style="@style/my_publish_item_btn"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_btn_8"
+                    style="@style/my_publish_item_btn"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_btn_9"
+                    style="@style/my_publish_item_btn"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_btn_10"
+                    style="@style/my_publish_item_btn"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_btn_11"
+                    style="@style/my_publish_item_btn"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_btn_14"
+                    style="@style/my_publish_item_btn"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_btn_12"
+                    style="@style/my_publish_item_btn"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_btn_13"
+                    style="@style/my_publish_item_btn"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_btn_15"
+                    style="@style/my_publish_item_btn"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="发视频"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/btn_refresh"
+                    style="@style/my_publish_item_btn"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="自动刷新"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/btn_set_refresh"
+                    style="@style/my_publish_item_btn"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="自动刷新"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        style="@style/line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp_16" />
+</LinearLayout>

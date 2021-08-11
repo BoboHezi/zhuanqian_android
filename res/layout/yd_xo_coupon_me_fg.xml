@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/yd_xo_me_avatar_bg" />
+
+    <RelativeLayout
+        android:id="@+id/ll_cut_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="67dp">
+
+        <ImageView
+            android:id="@+id/img_cut_user_header"
+            android:layout_width="59dp"
+            android:layout_height="59dp"
+            android:layout_marginRight="@dimen/dp_8"
+            android:src="@mipmap/yd_xo_user_default" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_cut_user_header"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_cut_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_cut_user_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text=""
+                android:textColor="#ffffffff"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cut_draw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_cut_user_info"
+        android:background="@mipmap/yd_xo_coupon_me_draw"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/btn_cut_bonus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_cut_me_bonusAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/color_FF333333"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收入余额(元）"
+                android:textColor="@color/color_FF333333"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:layout_width="67dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/yd_xo_me_change_money"
+                android:gravity="center"
+                android:text="去提现"
+                android:textColor="@color/btn_task_dark"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dp_24"
+            android:background="@color/color_eeeeee" />
+
+        <LinearLayout
+            android:id="@+id/btn_cut_task_reward"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_cut_me_reward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/color_FF333333"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="推广奖励(元）"
+                android:textColor="@color/color_FF333333"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:layout_width="67dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/yd_xo_me_change_money"
+                android:gravity="center"
+                android:text="去提现"
+                android:textColor="@color/btn_task_dark"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_cut_draw"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/btn_cut_verification"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:drawableLeft="@mipmap/yd_xo_me_real_name"
+                android:drawablePadding="11dp"
+                android:gravity="center_vertical"
+                android:text="实名认证"
+                android:textColor="@color/color_FF333333"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/tv_cut_identity_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/img_cut_identity_arrow"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/yd_xo_me_arrow_icon" />
+        </RelativeLayout>
+
+        <View style="@style/line" />
+
+        <TextView
+            android:id="@+id/btn_cut_me_friend"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:drawableLeft="@mipmap/yd_xo_me_friend"
+            android:drawableRight="@mipmap/yd_xo_me_arrow_icon"
+            android:drawablePadding="11dp"
+            android:gravity="center_vertical"
+            android:text="我的好友"
+            android:textColor="@color/color_FF333333"
+            android:textSize="@dimen/sp_15" />
+
+        <View style="@style/line" />
+
+        <RelativeLayout
+            android:id="@+id/btn_cut_invite"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48">
+
+            <ImageView
+                android:id="@+id/img_cut_invite_log"
+                android:layout_width="@dimen/dp_19"
+                android:layout_height="@dimen/dp_19"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/yd_xo_me_invite" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_toRightOf="@+id/img_cut_invite_log"
+                android:text="我的邀请人"
+                android:textColor="@color/color_FF333333"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/tv_cut_invite_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_FF333333"
+                android:textSize="@dimen/sp_15" />
+
+            <ImageView
+                android:id="@+id/img_cut_invite_user_header"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_cut_invite_user_name" />
+
+            <ImageView
+                android:id="@+id/img_cut_invite_arrow"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/yd_xo_me_arrow_icon" />
+        </RelativeLayout>
+
+        <View style="@style/line" />
+
+        <TextView
+            android:id="@+id/btn_cut_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:drawableLeft="@mipmap/yd_xo_about_us"
+            android:drawableRight="@mipmap/yd_xo_me_arrow_icon"
+            android:drawablePadding="11dp"
+            android:gravity="center_vertical"
+            android:text="关于我们"
+            android:textColor="@color/color_FF333333"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="客服联系方式"
+            android:textColor="@color/color_FF666666"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_cut_qq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="QQ:893839477"
+            android:textColor="@color/color_FF666666"
+            android:textSize="15sp" />
+    </LinearLayout>
+</RelativeLayout>

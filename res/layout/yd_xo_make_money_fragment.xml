@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/bg_top" />
+
+    <include
+        android:id="@+id/ll_top_tab"
+        layout="@layout/yd_xo_common_header_layout"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_top"
+        android:gravity="center_horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_to_search"
+            android:layout_width="@dimen/dp_328"
+            android:layout_height="@dimen/dp_33"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_13"
+            android:layout_marginBottom="@dimen/dp_13"
+            android:background="@drawable/yd_xo_index_edittext_bg_1"
+            android:drawableLeft="@mipmap/yd_xo_search_1"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:hint="任务标题、编号、用户ID、昵称"
+            android:paddingLeft="@dimen/dp_11"
+            android:paddingRight="@dimen/dp_11"
+            android:textColorHint="#99ffffff"
+            android:textSize="@dimen/sp_13" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_top"
+        android:gravity="center"
+        android:paddingBottom="1dp">
+
+        <com.jdqy.zqyd.widget.tablayout.CommonTabLayout
+            android:id="@+id/commonTabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_47"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            tl:tl_iconVisible="false"
+            tl:tl_indicator_color="@color/white"
+            tl:tl_indicator_corner_radius="1dp"
+            tl:tl_indicator_height="2dp"
+            tl:tl_indicator_width="30dp"
+            tl:tl_tab_width="80dp"
+            tl:tl_textSelectColor="@color/white"
+            tl:tl_textUnselectColor="@color/white"
+            tl:tl_textsize="@dimen/sp_16" />
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_get_data_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_empty_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="数据获取失败,请重试"
+            android:textColor="@color/color_FF666666"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/btn_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/yd_xo_index_edittext_bg_1"
+            android:padding="@dimen/dp_10"
+            android:text="点击刷新"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/yd_xo_common_white_header_layout" />
+
+    <LinearLayout
+        android:id="@+id/btn_start_time"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:background="@drawable/yd_xo_bottom_line"
+        android:gravity="center_vertical"
+        android:paddingRight="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="4"
+            android:text="开始时间"
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawableRight="@mipmap/yd_xo_arrow"
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_end_time"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:background="@drawable/yd_xo_bottom_line"
+        android:gravity="center_vertical"
+        android:paddingRight="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="4"
+            android:text="结束时间"
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawableRight="@mipmap/yd_xo_arrow"
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:background="@drawable/yd_xo_bottom_line"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:minEms="4"
+            android:text="数据类型"
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/type_apply"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/img_type_apply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yd_xo_radio_square_btn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:text="待审核的数据"
+                android:textColor="@color/color_FF333333"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/type_finish"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/img_type_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yd_xo_radio_square_btn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:text="已审核的数据"
+                android:textColor="@color/color_FF333333"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:minEms="4"
+            android:text="导出格式"
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/export_form"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/img_export_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yd_xo_radio_task_btn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:text="导出表格"
+                android:textColor="@color/color_FF333333"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/export_web"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/img_export_web"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yd_xo_radio_task_btn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:text="导出网页"
+                android:textColor="@color/color_FF333333"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:text="导出Excel文件用于后台数据核对，比如注册单等，导出网页用于验证图核对，比如关注单等，请根据需要选择。"
+        android:textColor="@color/color_FF999999"
+        android:textSize="@dimen/sp_13" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/bg_activity" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_47"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/color_FF333333"
+            android:textSize="@dimen/sp_17" />
+
+        <TextView
+            android:id="@+id/btn_sure"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_3"
+            android:layout_weight="1"
+            android:background="@color/btn_task_dark"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/text_color_btn"
+            android:textSize="@dimen/sp_17" />
+    </LinearLayout>
+</LinearLayout>

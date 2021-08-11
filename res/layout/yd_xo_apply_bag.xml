@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/yd_xo_common_white_header_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_top_banner"
+                android:layout_width="match_parent"
+                android:layout_height="266dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/yd_xo_bag_banner_top" />
+
+            <RelativeLayout
+                android:id="@+id/ll_real_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginTop="212dp"
+                android:layout_marginRight="@dimen/dp_8"
+                android:background="@mipmap/yd_xo_bag_real_bg">
+
+                <ImageView
+                    android:id="@+id/img_small_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:src="@mipmap/yd_xo_bag_star" />
+
+                <LinearLayout
+                    android:id="@+id/ll_bag_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_small_star"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/yd_xo_bag_doc_left" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:text="包工头申请规则"
+                        android:textColor="@color/color_FF333333"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/yd_xo_bag_doc_right" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_bag_identify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:layout_below="@+id/ll_bag_title"
+                    android:layout_marginLeft="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:src="@mipmap/yd_xo_bag_identify" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/img_bag_identify"
+                    android:layout_toRightOf="@+id/img_bag_identify"
+                    android:text="实名认证"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/img_bag_identify"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@+id/img_bag_identify"
+                    android:text="安全保证，快速拿到佣金"
+                    android:textColor="@color/color_FF999999"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/btn_validity"
+                    android:layout_width="68dp"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_alignTop="@+id/img_bag_identify"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_11"
+                    android:layout_marginRight="@dimen/dp_24"
+                    android:background="@drawable/yd_xo_bag_real_btn"
+                    android:gravity="center"
+                    android:text="去认证"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/img_bag_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:layout_below="@+id/img_bag_identify"
+                    android:layout_marginLeft="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:src="@mipmap/yd_xo_bag_contact" />
+
+                <TextView
+                    android:id="@+id/tv_apply_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/img_bag_contact"
+                    android:layout_toRightOf="@+id/img_bag_contact"
+                    android:text="申请试用包工头"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_apply_title"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toLeftOf="@+id/btn_apply"
+                    android:layout_toRightOf="@+id/img_bag_contact"
+                    android:text="试用期7天，完成5单以上，通过率≥80%，成为正式包头"
+                    android:textColor="@color/color_FF999999"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/btn_apply"
+                    android:layout_width="68dp"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_alignTop="@+id/img_bag_contact"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_11"
+                    android:layout_marginRight="@dimen/dp_24"
+                    android:background="@drawable/yd_xo_bag_real_btn"
+                    android:gravity="center"
+                    android:text="去申请"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/img_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:src="@mipmap/yd_xo_bag_man" />
+
+            <LinearLayout
+                android:id="@+id/ll_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_real_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="27dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/yd_xo_bag_doc_left" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:text="包工头升级规则"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/yd_xo_bag_doc_right" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_real_name"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/yd_xo_bag_doc_triangle_right" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_real_name"
+                android:layout_marginTop="80dp"
+                android:src="@mipmap/yd_xo_bag_doc_triangle_left" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcy_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_update"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:id="@+id/tv_bag_rule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rcy_update"
+                android:layout_marginLeft="21dp"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_17"
+                android:layout_marginBottom="@dimen/dp_40"
+                android:textColor="@color/color_FF999999" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

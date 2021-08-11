@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_16">
+
+        <ImageView
+            android:id="@+id/img_bill_type"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44" />
+
+        <TextView
+            android:id="@+id/tv_bill_item_title"
+            style="@style/tv_style_1"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/img_bill_type"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_bill_item_money"
+            style="@style/tv_style_1"
+            android:layout_alignParentRight="true"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_bill_item_data"
+            style="@style/tv_style_3"
+            android:layout_alignLeft="@+id/tv_bill_item_title"
+            android:layout_alignBottom="@+id/img_bill_type" />
+
+        <TextView
+            android:id="@+id/tv_bill_item_widthdrw"
+            style="@style/tv_style_2"
+            android:layout_alignTop="@+id/tv_bill_item_data"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_toRightOf="@+id/tv_bill_item_data" />
+
+        <TextView
+            android:id="@+id/tv_bill_item_status"
+            style="@style/tv_style_2"
+            android:layout_alignTop="@+id/tv_bill_item_data"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/sp_13" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/yd_xo_my_publish_title_bg"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_8"
+        android:paddingTop="@dimen/dp_3"
+        android:paddingRight="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_3"
+        android:text="撤销申请"
+        android:textColor="#ffff4343"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <View
+        style="@style/line"
+        android:layout_marginLeft="@dimen/dp_16" />
+</LinearLayout>
