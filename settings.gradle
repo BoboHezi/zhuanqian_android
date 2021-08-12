@@ -1,2 +1,4 @@
 include ':app'
+include ':network'
+include ':tools'
 rootProject.name = "zhuanqian"

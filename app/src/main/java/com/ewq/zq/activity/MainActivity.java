@@ -1,8 +1,10 @@
-package com.ewq.zq;
+package com.ewq.zq.activity;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.ewq.zq.R;
 
 public class MainActivity extends AppCompatActivity {
 

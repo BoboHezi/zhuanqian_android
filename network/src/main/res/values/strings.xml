@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Network</string>
+    <string name="app_network_error">网络连接错误，请查看网络是否已连接!</string>
+    <string name="app_network_socket_timeout">请求超时,请检查网络!</string>
+    <string name="app_network_http_error">请求内部错误!</string>
+    <string name="app_network_http_no">内部错误,请求不存在!</string>
+    <string name="app_network_http_exception">请求错误!</string>
+    <string name="app_network_http_exception_all">未知请求错误!</string>
+</resources>
