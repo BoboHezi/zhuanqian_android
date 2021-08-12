@@ -47,4 +47,7 @@ dependencies {
     implementation 'com.github.eli:AvocadoUtils:0.0.1'
     implementation 'com.google.code.gson:gson:2.8.7'
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 }

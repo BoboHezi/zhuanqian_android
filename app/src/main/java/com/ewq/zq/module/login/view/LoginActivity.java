@@ -8,8 +8,6 @@ import android.widget.EditText;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.ewq.tools.common.BaseParams;
-import com.ewq.tools.info.SharedInfo;
 import com.ewq.zq.R;
 import com.ewq.zq.module.login.contract.ILoginContract;
 import com.ewq.zq.module.login.model.LoginBean;
@@ -32,8 +30,6 @@ public class LoginActivity extends AppCompatActivity implements ILoginContract.I
         edPassword = findViewById(R.id.input_password);
 
         loginPresenter = new LoginPresenterImpl(this);
-
-        SharedInfo.init(BaseParams.SP_NAME);
     }
 
     public void submit(View v) {
