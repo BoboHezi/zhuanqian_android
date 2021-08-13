@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="view_shake" type="id" />
+    <item name="nav_icon" type="id" />
+    <item name="nav_text" type="id" />
+</resources>

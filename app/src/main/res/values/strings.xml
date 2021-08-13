@@ -108,6 +108,7 @@
     <string name="make_money_string">大厅</string>
     <string name="money_tip">只能&lt;font color=#FF4343&gt;涨价&lt;/font&gt;，不能&lt;font color=#FF4343&gt;降价&lt;/font&gt;，请输入涨价后的价格</string>
     <string name="my_string">我的</string>
+    <string name="dynamic_string">动态</string>
     <string name="new_people_reward_tip">今日已发放新人福利奖励 &lt;font color=#FF4343&gt;%1$s元&lt;/font&gt;</string>
     <string name="open_app_host_1">open.act</string>
     <string name="open_app_scheme_1">zqyd</string>
