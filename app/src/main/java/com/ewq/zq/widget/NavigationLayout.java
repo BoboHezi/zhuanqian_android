@@ -6,7 +6,6 @@ import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.viewpager.widget.ViewPager;
@@ -69,7 +68,7 @@ public class NavigationLayout extends LinearLayout implements View.OnClickListen
         if (context != null && StringUtils.isEmpty((String) SharedInfo.getInstance()
                 .getValue(Constant.userId, ""))) {
             // AppManager.getInstance().jumpActivity(context, LoginCodeActivity.class);
-            return;
+            // return;
         }
 
         if (mViewPager != null) {
@@ -100,15 +99,16 @@ public class NavigationLayout extends LinearLayout implements View.OnClickListen
      * 选中tab
      */
     public void select(int index) {
+        View selectView = null;
         for (int i = 0; i < getChildCount(); i++) {
             View child = getChildAt(i);
-            if (child instanceof ImageView) {
-                if (index == i) {
-                    child.setSelected(true);
-                } else {
-                    child.setSelected(false);
-                }
+            child.setSelected(index == i);
+            if (index == i) {
+                selectView = child;
             }
+        }
+        if (tabClick != null) {
+            tabClick.onTabClick(selectView, index);
         }
     }
 

@@ -1,5 +1,7 @@
 package com.ewq.network.utils;
 
+import static com.ewq.tools.encryption.RSAUtil.BCDEncrypt;
+
 import android.text.TextUtils;
 
 import com.ewq.network.annotation.SerializedEncryption;
@@ -13,8 +15,6 @@ import com.google.gson.annotations.SerializedName;
 import java.io.File;
 import java.lang.reflect.Field;
 import java.security.Key;
-
-import static com.ewq.tools.encryption.RSAUtil.BCDEncrypt;
 
 
 /**

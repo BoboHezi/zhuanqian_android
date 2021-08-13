@@ -15,6 +15,10 @@
  */
 package com.ewq.network.interceptor;
 
+import static java.net.HttpURLConnection.HTTP_NOT_MODIFIED;
+import static java.net.HttpURLConnection.HTTP_NO_CONTENT;
+import static okhttp3.internal.http.StatusLine.HTTP_CONTINUE;
+
 import android.util.Log;
 
 import java.io.EOFException;
@@ -35,10 +39,6 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 import okio.Buffer;
 import okio.BufferedSource;
-
-import static java.net.HttpURLConnection.HTTP_NOT_MODIFIED;
-import static java.net.HttpURLConnection.HTTP_NO_CONTENT;
-import static okhttp3.internal.http.StatusLine.HTTP_CONTINUE;
 
 /**
  * An OkHttp interceptor which logs request and response information. Can be applied as an
