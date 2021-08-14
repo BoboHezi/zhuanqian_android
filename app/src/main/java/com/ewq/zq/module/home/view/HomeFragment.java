@@ -65,7 +65,7 @@ public class HomeFragment extends BaseFragment {
 
             LayoutInflater inflater = LayoutInflater.from(mContext);
             View header1 = inflater.inflate(R.layout.fake_home_header1, contentRecycleView, false);
-            View header2 = inflater.inflate(R.layout.fake_home_header2, contentRecycleView, false);
+            View header2 = inflater.inflate(R.layout.home_header_quick_tiles, contentRecycleView, false);
             View title = inflater.inflate(R.layout.home_header_title, contentRecycleView, false);
             adapter.addHeader(header1);
             adapter.addHeader(header2);

@@ -3,4 +3,7 @@
     <item name="view_shake" type="id" />
     <item name="nav_icon" type="id" />
     <item name="nav_text" type="id" />
+    <item name="icon" type="id" />
+    <item name="title" type="id" />
+    <item name="sub_title" type="id" />
 </resources>

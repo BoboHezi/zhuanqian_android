@@ -18,7 +18,7 @@ public class LobbyFragment extends BaseFragment implements NavigationLayout.OnTa
     private static LobbyFragment lobbyFragment;
     @BindView(R.id.main_pager)
     ViewPager mViewPager;
-    @BindView(R.id.nav_tab)
+    @BindView(R.id.header_nav)
     NavigationLayout mNavigation;
 
     private LobbyFragment() {
