@@ -21,9 +21,9 @@ public class NavigationLayout extends LinearLayout implements View.OnClickListen
     private ViewPager mViewPager;
     private OnTabClickListener tabClick;
 
-    private GestureDetector gestureDetector;
+    private final GestureDetector gestureDetector;
 
-    private Context context;
+    private final Context context;
 
     public NavigationLayout(Context context) {
         this(context, null);

@@ -13,12 +13,21 @@ import com.ewq.tools.info.SharedInfo;
 import com.ewq.tools.log.Logger;
 import com.ewq.tools.utils.ActivityManage;
 import com.ewq.tools.utils.ContextHolder;
+import com.ewq.zq.widget.GoldRefreshHeader;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 
 public class ZqApplication extends MultiDexApplication {
 
     protected static final String TAG = "ZqApplication";
     private static ZqApplication sInstance;
     private static Context mContext;
+
+    static {
+        SmartRefreshLayout.setDefaultRefreshHeaderCreator((context, layout) -> new GoldRefreshHeader(context));
+        SmartRefreshLayout.setDefaultRefreshFooterCreator((context, layout) -> new ClassicsFooter(context));
+    }
+
     // 当前活动的Activity数量
     private int activityCount = 0;
 

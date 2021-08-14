@@ -244,4 +244,20 @@
     <string name="verification_cancel">我再想想</string>
     <string name="verification_sure">确认提交</string>
     <string name="zfb_tip">&lt;font color=#333&gt;说明：&lt;/font&gt;支付宝只可更改账号，不能更改姓名。账号更改后，原支付宝账号不能再绑定其他账号使用。。</string>
+
+    <string name="refresh_header_failed">刷新失败</string>
+    <string name="refresh_header_finish">刷新完成</string>
+    <string name="refresh_header_ing">刷新中</string>
+    <string name="refresh_header_loading">等待底部加载完成…</string>
+    <string name="refresh_header_pulling">下拉可以刷新</string>
+    <string name="refresh_header_refreshing">正在刷新…</string>
+    <string name="refresh_header_release">释放立即刷新</string>
+
+    <string name="refresh_footer_failed">加载失败</string>
+    <string name="refresh_footer_finish">加载完成</string>
+    <string name="refresh_footer_loading">正在加载…</string>
+    <string name="refresh_footer_nothing">没有更多数据了</string>
+    <string name="refresh_footer_pulling">上拉加载更多</string>
+    <string name="refresh_footer_ing">等待头部刷新完成…</string>
+    <string name="refresh_footer_release">释放立即加载</string>
 </resources>

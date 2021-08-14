@@ -20,6 +20,7 @@ import com.ewq.zq.module.home.view.HomeFragment;
 import com.ewq.zq.module.lobby.view.LobbyFragment;
 import com.ewq.zq.module.my.view.MyFragment;
 import com.ewq.zq.widget.NavigationLayout;
+import com.leaf.library.StatusBarUtil;
 
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -33,7 +34,7 @@ public class MainActivity extends BaseActivity implements NavigationLayout.OnTab
     @BindView(R.id.nav_tab)
     NavigationLayout mNavigation;
 
-    private ConcurrentHashMap<Integer, Fragment> mFragments = new ConcurrentHashMap<>();
+    private final ConcurrentHashMap<Integer, Fragment> mFragments = new ConcurrentHashMap<>();
 
     @Override
     protected int getLayoutId() {
@@ -45,6 +46,7 @@ public class MainActivity extends BaseActivity implements NavigationLayout.OnTab
         mNavigation.setTabClickListener(this);
         updateNaviView(mNavigation, 0);
         mNavigation.attachViewPager(mViewPager);
+        StatusBarUtil.setTransparentForWindow(this);
     }
 
     @Override
