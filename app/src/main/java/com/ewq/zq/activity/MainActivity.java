@@ -29,12 +29,11 @@ import butterknife.BindView;
 @RequiresApi(api = Build.VERSION_CODES.M)
 public class MainActivity extends BaseActivity implements NavigationLayout.OnTabClickListener {
 
+    private final ConcurrentHashMap<Integer, Fragment> mFragments = new ConcurrentHashMap<>();
     @BindView(R.id.main_pager)
     ViewPager mViewPager;
     @BindView(R.id.nav_tab)
     NavigationLayout mNavigation;
-
-    private final ConcurrentHashMap<Integer, Fragment> mFragments = new ConcurrentHashMap<>();
 
     @Override
     protected int getLayoutId() {

@@ -4,8 +4,8 @@
     android:layout_height="wrap_content"
     android:background="@color/white"
     android:paddingStart="20dp"
-    android:paddingEnd="15dp"
-    android:paddingTop="10dp">
+    android:paddingTop="10dp"
+    android:paddingEnd="15dp">
 
     <eli.avocado.widget.CircleImageView
         android:id="@+id/icon"
@@ -17,9 +17,9 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
         android:layout_toRightOf="@id/icon"
-        android:layout_marginLeft="20dp">
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -29,15 +29,16 @@
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
                 android:layout_alignLeft="@id/money"
-                android:text="简单关注"/>
+                android:layout_alignParentStart="true"
+                android:text="简单关注" />
+
             <TextView
                 android:id="@+id/money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:text="+0.2元"/>
+                android:text="+0.2元" />
         </RelativeLayout>
 
         <TextView
@@ -45,13 +46,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="关注"/>
+            android:text="关注" />
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:background="#2000"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:background="#2000" />
 
 </RelativeLayout>

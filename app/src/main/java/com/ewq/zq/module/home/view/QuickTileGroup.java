@@ -66,7 +66,7 @@ public class QuickTileGroup extends FrameLayout {
         @NonNull
         @Override
         public TileAdapter.TileHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new TileAdapter.TileHolder(LayoutInflater.from(getContext()).inflate(R.layout.holder_tile, parent, false));
+            return new TileAdapter.TileHolder(LayoutInflater.from(getContext()).inflate(R.layout.holder_quick_tile, parent, false));
         }
 
         @Override

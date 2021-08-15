@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="10dp">
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
 
     <ImageView
         android:layout_width="340dp"
         android:layout_height="120dp"
-        android:src="@drawable/fake_header2"
-        android:background="@drawable/rectangle_white_radius"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="2dp"/>
+        android:layout_margin="2dp"
+        android:background="@drawable/rectangle_white_radius"
+        android:src="@drawable/fake_header2" />
 
 </LinearLayout>

@@ -12,8 +12,8 @@
         android:layout_height="45dp"
         android:layout_centerInParent="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/yd_xo_progress_dialog_anim"
-        android:contentDescription="@null" />
+        android:contentDescription="@null"
+        android:src="@drawable/yd_xo_progress_dialog_anim" />
 
     <TextView
         android:id="@+id/refresh_header_text"

@@ -18,12 +18,10 @@ import eli.avocado.utils.StringUtils;
 
 public class NavigationLayout extends LinearLayout implements View.OnClickListener, ViewPager.OnPageChangeListener, View.OnLongClickListener, View.OnTouchListener {
 
+    private final GestureDetector gestureDetector;
+    private final Context context;
     private ViewPager mViewPager;
     private OnTabClickListener tabClick;
-
-    private final GestureDetector gestureDetector;
-
-    private final Context context;
 
     public NavigationLayout(Context context) {
         this(context, null);
