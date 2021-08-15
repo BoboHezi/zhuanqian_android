@@ -1,5 +1,6 @@
 package com.ewq.zq.activity;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Build;
 import android.view.View;
@@ -8,17 +9,17 @@ import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.ewq.zq.R;
+import com.ewq.zq.adapter.FragmentsPagerAdapter;
 import com.ewq.zq.base.BaseActivity;
 import com.ewq.zq.module.discovery.view.DiscoveryFragment;
 import com.ewq.zq.module.dynamic.view.DynamicFragment;
 import com.ewq.zq.module.home.view.HomeFragment;
 import com.ewq.zq.module.lobby.view.LobbyFragment;
 import com.ewq.zq.module.my.view.MyFragment;
+import com.ewq.zq.views.InviteDialog;
 import com.ewq.zq.widget.NavigationLayout;
 import com.leaf.library.StatusBarUtil;
 
@@ -34,6 +35,8 @@ public class MainActivity extends BaseActivity implements NavigationLayout.OnTab
     ViewPager mViewPager;
     @BindView(R.id.nav_tab)
     NavigationLayout mNavigation;
+    @BindView(R.id.ll_order)
+    View floatBtn;
 
     @Override
     protected int getLayoutId() {
@@ -46,6 +49,10 @@ public class MainActivity extends BaseActivity implements NavigationLayout.OnTab
         updateNaviView(mNavigation, 0);
         mNavigation.attachViewPager(mViewPager);
         StatusBarUtil.setTransparentForWindow(this);
+        mViewPager.setSaveEnabled(false);
+
+        new InviteDialog(this).show();
+        floatBtn.setOnClickListener(v -> startActivity(new Intent(this, PendingActivity.class)));
     }
 
     @Override
@@ -55,7 +62,8 @@ public class MainActivity extends BaseActivity implements NavigationLayout.OnTab
         mFragments.put(2, DynamicFragment.getInstance());
         mFragments.put(3, DiscoveryFragment.getInstance());
         mFragments.put(4, MyFragment.getInstance());
-        MyPagerAdapter pagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
+        FragmentsPagerAdapter pagerAdapter = new FragmentsPagerAdapter(getSupportFragmentManager(),
+                mFragments);
         mViewPager.setOffscreenPageLimit(3);
         mViewPager.setAdapter(pagerAdapter);
     }
@@ -77,33 +85,6 @@ public class MainActivity extends BaseActivity implements NavigationLayout.OnTab
             if (text != null) {
                 text.setTextColor(color);
             }
-        }
-    }
-
-    private class MyPagerAdapter extends FragmentStatePagerAdapter {
-
-        MyPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            Fragment fragment = null;
-            if (mFragments.containsKey(position)) {
-                fragment = mFragments.get(position);
-                return fragment;
-            }
-
-            if (fragment != null) {
-                mFragments.put(position, fragment);
-            }
-
-            return fragment;
-        }
-
-        @Override
-        public int getCount() {
-            return mFragments.size();
         }
     }
 }

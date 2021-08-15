@@ -48,6 +48,14 @@
         </activity>
 
         <activity android:name=".module.login.view.LoginActivity"></activity>
+
+        <activity
+            android:name=".activity.LotteryActivity"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
+
+        <activity
+            android:name=".activity.PendingActivity"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
     </application>
 
 </manifest>

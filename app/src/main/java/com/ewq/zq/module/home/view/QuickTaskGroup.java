@@ -2,6 +2,10 @@ package com.ewq.zq.module.home.view;
 
 import android.content.Context;
 import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ImageSpan;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,17 +43,50 @@ public class QuickTaskGroup extends FrameLayout {
 
         tilesRecyclerView = child.findViewById(R.id.tasks_recycler);
         tilesRecyclerView.setLayoutManager(new GridLayoutManager(context, 2));
+        tilesRecyclerView.addItemDecoration(new FourSpacesItemDecoration(10, 20, 2));
         tilesRecyclerView.setAdapter(new TaskAdapter());
         //tilesRecyclerView.addItemDecoration(new FourSpacesItemDecoration(1, 1, 2));
-
-        tasks = new ArrayList<>();
-        tasks.add(new TaskHomeBean());
-        tasks.add(new TaskHomeBean());
-        tasks.add(new TaskHomeBean());
-        tasks.add(new TaskHomeBean());
-        tasks.add(new TaskHomeBean());
-        tasks.add(new TaskHomeBean());
+        tasks = getFakeData();
         tilesRecyclerView.getAdapter().notifyDataSetChanged();
+    }
+
+    private List<TaskHomeBean> getFakeData() {
+        String title = "H微信白给E";
+        SpannableString titleSpan = new SpannableString(title);
+        Drawable d = getResources().getDrawable(R.mipmap.yd_xo_withdrawal_wx);
+        d.setBounds(0, 0, 60, 60);
+        ImageSpan span = new ImageSpan(d, ImageSpan.ALIGN_BASELINE);
+        titleSpan.setSpan(span, 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        d = getResources().getDrawable(R.mipmap.yd_xo_reply);
+        d.setBounds(0, 0, 40, 40);
+        span = new ImageSpan(d, ImageSpan.ALIGN_BASELINE);
+        titleSpan.setSpan(span, 5, 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        String subTitle = "H试玩|笔趣阁\nH 4633人已赚\nH +9.28元";
+        SpannableString subSpan = new SpannableString(subTitle);
+        d = getResources().getDrawable(R.mipmap.yd_xo_top);
+        d.setBounds(0, 0, 40, 40);
+        span = new ImageSpan(d, ImageSpan.ALIGN_BASELINE);
+        subSpan.setSpan(span, 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        d = getResources().getDrawable(R.mipmap.yd_xo_withdraw_margin_icon);
+        d.setBounds(0, 0, 40, 40);
+        span = new ImageSpan(d, ImageSpan.ALIGN_BASELINE);
+        subSpan.setSpan(span, 8, 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        d = getResources().getDrawable(R.mipmap.yd_xo_no1);
+        d.setBounds(0, 0, 40, 40);
+        span = new ImageSpan(d, ImageSpan.ALIGN_BASELINE);
+        subSpan.setSpan(span, 18, 19, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        List<TaskHomeBean> tasks = new ArrayList<>();
+        tasks.add(new TaskHomeBean(titleSpan, subSpan, 34f));
+        tasks.add(new TaskHomeBean(titleSpan, subSpan, 34f));
+        tasks.add(new TaskHomeBean(titleSpan, subSpan, 34f));
+        tasks.add(new TaskHomeBean(titleSpan, subSpan, 34f));
+        tasks.add(new TaskHomeBean(titleSpan, subSpan, 34f));
+        tasks.add(new TaskHomeBean(titleSpan, subSpan, 34f));
+        return tasks;
     }
 
     class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskHolder> {
@@ -63,9 +100,9 @@ public class QuickTaskGroup extends FrameLayout {
 
         @Override
         public void onBindViewHolder(@NonNull TaskHolder holder, int position) {
-            /*TaskHomeBean bean = tasks.get(position);
+            TaskHomeBean bean = tasks.get(position);
             holder.title.setText(bean.getTitle());
-            holder.subTitle.setText(bean.getSubTitle());*/
+            holder.subTitle.setText(bean.getSubTitle());
         }
 
         @Override

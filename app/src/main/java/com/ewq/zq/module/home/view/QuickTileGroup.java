@@ -1,6 +1,8 @@
 package com.ewq.zq.module.home.view;
 
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -16,10 +18,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ewq.zq.R;
+import com.ewq.zq.activity.LotteryActivity;
 import com.ewq.zq.module.home.model.TileBean;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import eli.avocado.utils.StringUtils;
 
 public class QuickTileGroup extends FrameLayout {
     private final RecyclerView tilesRecyclerView;
@@ -45,7 +50,7 @@ public class QuickTileGroup extends FrameLayout {
         tiles = new ArrayList<>();
         Resources res = getResources();
         tiles.add(new TileBean(res.getDrawable(R.mipmap.yd_xo_union_finish),
-                "每日抽奖", ""));
+                "每日抽奖", "com.ewq.zq/.activity.LotteryActivity"));
         tiles.add(new TileBean(res.getDrawable(R.mipmap.yd_xo_union_money),
                 "热门", ""));
         tiles.add(new TileBean(res.getDrawable(R.mipmap.yd_xo_system_note),
@@ -74,6 +79,16 @@ public class QuickTileGroup extends FrameLayout {
             TileBean bean = tiles.get(position);
             holder.icon.setImageDrawable(bean.getIcon());
             holder.title.setText(bean.getTitle());
+            if (!StringUtils.isEmpty(bean.getAction())) {
+                holder.itemView.setOnClickListener(v -> {
+                    Intent intent = new Intent().addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    ComponentName cn = new ComponentName(bean.getAction().split("/")[0],
+                            bean.getAction().split("/")[1]);
+                    intent.setComponent(cn);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    getContext().startActivity(new Intent(getContext(), LotteryActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                });
+            }
         }
 
         @Override
