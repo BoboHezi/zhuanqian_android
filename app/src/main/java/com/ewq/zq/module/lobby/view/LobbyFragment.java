@@ -45,6 +45,7 @@ public class LobbyFragment extends BaseFragment implements NavigationLayout.OnTa
             //Logger.i(TAG, "onPageScrollStateChanged, state: " + state);
         }
     };
+    private final HashMap<Integer, Rect> tabReacts = new HashMap<>();
     @BindView(R.id.main_pager)
     ViewPager mViewPager;
     @BindView(R.id.header_nav)
@@ -53,7 +54,6 @@ public class LobbyFragment extends BaseFragment implements NavigationLayout.OnTa
     FrameLayout slideBlock;
     private boolean navChildInitFlag;
     private ConcurrentHashMap<Integer, Fragment> mFragments = new ConcurrentHashMap<>();
-    private final HashMap<Integer, Rect> tabReacts = new HashMap<>();
 
     private LobbyFragment() {
         super();
@@ -148,7 +148,7 @@ public class LobbyFragment extends BaseFragment implements NavigationLayout.OnTa
         int slideAfterX = calcSlideX(index);
         Logger.i(TAG, "beforeX: " + slideBeforeX + ", afterX: " + slideAfterX);
         if (slideAfterX > 0 && slideBeforeX > 0) {
-            slideBlock(slideBeforeX, slideAfterX, Math.abs(slideBeforeX - slideAfterX));
+            slideBlock(slideBeforeX, slideAfterX, 200);
         }
     }
 }
