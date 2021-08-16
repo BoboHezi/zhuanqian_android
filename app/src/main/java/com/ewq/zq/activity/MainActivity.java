@@ -19,7 +19,6 @@ import com.ewq.zq.module.dynamic.view.DynamicFragment;
 import com.ewq.zq.module.home.view.HomeFragment;
 import com.ewq.zq.module.lobby.view.LobbyFragment;
 import com.ewq.zq.module.my.view.MyFragment;
-import com.ewq.zq.views.InviteDialog;
 import com.ewq.zq.widget.NavigationLayout;
 import com.leaf.library.StatusBarUtil;
 
@@ -51,7 +50,7 @@ public class MainActivity extends BaseActivity implements NavigationLayout.OnTab
         StatusBarUtil.setTransparentForWindow(this);
         mViewPager.setSaveEnabled(false);
 
-        new InviteDialog(this).show();
+        // new InviteDialog(this).show();
         floatBtn.setOnClickListener(v -> startActivity(new Intent(this, PendingActivity.class)));
     }
 
