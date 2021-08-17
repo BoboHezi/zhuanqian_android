@@ -4,15 +4,15 @@ import com.ewq.zq.R;
 import com.ewq.zq.base.BaseActivity;
 import com.leaf.library.StatusBarUtil;
 
-public class LotteryActivity extends BaseActivity {
+public class TaskDetailActivity extends BaseActivity {
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_lottery;
+        return R.layout.yd_xo_new_task_detail;
     }
 
     @Override
     protected void initView() {
-        StatusBarUtil.setColor(this, 0xffe83238);
+        StatusBarUtil.setTransparentForWindow(this);
     }
 
     @Override

@@ -35,4 +35,10 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1px</item>
     </style>
+
+    <style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:maxHeight">11dp</item>
+        <item name="android:progressDrawable">@drawable/mh_zql_task_bar</item>
+        <item name="android:minHeight">11dp</item>
+    </style>
 </resources>

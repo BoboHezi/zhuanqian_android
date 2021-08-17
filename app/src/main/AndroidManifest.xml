@@ -56,6 +56,10 @@
         <activity
             android:name=".activity.PendingActivity"
             android:theme="@style/Theme.MyApplication.NoActionBar" />
+
+        <activity
+            android:name=".activity.TaskDetailActivity"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
     </application>
 
 </manifest>

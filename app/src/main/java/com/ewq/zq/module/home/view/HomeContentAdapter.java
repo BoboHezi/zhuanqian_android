@@ -1,6 +1,8 @@
 package com.ewq.zq.module.home.view;
 
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,7 +65,13 @@ public class HomeContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         final int realPosition = getRealPosition(holder);
         final TaskHomeBean bean = mTaskBeans == null ? null : mTaskBeans.get(realPosition);
         if (bean != null) {
-
+            holder.itemView.setOnClickListener(v -> {
+                Intent intent = new Intent();
+                intent.setComponent(new ComponentName("com.ewq.zq",
+                        "com.ewq.zq.activity.TaskDetailActivity"));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                mContext.startActivity(intent);
+            });
         }
     }
 

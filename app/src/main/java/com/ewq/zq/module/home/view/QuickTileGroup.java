@@ -18,7 +18,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ewq.zq.R;
-import com.ewq.zq.activity.LotteryActivity;
 import com.ewq.zq.module.home.model.TileBean;
 
 import java.util.ArrayList;
@@ -50,7 +49,7 @@ public class QuickTileGroup extends FrameLayout {
         tiles = new ArrayList<>();
         Resources res = getResources();
         tiles.add(new TileBean(res.getDrawable(R.mipmap.yd_xo_union_finish),
-                "每日抽奖", "com.ewq.zq/.activity.LotteryActivity"));
+                "每日抽奖", "com.ewq.zq/com.ewq.zq.activity.LotteryActivity"));
         tiles.add(new TileBean(res.getDrawable(R.mipmap.yd_xo_union_money),
                 "热门", ""));
         tiles.add(new TileBean(res.getDrawable(R.mipmap.yd_xo_system_note),
@@ -86,7 +85,7 @@ public class QuickTileGroup extends FrameLayout {
                             bean.getAction().split("/")[1]);
                     intent.setComponent(cn);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    getContext().startActivity(new Intent(getContext(), LotteryActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                    getContext().startActivity(intent);
                 });
             }
         }
