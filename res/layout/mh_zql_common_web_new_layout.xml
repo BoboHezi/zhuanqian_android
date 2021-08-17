@@ -1,14 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include layout="@layout/mh_zql_common_white_header_layout"/>
-    <ProgressBar android:id="@+id/progressBar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dp_4" android:progressDrawable="@drawable/mh_zql_progress_bg" style="?android:attr/progressBarStyleHorizontal"/>
-    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
-        <LinearLayout android:orientation="vertical" android:id="@+id/webview_layout" android:layout_width="match_parent" android:layout_height="match_parent"/>
-        <TextView android:textSize="15sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@+id/tv_tip" android:background="#000" android:paddingLeft="16dp" android:paddingRight="16dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/dp_30" android:layout_marginBottom="15dp" android:text="当前已经看了1/5，继续加油" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
-        <RelativeLayout android:id="@+id/ll_progress" android:background="@drawable/mh_zql_white_shape_27" android:visibility="gone" android:layout_width="@dimen/dp_53" android:layout_height="@dimen/dp_53" android:layout_marginLeft="@dimen/dp_30" android:layout_marginBottom="@dimen/dp_30" android:layout_alignParentBottom="true">
-            <com.mikhaellopez.circularprogressbar.CircularProgressBar android:id="@+id/pb_circle" android:layout_width="45dp" android:layout_height="45dp" android:layout_centerInParent="true" app:cpb_background_progressbar_color="#f3f3f3" app:cpb_background_progressbar_width="2dp" app:cpb_progress="0" app:cpb_progress_max="100" app:cpb_progressbar_color="#ff801d" app:cpb_progressbar_width="2dp"/>
-            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@mipmap/mh_zql_gold_32" android:layout_centerInParent="true"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/mh_zql_common_white_header_layout" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_4"
+        android:progressDrawable="@drawable/mh_zql_progress_bg"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/webview_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_30"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:background="#000"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="当前已经看了1/5，继续加油"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/ll_progress"
+            android:layout_width="@dimen/dp_53"
+            android:layout_height="@dimen/dp_53"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:background="@drawable/mh_zql_white_shape_27"
+            android:visibility="gone">
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/pb_circle"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                app:cpb_background_progressbar_color="#f3f3f3"
+                app:cpb_background_progressbar_width="2dp"
+                app:cpb_progress="0"
+                app:cpb_progress_max="100"
+                app:cpb_progressbar_color="#ff801d"
+                app:cpb_progressbar_width="2dp" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/mh_zql_gold_32" />
         </RelativeLayout>
     </RelativeLayout>
-    <TextView android:textSize="13sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_count" android:background="@drawable/mh_zql_login_btn_pre" android:visibility="gone" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginLeft="16dp" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="16dp" android:layout_marginBottom="@dimen/dp_10"/>
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/mh_zql_login_btn_pre"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:visibility="gone" />
 </LinearLayout>

@@ -1,32 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/mh_zql_daily_task_bg" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include android:id="@+id/ll_top_layout" layout="@layout/mh_zql_common_white_header_layout"/>
-    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/ll_top_layout">
-        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
-            <ImageView android:id="@+id/ll_banner" android:background="@mipmap/mh_zql_banner_daily_task" android:layout_width="match_parent" android:layout_height="340dp"/>
-            <LinearLayout android:orientation="vertical" android:background="@drawable/mh_zql_white_shape_8" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="-80dp" android:layout_marginRight="@dimen/dp_16" android:layout_marginBottom="30dp" android:layout_below="@+id/ll_banner">
-                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp">
-                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/mh_zql_daily_space"/>
-                    <com.youchen.mhlite.widget.TextBoldStyle android:textSize="15sp" android:textColor="#ff333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6dp" android:layout_marginRight="6dp" android:text="每日推荐高额佣金"/>
-                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/mh_zql_daily_space"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mh_zql_daily_task_bg">
+
+    <include
+        android:id="@+id/ll_top_layout"
+        layout="@layout/mh_zql_common_white_header_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_top_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ll_banner"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:background="@mipmap/mh_zql_banner_daily_task" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_banner"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="-80dp"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/mh_zql_white_shape_8"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/mh_zql_daily_space" />
+
+                    <com.youchen.mhlite.widget.TextBoldStyle
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:text="每日推荐高额佣金"
+                        android:textColor="#ff333333"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/mh_zql_daily_space" />
                 </LinearLayout>
-                <RelativeLayout android:id="@+id/btn_share" android:layout_width="match_parent" android:layout_height="75dp">
-                    <ImageView android:id="@+id/img_logo" android:layout_width="48dp" android:layout_height="48dp" android:layout_marginLeft="@dimen/dp_16" android:src="@mipmap/mh_zql_day_recomend" android:layout_centerVertical="true"/>
-                    <RelativeLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:layout_toRightOf="@+id/img_logo" android:layout_centerVertical="true">
-                        <com.youchen.mhlite.widget.TextBoldStyle android:textSize="16sp" android:textColor="@color/color_FF333333" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="每日推荐高额佣金"/>
-                        <TextView android:textSize="13sp" android:textColor="#ff67696b" android:id="@+id/tv_remark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_5" android:text="每日精选任务，高额易赚" android:layout_below="@+id/tv_title"/>
+
+                <RelativeLayout
+                    android:id="@+id/btn_share"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp">
+
+                    <ImageView
+                        android:id="@+id/img_logo"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:src="@mipmap/mh_zql_day_recomend" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@+id/img_logo"
+                        android:orientation="vertical">
+
+                        <com.youchen.mhlite.widget.TextBoldStyle
+                            android:id="@+id/tv_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="每日推荐高额佣金"
+                            android:textColor="@color/color_FF333333"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_remark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_title"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:text="每日精选任务，高额易赚"
+                            android:textColor="#ff67696b"
+                            android:textSize="13sp" />
                     </RelativeLayout>
-                    <TextView android:textSize="@dimen/dp_16" android:textColor="#f54c2c" android:gravity="center" android:id="@+id/tv_status" android:background="@drawable/mh_zql_daily_status_0" android:layout_width="88dp" android:layout_height="36dp" android:layout_marginRight="@dimen/dp_16" android:text="去完成" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/tv_status"
+                        android:layout_width="88dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:background="@drawable/mh_zql_daily_status_0"
+                        android:gravity="center"
+                        android:text="去完成"
+                        android:textColor="#f54c2c"
+                        android:textSize="@dimen/dp_16" />
                 </RelativeLayout>
-                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
-                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/mh_zql_daily_space"/>
-                    <com.youchen.mhlite.widget.TextBoldStyle android:textSize="15sp" android:textColor="#ff333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6dp" android:layout_marginRight="6dp" android:text="完成任务额外奖励"/>
-                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/mh_zql_daily_space"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/mh_zql_daily_space" />
+
+                    <com.youchen.mhlite.widget.TextBoldStyle
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:text="完成任务额外奖励"
+                        android:textColor="#ff333333"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/mh_zql_daily_space" />
                 </LinearLayout>
-                <TextView android:textSize="13sp" android:textColor="@color/color_FF333333" android:layout_gravity="center_horizontal" android:id="@+id/tv_reward_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="今日已发放每日福利奖励 1288元"/>
-                <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcy_new_people" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+
+                <TextView
+                    android:id="@+id/tv_reward_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="今日已发放每日福利奖励 1288元"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="13sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcy_new_people"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
             </LinearLayout>
-            <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="190dp" android:layout_alignParentRight="true" layout="@layout/mh_zql_msg_roll"/>
+
+            <include
+                layout="@layout/mh_zql_msg_roll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="190dp" />
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 </RelativeLayout>

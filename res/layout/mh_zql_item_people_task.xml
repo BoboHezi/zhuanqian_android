@@ -1,20 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <ImageView android:id="@+id/iv_icon" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_16" android:src="@mipmap/mh_zql_user_default"/>
-    <ImageView android:id="@+id/iv_member" android:visibility="gone" android:layout_width="@dimen/dp_15" android:layout_height="@dimen/dp_15" android:layout_marginLeft="@dimen/dp_16" android:src="@mipmap/mh_zql_member_y" android:layout_alignRight="@+id/iv_icon" android:layout_alignBottom="@+id/iv_icon"/>
-    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13dp" android:layout_marginTop="@dimen/dp_15" android:layout_toRightOf="@+id/iv_icon">
-        <TextView android:textSize="@dimen/sp_15" android:textColor="@color/color_FF333333" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <ImageView android:id="@+id/bail_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:src="@mipmap/mh_zql_bail_icon"/>
-        <ImageView android:id="@+id/img_top" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:src="@mipmap/mh_zql_top"/>
-        <ImageView android:id="@+id/img_recommend" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:src="@mipmap/mh_zql_recommend"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:src="@mipmap/mh_zql_user_default" />
+
+    <ImageView
+        android:id="@+id/iv_member"
+        android:layout_width="@dimen/dp_15"
+        android:layout_height="@dimen/dp_15"
+        android:layout_alignRight="@+id/iv_icon"
+        android:layout_alignBottom="@+id/iv_icon"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:src="@mipmap/mh_zql_member_y"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_FF333333"
+            android:textSize="@dimen/sp_15" />
+
+        <ImageView
+            android:id="@+id/bail_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:src="@mipmap/mh_zql_bail_icon"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/img_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:src="@mipmap/mh_zql_top"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/img_recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:src="@mipmap/mh_zql_recommend"
+            android:visibility="gone" />
     </LinearLayout>
-    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_type" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_below="@+id/ll_title" android:layout_alignLeft="@+id/ll_title">
-        <TextView android:textSize="@dimen/sp_12" android:textColor="@color/color_FF999999" android:id="@+id/tv_type" android:background="@drawable/mh_zql_task_detail_type_label_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="" android:layout_centerVertical="true"/>
-        <TextView android:textSize="@dimen/sp_12" android:textColor="@color/color_FF999999" android:id="@+id/tv_project_name" android:background="@drawable/mh_zql_task_detail_type_label_gray" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:layout_toRightOf="@+id/tv_type" android:layout_below="@+id/tv_reminding" android:layout_centerVertical="true"/>
+
+    <LinearLayout
+        android:id="@+id/ll_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_title"
+        android:layout_alignLeft="@+id/ll_title"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/mh_zql_task_detail_type_label_gray"
+            android:text=""
+            android:textColor="@color/color_FF999999"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tv_project_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_reminding"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/tv_type"
+            android:background="@drawable/mh_zql_task_detail_type_label_gray"
+            android:textColor="@color/color_FF999999"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone" />
     </LinearLayout>
-    <TextView android:textSize="@dimen/sp_13" android:textColor="@color/color_FF999999" android:ellipsize="end" android:id="@+id/tv_reminding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="@dimen/dp_16" android:text="" android:maxLines="1" android:layout_below="@+id/ll_type" android:layout_alignLeft="@+id/ll_title"/>
-    <TextView android:textSize="@dimen/sp_14" android:textStyle="bold" android:textColor="@color/color_FF4343" android:id="@+id/tv_money_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_16" android:text="元" android:layout_alignTop="@+id/ll_title" android:layout_alignParentRight="true"/>
-    <TextView android:textSize="@dimen/sp_16" android:textStyle="bold" android:textColor="@color/color_FF4343" android:id="@+id/tv_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-2dp" android:layout_toLeftOf="@+id/tv_money_unit" android:layout_alignTop="@+id/ll_title"/>
-    <TextView android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_status" android:background="@drawable/mh_zql_task_public" android:layout_width="78dp" android:layout_height="@dimen/dp_30" android:layout_marginRight="@dimen/dp_16" android:text="去完成" android:layout_alignBottom="@+id/tv_reminding" android:layout_alignParentRight="true"/>
-    <View android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_15" android:layout_below="@+id/tv_reminding" style="@style/line"/>
+
+    <TextView
+        android:id="@+id/tv_reminding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_type"
+        android:layout_alignLeft="@+id/ll_title"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="@dimen/dp_16"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@color/color_FF999999"
+        android:textSize="@dimen/sp_13" />
+
+    <TextView
+        android:id="@+id/tv_money_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ll_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_16"
+        android:text="元"
+        android:textColor="@color/color_FF4343"
+        android:textSize="@dimen/sp_14"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ll_title"
+        android:layout_marginTop="-2dp"
+        android:layout_toLeftOf="@+id/tv_money_unit"
+        android:textColor="@color/color_FF4343"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="78dp"
+        android:layout_height="@dimen/dp_30"
+        android:layout_alignBottom="@+id/tv_reminding"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_16"
+        android:background="@drawable/mh_zql_task_public"
+        android:gravity="center"
+        android:text="去完成"
+        android:textColor="@color/white" />
+
+    <View
+        style="@style/line"
+        android:layout_below="@+id/tv_reminding"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_15" />
 </RelativeLayout>

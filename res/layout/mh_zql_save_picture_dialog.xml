@@ -1,8 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <TextView android:textSize="@dimen/dp_16" android:textColor="@color/color_FF333333" android:id="@+id/tv_share_pic" android:padding="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="分享"/>
-    <View android:background="@color/color_ffcecece" android:layout_width="match_parent" android:layout_height="1px"/>
-    <TextView android:textSize="@dimen/dp_16" android:textColor="@color/color_FF333333" android:id="@+id/tv_save_pic" android:padding="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="保存图片"/>
-    <View android:background="@color/color_ffcecece" android:layout_width="match_parent" android:layout_height="1px"/>
-    <TextView android:textSize="@dimen/dp_16" android:textColor="@color/color_FF333333" android:id="@+id/tv_qr" android:padding="@dimen/dp_16" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="识别二维码"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_share_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_16"
+        android:text="分享"
+        android:textColor="@color/color_FF333333"
+        android:textSize="@dimen/dp_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_ffcecece" />
+
+    <TextView
+        android:id="@+id/tv_save_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_16"
+        android:text="保存图片"
+        android:textColor="@color/color_FF333333"
+        android:textSize="@dimen/dp_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_ffcecece" />
+
+    <TextView
+        android:id="@+id/tv_qr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_16"
+        android:text="识别二维码"
+        android:textColor="@color/color_FF333333"
+        android:textSize="@dimen/dp_16"
+        android:visibility="gone" />
 </LinearLayout>

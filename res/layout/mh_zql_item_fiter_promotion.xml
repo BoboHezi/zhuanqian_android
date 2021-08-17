@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:paddingLeft="16dp" android:layout_width="wrap_content" android:layout_height="40dp">
-    <TextView android:textColor="@color/color_FF666666" android:id="@+id/tv_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="注册"/>
-    <ImageView android:id="@+id/img_sel" android:layout_width="16dp" android:layout_height="16dp" android:layout_marginLeft="10dp" android:src="@mipmap/mh_zql_sel_type" android:layout_toRightOf="@+id/tv_type"/>
-    <TextView android:id="@+id/bottom_line" android:background="@color/text_color_1" android:layout_width="wrap_content" android:layout_height="1dp" android:layout_marginTop="3dp" android:layout_below="@+id/tv_type" android:layout_alignLeft="@+id/tv_type" android:layout_alignRight="@+id/img_sel"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    android:gravity="center"
+    android:paddingLeft="16dp">
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:textColor="@color/color_FF666666" />
+
+    <ImageView
+        android:id="@+id/img_sel"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/tv_type"
+        android:src="@mipmap/mh_zql_sel_type" />
+
+    <TextView
+        android:id="@+id/bottom_line"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_type"
+        android:layout_alignLeft="@+id/tv_type"
+        android:layout_alignRight="@+id/img_sel"
+        android:layout_marginTop="3dp"
+        android:background="@color/text_color_1" />
 </RelativeLayout>

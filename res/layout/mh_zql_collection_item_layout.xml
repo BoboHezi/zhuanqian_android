@@ -1,12 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <RelativeLayout android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_17" android:layout_marginBottom="@dimen/dp_17">
-        <ImageView android:id="@+id/collection_item_header" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40"/>
-        <TextView android:textSize="@dimen/sp_13" android:textColor="@color/text_color_1" android:id="@+id/tv_type" android:background="@drawable/mh_zql_task_detail_type_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_17" android:layout_toRightOf="@+id/collection_item_header"/>
-        <TextView android:id="@+id/collection_item_title" android:layout_marginLeft="@dimen/dp_3" android:layout_toRightOf="@+id/tv_type" style="@style/tv_style_4"/>
-        <TextView android:textStyle="bold" android:textColor="@color/color_FF4343" android:id="@+id/tv_price" android:layout_alignParentRight="true" style="@style/tv_style_4"/>
-        <TextView android:textSize="14sp" android:textColor="#ff9d9c9c" android:id="@+id/collection_item_nuber" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_4" android:layout_toRightOf="@+id/collection_item_header" android:layout_below="@+id/collection_item_title"/>
-        <TextView android:textSize="13sp" android:textColor="#ff9d9c9c" android:id="@+id/collection_item_finish_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_17" android:layout_marginTop="@dimen/dp_4" android:layout_toRightOf="@+id/collection_item_nuber" android:layout_below="@+id/collection_item_title"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_16">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_17"
+        android:layout_marginBottom="@dimen/dp_17"
+        android:paddingRight="@dimen/dp_16">
+
+        <ImageView
+            android:id="@+id/collection_item_header"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_toRightOf="@+id/collection_item_header"
+            android:background="@drawable/mh_zql_task_detail_type_label"
+            android:textColor="@color/text_color_1"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/collection_item_title"
+            style="@style/tv_style_4"
+            android:layout_marginLeft="@dimen/dp_3"
+            android:layout_toRightOf="@+id/tv_type" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            style="@style/tv_style_4"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/color_FF4343"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/collection_item_nuber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/collection_item_title"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_toRightOf="@+id/collection_item_header"
+            android:textColor="#ff9d9c9c"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/collection_item_finish_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/collection_item_title"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_toRightOf="@+id/collection_item_nuber"
+            android:textColor="#ff9d9c9c"
+            android:textSize="13sp" />
     </RelativeLayout>
-    <View style="@style/line"/>
+
+    <View style="@style/line" />
 </LinearLayout>

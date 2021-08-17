@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
-    <TextView android:id="@+id/tv_step_number" style="@style/edit_step_number"/>
-    <com.youchen.mhlite.widget.CommonTextView android:textSize="@dimen/sp_15" android:textColor="@color/color_FF333333" android:id="@+id/tv_step_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_toRightOf="@+id/tv_step_number"/>
-    <TextView android:textSize="13sp" android:textColor="@color/color_FF333333" android:textColorHint="@color/color_BBBBBB" android:gravity="center_vertical" android:id="@+id/tv_content" android:background="@drawable/mh_zql_task_detail_input" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginTop="10dp" android:layout_marginRight="16dp" android:hint="请按要求输入文字内容" android:layout_below="@+id/tv_step_title" android:layout_alignLeft="@+id/tv_step_title"/>
-    <include android:layout_width="match_parent" android:layout_height="47dp" android:layout_marginTop="15dp" android:layout_below="@+id/tv_content" layout="@layout/mh_zql_item_edit_step_operate"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_step_number"
+        style="@style/edit_step_number" />
+
+    <com.youchen.mhlite.widget.CommonTextView
+        android:id="@+id/tv_step_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/tv_step_number"
+        android:textColor="@color/color_FF333333"
+        android:textSize="@dimen/sp_15" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tv_step_title"
+        android:layout_alignLeft="@+id/tv_step_title"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/mh_zql_task_detail_input"
+        android:gravity="center_vertical"
+        android:hint="请按要求输入文字内容"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/color_FF333333"
+        android:textColorHint="@color/color_BBBBBB"
+        android:textSize="13sp" />
+
+    <include
+        layout="@layout/mh_zql_item_edit_step_operate"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_below="@+id/tv_content"
+        android:layout_marginTop="15dp" />
 </RelativeLayout>

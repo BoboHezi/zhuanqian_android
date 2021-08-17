@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tl="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"> &gt; 
-    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/srl" android:layout_width="match_parent" android:layout_height="match_parent" tl:srlEnableAutoLoadMore="true">
-        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recy_order_task" android:layout_width="match_parent" android:layout_height="match_parent" android:nestedScrollingEnabled="false"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">&gt;
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tl:srlEnableAutoLoadMore="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recy_order_task"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="false" />
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 </LinearLayout>

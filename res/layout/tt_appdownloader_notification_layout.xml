@@ -1,18 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@+id/tt_appdownloader_root" android:padding="10dp" android:layout_width="match_parent" android:layout_height="64dp">
-    <ImageView android:layout_gravity="center" android:id="@+id/tt_appdownloader_icon" android:background="@drawable/tt_appdownloader_action_bg" android:duplicateParentState="false" android:layout_width="44dp" android:layout_height="44dp" android:layout_marginRight="18dp" android:scaleType="centerInside"/>
-    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
-        <TextView android:ellipsize="end" android:id="@+id/tt_appdownloader_desc" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/tt_appdownloader_style_notification_title"/>
-        <LinearLayout android:orientation="horizontal" android:id="@+id/tt_appdownloader_download_success" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/tt_appdownloader_desc">
-            <TextView android:ellipsize="end" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/tt_appdownloader_download_success_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12dp" android:singleLine="true" style="@style/tt_appdownloader_style_notification_text"/>
-            <TextView android:ellipsize="end" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/tt_appdownloader_download_success_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/tt_appdownloader_style_notification_text"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tt_appdownloader_root"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/tt_appdownloader_icon"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/tt_appdownloader_action_bg"
+        android:duplicateParentState="false"
+        android:scaleType="centerInside" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tt_appdownloader_desc"
+            style="@style/tt_appdownloader_style_notification_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:id="@+id/tt_appdownloader_download_success"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tt_appdownloader_desc"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tt_appdownloader_download_success_size"
+                style="@style/tt_appdownloader_style_notification_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical|center_horizontal|center"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/tt_appdownloader_download_success_status"
+                style="@style/tt_appdownloader_style_notification_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical|center_horizontal|center"
+                android:singleLine="true" />
         </LinearLayout>
-        <LinearLayout android:orientation="horizontal" android:id="@+id/tt_appdownloader_download_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/tt_appdownloader_desc">
-            <TextView android:textSize="10sp" android:ellipsize="end" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/tt_appdownloader_download_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:singleLine="true" style="@style/tt_appdownloader_style_notification_text"/>
-            <TextView android:textSize="10sp" android:ellipsize="end" android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/tt_appdownloader_download_status" android:layout_width="0dp" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1" style="@style/tt_appdownloader_style_notification_text"/>
+
+        <LinearLayout
+            android:id="@+id/tt_appdownloader_download_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tt_appdownloader_desc"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tt_appdownloader_download_size"
+                style="@style/tt_appdownloader_style_notification_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical|center_horizontal|center"
+                android:singleLine="true"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tt_appdownloader_download_status"
+                style="@style/tt_appdownloader_style_notification_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="right|center_vertical|center_horizontal|center"
+                android:singleLine="true"
+                android:textSize="10sp" />
         </LinearLayout>
-        <ProgressBar android:id="@+id/tt_appdownloader_download_progress" android:visibility="gone" android:layout_width="match_parent" android:layout_height="3dp" android:layout_marginTop="3dp" android:max="100" android:layout_below="@+id/tt_appdownloader_download_text" style="@style/tt_appdownloader_style_progress_bar"/>
-        <ProgressBar android:id="@+id/tt_appdownloader_download_progress_new" android:visibility="gone" android:layout_width="match_parent" android:layout_height="3dp" android:layout_marginTop="3dp" android:max="100" android:layout_below="@+id/tt_appdownloader_download_text" style="@style/tt_appdownloader_style_progress_bar_new"/>
+
+        <ProgressBar
+            android:id="@+id/tt_appdownloader_download_progress"
+            style="@style/tt_appdownloader_style_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/tt_appdownloader_download_text"
+            android:layout_marginTop="3dp"
+            android:max="100"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/tt_appdownloader_download_progress_new"
+            style="@style/tt_appdownloader_style_progress_bar_new"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/tt_appdownloader_download_text"
+            android:layout_marginTop="3dp"
+            android:max="100"
+            android:visibility="gone" />
     </RelativeLayout>
-    <TextView android:gravity="center" android:layout_gravity="right|center_vertical|center_horizontal|center" android:id="@+id/tt_appdownloader_action" android:background="@drawable/tt_appdownloader_action_bg" android:layout_width="55dp" android:layout_height="30dp" android:layout_marginLeft="18dp" android:layout_weight="0" style="@style/tt_appdownloader_style_notification_title"/>
+
+    <TextView
+        android:id="@+id/tt_appdownloader_action"
+        style="@style/tt_appdownloader_style_notification_title"
+        android:layout_width="55dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right|center_vertical|center_horizontal|center"
+        android:layout_marginLeft="18dp"
+        android:layout_weight="0"
+        android:background="@drawable/tt_appdownloader_action_bg"
+        android:gravity="center" />
 </LinearLayout>

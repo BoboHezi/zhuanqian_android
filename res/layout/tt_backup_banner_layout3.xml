@@ -1,21 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="7dp" android:layout_width="match_parent" android:layout_height="match_parent">
-    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <LinearLayout android:orientation="vertical" android:id="@+id/tt_bu_total_title" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
-            <TextView android:textSize="14sp" android:textColor="#ff3e3e3e" android:ellipsize="end" android:id="@+id/tt_bu_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
-            <TextView android:textSize="12sp" android:textColor="#ffaeaeae" android:ellipsize="end" android:id="@+id/tt_bu_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="7dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/tt_bu_total_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tt_bu_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#ff3e3e3e"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tt_bu_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#ffaeaeae"
+                android:textSize="12sp" />
         </LinearLayout>
-        <ImageView android:id="@+id/tt_bu_close" android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/tt_titlebar_close_press_for_dark" android:scaleType="fitXY"/>
+
+        <ImageView
+            android:id="@+id/tt_bu_close"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/tt_titlebar_close_press_for_dark" />
     </LinearLayout>
-    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
-        <FrameLayout android:id="@+id/tt_ad_content_layout" android:background="@android:color/background_dark" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="203">
-            <ImageView android:id="@+id/tt_bu_img" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerInside"/>
-            <include android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginBottom="5dp" layout="@layout/tt_backup_ad"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/tt_ad_content_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="203"
+            android:background="@android:color/background_dark">
+
+            <ImageView
+                android:id="@+id/tt_bu_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside" />
+
+            <include
+                layout="@layout/tt_backup_ad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp" />
         </FrameLayout>
-        <RelativeLayout android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="87">
-            <ImageView android:id="@+id/tt_bu_icon" android:layout_width="45dp" android:layout_height="45dp" android:scaleType="fitXY" android:layout_above="@+id/tt_bu_name" android:layout_centerHorizontal="true"/>
-            <TextView android:textSize="12sp" android:textColor="#ff3e3e3e" android:ellipsize="end" android:gravity="center" android:id="@+id/tt_bu_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:layout_marginBottom="15dp" android:maxLines="1" android:layout_above="@+id/tt_bu_download" android:layout_centerHorizontal="true"/>
-            <TextView android:textSize="12sp" android:textColor="@color/tt_white" android:ellipsize="end" android:gravity="center" android:id="@+id/tt_bu_download" android:background="@drawable/tt_backup_btn_1" android:paddingLeft="10dp" android:paddingTop="5dp" android:paddingRight="10dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15dp" android:text="@string/tt_video_download_apk" android:maxLines="1" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="87"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/tt_bu_icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_above="@+id/tt_bu_name"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tt_bu_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tt_bu_download"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="15dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="#ff3e3e3e"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tt_bu_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/tt_backup_btn_1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text="@string/tt_video_download_apk"
+                android:textColor="@color/tt_white"
+                android:textSize="12sp" />
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

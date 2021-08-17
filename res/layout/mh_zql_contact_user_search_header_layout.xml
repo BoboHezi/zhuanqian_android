@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/dp_53">
-    <TextView android:textSize="@dimen/sp_17" android:textColor="@color/color_FF333333" android:gravity="center" android:id="@+id/tv_cancel" android:paddingRight="@dimen/dp_18" android:layout_width="61dp" android:layout_height="match_parent" android:text="取消" android:layout_alignParentRight="true"/>
-    <com.youchen.mhlite.widget.ClearEditText android:textSize="@dimen/sp_13" android:textColor="@color/color_FF333333" android:textColorHint="@color/color_BBBBBB" android:layout_gravity="center_horizontal" android:id="@+id/et_search" android:background="@drawable/mh_zql_index_edittext_bg" android:paddingLeft="@dimen/dp_11" android:paddingRight="@dimen/dp_11" android:layout_width="match_parent" android:layout_height="@dimen/dp_33" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_13" android:layout_marginBottom="@dimen/dp_13" android:hint="请输入用户ID、用户名、手机号" android:singleLine="true" android:drawableLeft="@mipmap/mh_zql_search" android:drawablePadding="@dimen/dp_5" android:layout_toLeftOf="@+id/tv_cancel" android:imeOptions="actionSearch" android:textCursorDrawable="@drawable/mh_zql_common_cursor"/>
-    <View android:layout_alignParentBottom="true" style="@style/line"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_53"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="61dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingRight="@dimen/dp_18"
+        android:text="取消"
+        android:textColor="@color/color_FF333333"
+        android:textSize="@dimen/sp_17" />
+
+    <com.youchen.mhlite.widget.ClearEditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_33"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_13"
+        android:layout_marginBottom="@dimen/dp_13"
+        android:layout_toLeftOf="@+id/tv_cancel"
+        android:background="@drawable/mh_zql_index_edittext_bg"
+        android:drawableLeft="@mipmap/mh_zql_search"
+        android:drawablePadding="@dimen/dp_5"
+        android:hint="请输入用户ID、用户名、手机号"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="@dimen/dp_11"
+        android:paddingRight="@dimen/dp_11"
+        android:singleLine="true"
+        android:textColor="@color/color_FF333333"
+        android:textColorHint="@color/color_BBBBBB"
+        android:textCursorDrawable="@drawable/mh_zql_common_cursor"
+        android:textSize="@dimen/sp_13" />
+
+    <View
+        style="@style/line"
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>

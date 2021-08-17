@@ -1,8 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/tt_transparent" android:layout_width="match_parent" android:layout_height="match_parent">
-    <LinearLayout android:orientation="vertical" android:background="@drawable/tt_adinfo_dialog_corner_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_centerInParent="true">
-        <TextView android:textSize="14sp" android:textColor="#c0222435" android:gravity="center" android:layout_gravity="center" android:id="@+id/tt_dialog_content" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:layout_marginBottom="32dp" android:selectAllOnFocus="true" android:layout_alignParentLeft="true" android:layout_centerHorizontal="true" android:textIsSelectable="true"/>
-        <View android:background="#1e222435" android:layout_width="match_parent" android:layout_height="0.5dp"/>
-        <TextView android:textSize="15sp" android:textColor="#161823" android:gravity="center" android:layout_gravity="center" android:id="@+id/tt_button_ok" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/tt_label_ok" android:height="48dp" android:layout_alignParentRight="true"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tt_transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/tt_adinfo_dialog_corner_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tt_dialog_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:selectAllOnFocus="true"
+            android:textColor="#c0222435"
+            android:textIsSelectable="true"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#1e222435" />
+
+        <TextView
+            android:id="@+id/tt_button_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:height="48dp"
+            android:gravity="center"
+            android:text="@string/tt_label_ok"
+            android:textColor="#161823"
+            android:textSize="15sp" />
     </LinearLayout>
 </RelativeLayout>

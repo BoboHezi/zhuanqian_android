@@ -1,30 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <TextView android:textSize="17sp" android:textColor="@color/color_FF333333" android:ellipsize="end" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16" android:text="【信息流推广】传奇游戏寻找推广渠道，最好是今日头条和抖音。" android:maxLines="2"/>
-    <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="8dp">
-        <TextView android:textSize="14sp" android:textColor="#ff67696b" android:id="@+id/tv_comment_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="浏览数：9871"/>
-        <TextView android:background="@drawable/mh_zql_circle_3" android:layout_width="@dimen/dp_3" android:layout_height="@dimen/dp_3" android:layout_marginLeft="4dp" android:layout_marginRight="@dimen/dp_4"/>
-        <TextView android:textSize="14sp" android:textColor="#ff67696b" android:id="@+id/tv_look_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="浏览数：9871"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="【信息流推广】传奇游戏寻找推广渠道，最好是今日头条和抖音。"
+        android:textColor="@color/color_FF333333"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="浏览数：9871"
+            android:textColor="#ff67696b"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="@dimen/dp_3"
+            android:layout_height="@dimen/dp_3"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="@dimen/dp_4"
+            android:background="@drawable/mh_zql_circle_3" />
+
+        <TextView
+            android:id="@+id/tv_look_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="浏览数：9871"
+            android:textColor="#ff67696b"
+            android:textSize="14sp" />
     </LinearLayout>
-    <TextView android:textSize="13sp" android:textColor="#ffbcbfc2" android:id="@+id/tv_pb_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_8" android:text="发布于：2020/04/10 10:24"/>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_16">
-        <TextView android:textSize="13sp" android:textColor="#ffff4c3a" android:id="@+id/tv_status" android:background="@drawable/mh_zql_task_reason_shape" android:paddingLeft="6.5dp" android:paddingTop="@dimen/dp_3" android:paddingRight="6.5dp" android:paddingBottom="@dimen/dp_3" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="" android:layout_below="@+id/tv_reminding"/>
-        <TextView android:textSize="13sp" android:textColor="#ffff4c3a" android:id="@+id/tv_tip_lab" android:background="@drawable/mh_zql_task_reason_shape" android:paddingLeft="6.5dp" android:paddingTop="@dimen/dp_3" android:paddingRight="6.5dp" android:paddingBottom="@dimen/dp_3" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/tv_status" android:layout_below="@+id/tv_reminding"/>
+
+    <TextView
+        android:id="@+id/tv_pb_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="发布于：2020/04/10 10:24"
+        android:textColor="#ffbcbfc2"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_16">
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_reminding"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/mh_zql_task_reason_shape"
+            android:paddingLeft="6.5dp"
+            android:paddingTop="@dimen/dp_3"
+            android:paddingRight="6.5dp"
+            android:paddingBottom="@dimen/dp_3"
+            android:text=""
+            android:textColor="#ffff4c3a"
+            android:textSize="13sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_tip_lab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_reminding"
+            android:layout_toRightOf="@+id/tv_status"
+            android:background="@drawable/mh_zql_task_reason_shape"
+            android:paddingLeft="6.5dp"
+            android:paddingTop="@dimen/dp_3"
+            android:paddingRight="6.5dp"
+            android:paddingBottom="@dimen/dp_3"
+            android:text=""
+            android:textColor="#ffff4c3a"
+            android:textSize="13sp"
+            android:visibility="gone" />
     </LinearLayout>
-    <TextView android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_18" android:layout_marginRight="@dimen/dp_16" style="@style/line"/>
-    <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/dp_50">
-        <LinearLayout android:gravity="center_vertical" android:id="@+id/btn_option_1" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="wrap_content" android:layout_height="match_parent" android:minWidth="110dp">
-            <ImageView android:id="@+id/img_option_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/mh_zql_public_task_examine"/>
-            <TextView android:id="@+id/tv_option_1" android:text="" style="@style/btn_public_style"/>
+
+    <TextView
+        style="@style/line"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_18"
+        android:layout_marginRight="@dimen/dp_16" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/btn_option_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:minWidth="110dp"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16">
+
+            <ImageView
+                android:id="@+id/img_option_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/mh_zql_public_task_examine" />
+
+            <TextView
+                android:id="@+id/tv_option_1"
+                style="@style/btn_public_style"
+                android:text="" />
         </LinearLayout>
-        <LinearLayout android:gravity="center" android:id="@+id/btn_option_2" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="match_parent" android:minWidth="110dp" android:layout_centerHorizontal="true">
-            <ImageView android:id="@+id/img_option_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/mh_zql_public_task_upshelf"/>
-            <TextView android:id="@+id/tv_option_2" android:text="" style="@style/btn_public_style"/>
+
+        <LinearLayout
+            android:id="@+id/btn_option_2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:minWidth="110dp"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/img_option_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/mh_zql_public_task_upshelf" />
+
+            <TextView
+                android:id="@+id/tv_option_2"
+                style="@style/btn_public_style"
+                android:text="" />
         </LinearLayout>
-        <LinearLayout android:gravity="center" android:id="@+id/btn_option_3" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="50dp" android:minWidth="110dp" android:layout_alignParentRight="true">
-            <ImageView android:id="@+id/img_option_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/mh_zql_public_task_top"/>
-            <TextView android:id="@+id/tv_option_3" android:text="" style="@style/btn_public_style"/>
+
+        <LinearLayout
+            android:id="@+id/btn_option_3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:minWidth="110dp"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/img_option_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/mh_zql_public_task_top" />
+
+            <TextView
+                android:id="@+id/tv_option_3"
+                style="@style/btn_public_style"
+                android:text="" />
         </LinearLayout>
     </RelativeLayout>
-    <TextView style="@style/line_space"/>
+
+    <TextView style="@style/line_space" />
 </LinearLayout>

@@ -1,26 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@drawable/mh_zql_white_shape" android:paddingLeft="16dp" android:paddingTop="16dp" android:paddingRight="16dp" android:layout_width="312dp" android:layout_height="wrap_content" android:minWidth="312dp">
-    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="上传说明图"/>
-        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="步骤说明"/>
-        <LinearLayout android:orientation="vertical" android:background="@drawable/mh_zql_step_title_ed" android:layout_width="match_parent" android:layout_height="93dp" android:layout_marginTop="10dp">
-            <EditText android:gravity="top" android:id="@+id/ed_des" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="70dp" android:layout_marginLeft="8dp" android:layout_marginRight="13dp" android:hint="适用于需要图文说明，引导悬赏人的操作。输入内容，详细说明需要注意那些事项等!" style="@style/edit_step_content"/>
-            <LinearLayout android:gravity="right" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:textSize="@dimen/sp_13" android:textColor="@color/color_FF333333" android:id="@+id/tv_text_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0"/>
-                <TextView style="@style/tv_step_word_number"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="312dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/mh_zql_white_shape"
+    android:minWidth="312dp"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上传说明图"
+            android:textColor="@color/color_FF333333"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="步骤说明"
+            android:textColor="@color/color_FF333333"
+            android:textSize="@dimen/sp_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/mh_zql_step_title_ed"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/ed_des"
+                style="@style/edit_step_content"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="13dp"
+                android:gravity="top"
+                android:hint="适用于需要图文说明，引导悬赏人的操作。输入内容，详细说明需要注意那些事项等!"
+                android:paddingTop="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/tv_text_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView style="@style/tv_step_word_number" />
             </LinearLayout>
         </LinearLayout>
-        <LinearLayout android:orientation="horizontal" android:paddingTop="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
-            <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="说明图"/>
-            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
-                <ImageView android:id="@+id/img_sample" android:layout_width="107dp" android:layout_height="189dp" android:layout_marginLeft="10dp" android:src="@mipmap/mh_zql_step_camera_2"/>
-                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_load" android:background="#99000000" android:visibility="gone" android:layout_width="67dp" android:layout_height="67dp" android:layout_centerInParent="true">
-                    <com.mikhaellopez.circularprogressbar.CircularProgressBar android:id="@+id/pb_load" android:layout_width="30dp" android:layout_height="30dp" app:cpb_background_progressbar_color="#838383" app:cpb_background_progressbar_width="2dp" app:cpb_progress="0" app:cpb_progress_max="100" app:cpb_progressbar_color="#dcdcdc" app:cpb_progressbar_width="2dp"/>j 
-                    <TextView android:textSize="@dimen/sp_15" android:textColor="@color/white" android:id="@+id/tv_pb" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="说明图"
+                android:textColor="@color/color_FF333333"
+                android:textSize="@dimen/sp_16" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_sample"
+                    android:layout_width="107dp"
+                    android:layout_height="189dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/mh_zql_step_camera_2" />
+
+                <LinearLayout
+                    android:id="@+id/ll_load"
+                    android:layout_width="67dp"
+                    android:layout_height="67dp"
+                    android:layout_centerInParent="true"
+                    android:background="#99000000"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:id="@+id/pb_load"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:cpb_background_progressbar_color="#838383"
+                        app:cpb_background_progressbar_width="2dp"
+                        app:cpb_progress="0"
+                        app:cpb_progress_max="100"
+                        app:cpb_progressbar_color="#dcdcdc"
+                        app:cpb_progressbar_width="2dp" />j
+
+                    <TextView
+                        android:id="@+id/tv_pb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_15" />
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>
-        <include android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/mh_zql_add_step_operate_view"/>
+
+        <include
+            layout="@layout/mh_zql_add_step_operate_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
-    <ImageView android:id="@+id/btn_close" android:padding="4dp" android:layout_width="30dp" android:layout_height="30dp" android:src="@mipmap/mh_zql_close" android:layout_alignParentRight="true"/>
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:padding="4dp"
+        android:src="@mipmap/mh_zql_close" />
 </RelativeLayout>

@@ -1,27 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/mh_zql_white_shape" android:layout_width="321dp" android:layout_height="wrap_content">
-    <TextView android:textSize="@dimen/sp_18" android:textColor="@color/color_FF333333" android:gravity="center" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_18" android:layout_marginTop="@dimen/dp_18" android:text="划拨佣金"/>
-    <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_20" android:layout_marginRight="@dimen/dp_16">
-        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="佣金金额" android:minEms="4"/>
-        <EditText android:textSize="15sp" android:textColor="@color/color_FF333333" android:textColorHint="@color/color_FF999999" android:gravity="center_vertical" android:id="@+id/ed_money" android:background="@drawable/mh_zql_ed_shape_5" android:paddingLeft="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="@dimen/dp_5" android:hint="请输入佣金金额" android:maxLength="8" android:inputType="numberDecimal"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="321dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/mh_zql_white_shape"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_18"
+        android:layout_marginTop="@dimen/dp_18"
+        android:gravity="center"
+        android:text="划拨佣金"
+        android:textColor="@color/color_FF333333"
+        android:textSize="@dimen/sp_18" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_16"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="4"
+            android:text="佣金金额"
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/ed_money"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:background="@drawable/mh_zql_ed_shape_5"
+            android:gravity="center_vertical"
+            android:hint="请输入佣金金额"
+            android:inputType="numberDecimal"
+            android:maxLength="8"
+            android:paddingLeft="@dimen/dp_10"
+            android:textColor="@color/color_FF333333"
+            android:textColorHint="@color/color_FF999999"
+            android:textSize="15sp" />
     </LinearLayout>
-    <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_16">
-        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="服务费" android:minEms="4"/>
-        <TextView android:textSize="15sp" android:textColor="@color/color_FF999999" android:gravity="center_vertical" android:id="@+id/tv_commission_money" android:background="@drawable/mh_zql_ed_shape_5" android:paddingLeft="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="@dimen/dp_5" android:hint="服务费10%" android:maxLength="8"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_16"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="4"
+            android:text="服务费"
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_commission_money"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:background="@drawable/mh_zql_ed_shape_5"
+            android:gravity="center_vertical"
+            android:hint="服务费10%"
+            android:maxLength="8"
+            android:paddingLeft="@dimen/dp_10"
+            android:textColor="@color/color_FF999999"
+            android:textSize="15sp" />
     </LinearLayout>
-    <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_16">
-        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="合计" android:minEms="4"/>
-        <TextView android:textSize="16sp" android:textColor="@color/color_FF4343" android:id="@+id/tv_total_money" android:paddingLeft="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:text=""/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_16"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="4"
+            android:text="合计"
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_total_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_10"
+            android:text=""
+            android:textColor="@color/color_FF4343"
+            android:textSize="16sp" />
     </LinearLayout>
-    <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_16">
-        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="备注" android:minEms="4"/>
-        <EditText android:textSize="15sp" android:textColor="@color/color_FF333333" android:textColorHint="@color/color_FF999999" android:gravity="center_vertical" android:id="@+id/ed_remark" android:background="@drawable/mh_zql_ed_shape_5" android:paddingLeft="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="@dimen/dp_5" android:hint="请输入备注信息" android:singleLine="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_16"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="4"
+            android:text="备注"
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/ed_remark"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:background="@drawable/mh_zql_ed_shape_5"
+            android:gravity="center_vertical"
+            android:hint="请输入备注信息"
+            android:paddingLeft="@dimen/dp_10"
+            android:singleLine="true"
+            android:textColor="@color/color_FF333333"
+            android:textColorHint="@color/color_FF999999"
+            android:textSize="15sp" />
     </LinearLayout>
-    <TextView android:textSize="13sp" android:textColor="@color/color_FF999999" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_16" android:text="划拨佣金用于悬赏主和接单人双方协商后，悬 赏主发起划拨，划拨后从悬赏主账户余额转给 接单人，用于补单，补偿等。"/>
-    <TextView android:layout_marginTop="@dimen/dp_20" style="@style/line"/>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="@dimen/dp_48">
-        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF666666" android:gravity="center" android:id="@+id/tv_cancel" android:layout_width="0dp" android:layout_height="match_parent" android:text="取消" android:layout_weight="1"/>
-        <View android:layout_gravity="center" android:background="@color/color_ffdbdbdb" android:layout_width="1px" android:layout_height="23dp"/>
-        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/text_color_1" android:gravity="center" android:id="@+id/tv_reply" android:layout_width="0dp" android:layout_height="match_parent" android:text="确定" android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_16"
+        android:text="划拨佣金用于悬赏主和接单人双方协商后，悬 赏主发起划拨，划拨后从悬赏主账户余额转给 接单人，用于补单，补偿等。"
+        android:textColor="@color/color_FF999999"
+        android:textSize="13sp" />
+
+    <TextView
+        style="@style/line"
+        android:layout_marginTop="@dimen/dp_20" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/color_FF666666"
+            android:textSize="@dimen/sp_16" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="23dp"
+            android:layout_gravity="center"
+            android:background="@color/color_ffdbdbdb" />
+
+        <TextView
+            android:id="@+id/tv_reply"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/text_color_1"
+            android:textSize="@dimen/sp_16" />
     </LinearLayout>
 </LinearLayout>

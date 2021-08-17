@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_selected="false" android:drawable="@mipmap/mh_zql_sex_normal_btn"/>
-    <item android:state_selected="true" android:drawable="@mipmap/mh_zql_sex_select_btn"/>
+    <item
+        android:drawable="@mipmap/mh_zql_sex_normal_btn"
+        android:state_selected="false" />
+    <item
+        android:drawable="@mipmap/mh_zql_sex_select_btn"
+        android:state_selected="true" />
 </selector>

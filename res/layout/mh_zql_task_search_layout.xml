@@ -1,12 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include layout="@layout/mh_zql_task_search_header_layout"/>
-    <RelativeLayout android:id="@+id/rl_search_history" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_20" android:layout_marginRight="@dimen/dp_16" android:layout_marginBottom="@dimen/dp_4">
-        <TextView android:textSize="@dimen/sp_17" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="搜索历史"/>
-        <ImageView android:id="@+id/iv_delete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_delete" android:layout_alignParentRight="true"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/mh_zql_task_search_header_layout" />
+
+    <RelativeLayout
+        android:id="@+id/rl_search_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜索历史"
+            android:textColor="@color/color_FF333333"
+            android:textSize="@dimen/sp_17" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_delete" />
     </RelativeLayout>
-    <com.youchen.mhlite.widget.RecommendViewGroup android:id="@+id/recommendViewGroup" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/srl" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" app:srlEnableAutoLoadMore="true">
-        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_search_result" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <com.youchen.mhlite.widget.RecommendViewGroup
+        android:id="@+id/recommendViewGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:srlEnableAutoLoadMore="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_search_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 </LinearLayout>

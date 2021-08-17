@@ -1,44 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
-    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-        <LinearLayout android:id="@+id/ll_empty" android:layout_width="match_parent" android:layout_height="match_parent">
-            <include layout="@layout/mh_zql_no_data_layout"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/mh_zql_no_data_layout" />
         </LinearLayout>
-        <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
-            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:gravity="center" android:id="@+id/tv_check_count" android:layout_width="match_parent" android:layout_height="45dp"/>
-                <TextView android:background="#f3f3f3" android:layout_width="match_parent" android:layout_height="10dp"/>
-                <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_20" android:text="提交人信息"/>
-                <TextView android:textSize="13sp" android:textColor="#ff999999" android:id="@+id/tv_user_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="10dp" android:text="未填写"/>
-                <TextView android:background="#cecece" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_16"/>
-                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcy_img" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_check_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#f3f3f3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:text="提交人信息"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginTop="10dp"
+                    android:text="未填写"
+                    android:textColor="#ff999999"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:background="#cecece" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcy_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingLeft="@dimen/dp_16"
+                        android:paddingRight="@dimen/dp_16" />
                 </RelativeLayout>
-                <TextView android:background="#cecece" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_16"/>
-                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcy_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:background="#cecece" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcy_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
                 </RelativeLayout>
-                <TextView android:background="#f3f3f3" android:layout_width="match_parent" android:layout_height="@dimen/dp_10" android:layout_marginTop="@dimen/dp_10"/>
-                <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_16" android:text="驳回原因"/>
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_16">
-                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/mh_zql_reply"/>
-                    <TextView android:textColor="@color/color_FF333333" android:id="@+id/tv_reject_reason" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_5" android:text=""/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="#f3f3f3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:text="驳回原因"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_16">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/mh_zql_reply" />
+
+                    <TextView
+                        android:id="@+id/tv_reject_reason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:text=""
+                        android:textColor="@color/color_FF333333" />
                 </LinearLayout>
-                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcy_reject" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:nestedScrollingEnabled="false"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcy_reject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingLeft="@dimen/dp_16"
+                        android:paddingRight="@dimen/dp_16" />
                 </RelativeLayout>
-                <TextView android:layout_width="match_parent" android:layout_height="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
-        <LinearLayout android:background="@color/btn_task_dark" android:layout_width="match_parent" android:layout_height="45dp">
-            <TextView android:textSize="16sp" android:textColor="@color/text_color_btn" android:gravity="center" android:id="@+id/btn_to_up" android:layout_width="match_parent" android:layout_height="45dp" android:text="上一个" android:layout_weight="1"/>
-            <TextView android:layout_gravity="center_vertical" android:background="@color/white" android:layout_width="1px" android:layout_height="33dp"/>
-            <TextView android:textSize="16sp" android:textColor="@color/text_color_btn" android:gravity="center" android:id="@+id/btn_appeal" android:layout_width="match_parent" android:layout_height="45dp" android:text="申诉" android:layout_weight="1"/>
-            <TextView android:layout_gravity="center_vertical" android:background="@color/white" android:layout_width="1px" android:layout_height="33dp"/>
-            <TextView android:textSize="16sp" android:textColor="@color/text_color_btn" android:gravity="center" android:id="@+id/btn_to_commit" android:layout_width="match_parent" android:layout_height="45dp" android:text="重新提交" android:layout_weight="1"/>
-            <TextView android:layout_gravity="center_vertical" android:background="@color/white" android:layout_width="1px" android:layout_height="33dp"/>
-            <TextView android:textSize="16sp" android:textColor="@color/text_color_btn" android:gravity="center" android:id="@+id/btn_next" android:layout_width="match_parent" android:layout_height="45dp" android:text="下一个" android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/btn_task_dark">
+
+            <TextView
+                android:id="@+id/btn_to_up"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="上一个"
+                android:textColor="@color/text_color_btn"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="33dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/btn_appeal"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="申诉"
+                android:textColor="@color/text_color_btn"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="33dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/btn_to_commit"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="重新提交"
+                android:textColor="@color/text_color_btn"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="33dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="下一个"
+                android:textColor="@color/text_color_btn"
+                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
-    <TextView android:textSize="@dimen/sp_15" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@+id/btn_to_contact" android:background="@mipmap/mh_zql_drag" android:paddingTop="@dimen/dp_13" android:visibility="gone" android:layout_width="122dp" android:layout_height="51dp" android:layout_marginRight="@dimen/dp_16" android:layout_marginBottom="60dp" android:text="联系悬赏主" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:id="@+id/btn_to_contact"
+        android:layout_width="122dp"
+        android:layout_height="51dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginBottom="60dp"
+        android:background="@mipmap/mh_zql_drag"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/dp_13"
+        android:text="联系悬赏主"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_15"
+        android:visibility="gone" />
 </RelativeLayout>

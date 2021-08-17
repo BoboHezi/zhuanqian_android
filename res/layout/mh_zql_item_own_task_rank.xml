@@ -1,12 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <ImageView android:id="@+id/iv_icon" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="17dp" android:layout_marginRight="8dp" android:src="@mipmap/mh_zql_user_default"/>
-    <TextView android:textSize="@dimen/sp_15" android:textColor="@color/color_FF333333" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="dfdfdfdfdf" android:layout_toRightOf="@+id/iv_icon"/>
-    <TextView android:textSize="@dimen/sp_12" android:textColor="@color/color_FF999999" android:id="@+id/tv_tag" android:background="@drawable/mh_zql_task_detail_type_label_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_alignLeft="@+id/tv_title" android:layout_alignBottom="@+id/iv_icon"/>
-    <TextView android:textSize="@dimen/sp_13" android:textColor="@color/color_FF999999" android:ellipsize="end" android:id="@+id/tv_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_16" android:text="dfdfdfdf" android:maxLines="1" android:layout_alignBottom="@+id/iv_icon" android:layout_alignParentRight="true"/>
-    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/color_FF4343" android:id="@+id/tv_money_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_16" android:text="元" android:layout_alignTop="@+id/tv_title" android:layout_alignParentRight="true"/>
-    <TextView android:textSize="@dimen/sp_16" android:textStyle="bold" android:textColor="@color/color_FF4343" android:id="@+id/tv_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-2dp" android:layout_toLeftOf="@+id/tv_money_unit" android:layout_alignTop="@+id/tv_title"/>
-    <View android:id="@+id/line" android:background="#f3f3f3" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginLeft="16dp" android:layout_marginTop="17dp" android:layout_below="@+id/iv_icon"/>
-    <TextView android:textSize="15sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:id="@+id/btn_refresh" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="45dp" android:text="刷新新单" android:drawableLeft="@mipmap/mh_zql_public_task_refresh" android:drawableRight="@mipmap/mh_zql_me_arrow_icon" android:drawablePadding="6dp" android:layout_below="@+id/line"/>
-    <View android:background="#f3f3f3" android:layout_width="match_parent" android:layout_height="10dp" android:layout_below="@+id/btn_refresh"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="8dp"
+        android:src="@mipmap/mh_zql_user_default" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:text="dfdfdfdfdf"
+        android:textColor="@color/color_FF333333"
+        android:textSize="@dimen/sp_15" />
+
+    <TextView
+        android:id="@+id/tv_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_title"
+        android:layout_alignBottom="@+id/iv_icon"
+        android:background="@drawable/mh_zql_task_detail_type_label_gray"
+        android:text=""
+        android:textColor="@color/color_FF999999"
+        android:textSize="@dimen/sp_12" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_icon"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_16"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="dfdfdfdf"
+        android:textColor="@color/color_FF999999"
+        android:textSize="@dimen/sp_13" />
+
+    <TextView
+        android:id="@+id/tv_money_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_16"
+        android:text="元"
+        android:textColor="@color/color_FF4343"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_title"
+        android:layout_marginTop="-2dp"
+        android:layout_toLeftOf="@+id/tv_money_unit"
+        android:textColor="@color/color_FF4343"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/iv_icon"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="17dp"
+        android:background="#f3f3f3" />
+
+    <TextView
+        android:id="@+id/btn_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/line"
+        android:drawableLeft="@mipmap/mh_zql_public_task_refresh"
+        android:drawableRight="@mipmap/mh_zql_me_arrow_icon"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16"
+        android:text="刷新新单"
+        android:textColor="@color/color_FF333333"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/btn_refresh"
+        android:background="#f3f3f3" />
 </RelativeLayout>

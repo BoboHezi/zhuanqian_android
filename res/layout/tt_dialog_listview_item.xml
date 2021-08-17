@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true">
-    <TextView android:textSize="15sp" android:typeface="normal" android:textColor="#161823" android:gravity="top" android:layout_gravity="center" android:id="@+id/tt_item_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="11.5dp" android:layout_marginBottom="12dp"/>
-    <com.bytedance.sdk.openadsdk.dislike.ui.FlowLayout android:id="@+id/tt_item_tv_son" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-4dp"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tt_item_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="11.5dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="top"
+        android:textColor="#161823"
+        android:textSize="15sp"
+        android:typeface="normal" />
+
+    <com.bytedance.sdk.openadsdk.dislike.ui.FlowLayout
+        android:id="@+id/tt_item_tv_son"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-4dp"
+        android:background="#ffffff" />
 </LinearLayout>

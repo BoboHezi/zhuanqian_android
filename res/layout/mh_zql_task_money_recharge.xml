@@ -1,37 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/bg_activity" android:layout_width="match_parent" android:layout_height="match_parent">
-    <LinearLayout android:background="@mipmap/mh_zql_red_top" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-    <RelativeLayout android:id="@+id/rl_common_top" android:layout_width="match_parent" android:layout_height="@dimen/dp_47" android:layout_marginTop="@dimen/dp_25">
-        <LinearLayout android:id="@+id/ll_left" android:layout_width="@dimen/dp_100" android:layout_height="match_parent" android:layout_centerVertical="true">
-            <ImageView android:id="@+id/iv_left" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_10" android:src="@mipmap/mh_zql_back_white"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_activity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/mh_zql_red_top" />
+
+    <RelativeLayout
+        android:id="@+id/rl_common_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_47"
+        android:layout_marginTop="@dimen/dp_25">
+
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/iv_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@mipmap/mh_zql_back_white" />
         </LinearLayout>
-        <TextView android:textSize="@dimen/sp_17" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="250dp" android:text="任务币充值" android:singleLine="true" android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:maxWidth="250dp"
+            android:singleLine="true"
+            android:text="任务币充值"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_17" />
     </RelativeLayout>
-    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/tv_recharge" android:layout_below="@+id/rl_common_top">
-        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <LinearLayout android:orientation="vertical" android:background="@drawable/mh_zql_white_shape_8" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16">
-                <com.youchen.mhlite.widget.tablayout.CommonTabLayout android:id="@+id/tab_layout" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginLeft="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16" app:tl_indicator_color="@color/btn_task_dark" app:tl_indicator_height="2dp" app:tl_indicator_width="62dp" app:tl_textSelectColor="@color/color_FF333333" app:tl_textUnselectColor="@color/color_FF666666"/>
-                <View android:background="@color/color_ffdbdbdb" android:layout_marginLeft="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16" style="@style/line"/>
-                <LinearLayout android:orientation="vertical" android:id="@+id/ll_recharger_coupon" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10">
-                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcy_recharge_coupon" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_5" android:layout_marginRight="@dimen/dp_5" android:nestedScrollingEnabled="false"/>
-                    <TextView android:textSize="12sp" android:textColor="@color/color_FF999999" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_12" android:layout_marginRight="@dimen/dp_16" android:layout_marginBottom="@dimen/dp_20" android:text="说明：充值即送代金券，可用来购买置顶、刷新、推荐，代金券不支持提现。"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_recharge"
+        android:layout_below="@+id/rl_common_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:background="@drawable/mh_zql_white_shape_8"
+                android:orientation="vertical">
+
+                <com.youchen.mhlite.widget.tablayout.CommonTabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginRight="@dimen/dp_16"
+                    app:tl_indicator_color="@color/btn_task_dark"
+                    app:tl_indicator_height="2dp"
+                    app:tl_indicator_width="62dp"
+                    app:tl_textSelectColor="@color/color_FF333333"
+                    app:tl_textUnselectColor="@color/color_FF666666" />
+
+                <View
+                    style="@style/line"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:background="@color/color_ffdbdbdb" />
+
+                <LinearLayout
+                    android:id="@+id/ll_recharger_coupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcy_recharge_coupon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:nestedScrollingEnabled="false" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:layout_marginBottom="@dimen/dp_20"
+                        android:text="说明：充值即送代金券，可用来购买置顶、刷新、推荐，代金券不支持提现。"
+                        android:textColor="@color/color_FF999999"
+                        android:textSize="12sp" />
                 </LinearLayout>
-                <LinearLayout android:orientation="vertical" android:id="@+id/ll_normal_recharge" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16">
-                    <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="@dimen/dp_47" android:text="请输入充值金额"/>
-                    <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_30">
-                        <com.youchen.mhlite.widget.ClearEditText android:textSize="@dimen/sp_37" android:textColorHint="@color/color_cccccc" android:id="@+id/ed_recharge_amount" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="0.00" android:maxLength="6" android:inputType="numberDecimal" android:textCursorDrawable="@drawable/mh_zql_cursor_bg"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_normal_recharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_47"
+                        android:gravity="center_vertical"
+                        android:text="请输入充值金额"
+                        android:textColor="@color/color_FF333333"
+                        android:textSize="@dimen/sp_16" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_30"
+                        android:gravity="center_vertical">
+
+                        <com.youchen.mhlite.widget.ClearEditText
+                            android:id="@+id/ed_recharge_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:hint="0.00"
+                            android:inputType="numberDecimal"
+                            android:maxLength="6"
+                            android:textColorHint="@color/color_cccccc"
+                            android:textCursorDrawable="@drawable/mh_zql_cursor_bg"
+                            android:textSize="@dimen/sp_37" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-            <com.youchen.mhlite.widget.TextBoldStyle android:textSize="15sp" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_20" android:text="选择支付方式"/>
-            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-                <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcy_pay_method" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+
+            <com.youchen.mhlite.widget.TextBoldStyle
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="选择支付方式"
+                android:textColor="@color/color_FF333333"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcy_pay_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
             </RelativeLayout>
-            <LinearLayout android:orientation="vertical" android:padding="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_11">
-                <com.youchen.mhlite.widget.TextBoldStyle android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:id="@+id/tv_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="充值须知"/>
-                <TextView android:textSize="@dimen/sp_13" android:textColor="@color/color_FF999999" android:id="@+id/tv_charge_tip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:text="" android:lineSpacingExtra="2dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_11"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_16">
+
+                <com.youchen.mhlite.widget.TextBoldStyle
+                    android:id="@+id/tv_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="充值须知"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:id="@+id/tv_charge_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:lineSpacingExtra="2dp"
+                    android:text=""
+                    android:textColor="@color/color_FF999999"
+                    android:textSize="@dimen/sp_13" />
             </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-    <TextView android:enabled="true" android:textSize="@dimen/sp_17" android:textColor="@drawable/mh_zql_common_btn_bg" android:gravity="center" android:id="@+id/tv_recharge" android:background="@color/btn_task_dark" android:layout_width="match_parent" android:layout_height="@dimen/dp_48" android:text="充值" android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:id="@+id/tv_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_alignParentBottom="true"
+        android:background="@color/btn_task_dark"
+        android:enabled="true"
+        android:gravity="center"
+        android:text="充值"
+        android:textColor="@drawable/mh_zql_common_btn_bg"
+        android:textSize="@dimen/sp_17" />
 </RelativeLayout>

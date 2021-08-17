@@ -1,42 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include layout="@layout/mh_zql_common_white_header_layout"/>
-    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
-        <LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingLeft="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <RelativeLayout android:id="@+id/btn_person_head" android:layout_width="match_parent" android:layout_height="@dimen/dp_72">
-                <TextView android:text="头像" android:layout_centerVertical="true" style="@style/tv_style_1"/>
-                <ImageView android:id="@+id/img_person_head" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:layout_marginRight="@dimen/dp_10" android:layout_toLeftOf="@+id/img_person_head_arrow" android:layout_centerVertical="true"/>
-                <ImageView android:id="@+id/img_person_head_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_16" android:src="@mipmap/mh_zql_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/mh_zql_common_white_header_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_16">
+
+            <RelativeLayout
+                android:id="@+id/btn_person_head"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_72">
+
+                <TextView
+                    style="@style/tv_style_1"
+                    android:layout_centerVertical="true"
+                    android:text="头像" />
+
+                <ImageView
+                    android:id="@+id/img_person_head"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_toLeftOf="@+id/img_person_head_arrow" />
+
+                <ImageView
+                    android:id="@+id/img_person_head_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:src="@mipmap/mh_zql_arrow" />
             </RelativeLayout>
-            <View style="@style/line"/>
-            <RelativeLayout android:gravity="center_vertical" android:id="@+id/btn_person_weixin" android:layout_width="match_parent" android:layout_height="@dimen/dp_48">
-                <TextView android:id="@+id/tv_weixin_title" android:text="微信" style="@style/tv_style_1"/>
-                <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_FF999999" android:id="@+id/tv_weixin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:text="" android:layout_toRightOf="@+id/tv_weixin_title"/>
-                <TextView android:textColor="@color/color_FF333333" android:paddingRight="@dimen/dp_16" android:text="更换" android:drawableRight="@mipmap/mh_zql_arrow" android:drawablePadding="@dimen/dp_10" android:layout_alignParentRight="true" style="@style/tv_style_1"/>
+
+            <View style="@style/line" />
+
+            <RelativeLayout
+                android:id="@+id/btn_person_weixin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_weixin_title"
+                    style="@style/tv_style_1"
+                    android:text="微信" />
+
+                <TextView
+                    android:id="@+id/tv_weixin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_toRightOf="@+id/tv_weixin_title"
+                    android:text=""
+                    android:textColor="@color/color_FF999999"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    style="@style/tv_style_1"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@mipmap/mh_zql_arrow"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_16"
+                    android:text="更换"
+                    android:textColor="@color/color_FF333333" />
             </RelativeLayout>
-            <View style="@style/line"/>
-            <RelativeLayout android:orientation="vertical" android:id="@+id/ll_zfb" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
-                <TextView android:textSize="@dimen/sp_16" android:id="@+id/tv_zfb" android:text="支付宝" style="@style/tv_style_1"/>
-                <TextView android:id="@+id/tv_zfb_name_lab" android:layout_marginTop="@dimen/dp_15" android:text="姓名" android:layout_below="@+id/tv_zfb" style="@style/tv_style_1"/>
-                <TextView android:textColor="@color/color_FF999999" android:id="@+id/tv_zfb_name" android:layout_marginLeft="@dimen/dp_15" android:text="" android:layout_toRightOf="@+id/tv_zfb_name_lab" android:layout_alignTop="@+id/tv_zfb_name_lab" style="@style/tv_style_1"/>
-                <LinearLayout android:id="@+id/ll_zfb_account" android:paddingTop="@dimen/dp_15" android:paddingBottom="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/tv_zfb_name_lab">
-                    <TextView android:id="@+id/tv_zfb_account_lab" android:text="账号" style="@style/tv_style_1"/>
-                    <TextView android:textColor="@color/color_FF999999" android:id="@+id/tv_zfb_account" android:layout_marginLeft="@dimen/dp_15" android:text="" android:layout_weight="1" android:layout_toRightOf="@+id/tv_zfb_account_lab" android:layout_alignTop="@+id/tv_zfb_account_lab" style="@style/tv_style_1"/>
-                    <TextView android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_16" android:text="更换" android:drawableRight="@mipmap/mh_zql_arrow" android:drawablePadding="@dimen/dp_10" android:layout_alignTop="@+id/tv_zfb_account_lab" android:layout_alignParentRight="true"/>
+
+            <View style="@style/line" />
+
+            <RelativeLayout
+                android:id="@+id/ll_zfb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_zfb"
+                    style="@style/tv_style_1"
+                    android:text="支付宝"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:id="@+id/tv_zfb_name_lab"
+                    style="@style/tv_style_1"
+                    android:layout_below="@+id/tv_zfb"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:text="姓名" />
+
+                <TextView
+                    android:id="@+id/tv_zfb_name"
+                    style="@style/tv_style_1"
+                    android:layout_alignTop="@+id/tv_zfb_name_lab"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_toRightOf="@+id/tv_zfb_name_lab"
+                    android:text=""
+                    android:textColor="@color/color_FF999999" />
+
+                <LinearLayout
+                    android:id="@+id/ll_zfb_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_zfb_name_lab"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/tv_zfb_account_lab"
+                        style="@style/tv_style_1"
+                        android:text="账号" />
+
+                    <TextView
+                        android:id="@+id/tv_zfb_account"
+                        style="@style/tv_style_1"
+                        android:layout_alignTop="@+id/tv_zfb_account_lab"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_toRightOf="@+id/tv_zfb_account_lab"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textColor="@color/color_FF999999" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/tv_zfb_account_lab"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:drawableRight="@mipmap/mh_zql_arrow"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:text="更换"
+                        android:textColor="@color/color_FF333333" />
                 </LinearLayout>
-                <TextView android:textSize="13sp" android:textColor="@color/color_FF666666" android:id="@+id/tv_zfb_tip" android:layout_width="match_parent" android:layout_height="35dp" android:layout_marginRight="@dimen/dp_16" android:text="说明：支付宝只可更改账号，不能更改姓名。账号更改后，原支付宝账号不能再绑定其他账号使用。" android:layout_below="@+id/ll_zfb_account"/>
-                <View android:layout_marginTop="@dimen/dp_15" android:layout_below="@+id/tv_zfb_tip" style="@style/line"/>
+
+                <TextView
+                    android:id="@+id/tv_zfb_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/ll_zfb_account"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:text="说明：支付宝只可更改账号，不能更改姓名。账号更改后，原支付宝账号不能再绑定其他账号使用。"
+                    android:textColor="@color/color_FF666666"
+                    android:textSize="13sp" />
+
+                <View
+                    style="@style/line"
+                    android:layout_below="@+id/tv_zfb_tip"
+                    android:layout_marginTop="@dimen/dp_15" />
             </RelativeLayout>
-            <RelativeLayout android:gravity="center_vertical" android:id="@+id/btn_person_nickname" android:layout_width="match_parent" android:layout_height="@dimen/dp_48">
-                <TextView android:text="昵称" style="@style/tv_style_1"/>
-                <TextView android:textColor="@color/color_FF666666" android:id="@+id/tv_nickName" android:layout_marginRight="@dimen/dp_10" android:layout_toLeftOf="@+id/img_person_nickname_arrow" style="@style/tv_style_1"/>
-                <ImageView android:id="@+id/img_person_nickname_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_16" android:src="@mipmap/mh_zql_arrow" android:layout_alignParentRight="true"/>
+
+            <RelativeLayout
+                android:id="@+id/btn_person_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/tv_style_1"
+                    android:text="昵称" />
+
+                <TextView
+                    android:id="@+id/tv_nickName"
+                    style="@style/tv_style_1"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_toLeftOf="@+id/img_person_nickname_arrow"
+                    android:textColor="@color/color_FF666666" />
+
+                <ImageView
+                    android:id="@+id/img_person_nickname_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:src="@mipmap/mh_zql_arrow" />
             </RelativeLayout>
-            <View style="@style/line"/>
-            <TextView android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:id="@+id/btn_cancel_account" android:layout_width="match_parent" android:layout_height="@dimen/dp_48" android:layout_marginRight="@dimen/dp_16" android:text="注销账号" android:drawableRight="@mipmap/mh_zql_arrow"/>
-            <View style="@style/line"/>
-            <TextView android:textColor="@color/text_color_btn" android:gravity="center" android:layout_gravity="center" android:id="@+id/btn_setting_logout" android:background="@drawable/mh_zql_send_task" android:layout_width="280dp" android:layout_height="@dimen/dp_48" android:layout_marginTop="@dimen/dp_50" android:text="退出登录" style="@style/tv_style_1"/>
-            <TextView android:textColor="@color/text_color_btn" android:gravity="center" android:layout_gravity="center" android:id="@+id/btn_logout_other" android:background="@drawable/mh_zql_other_logout" android:layout_width="280dp" android:layout_height="@dimen/dp_48" android:layout_marginTop="@dimen/dp_30" android:text="退出其他设备" style="@style/tv_style_1"/>
+
+            <View style="@style/line" />
+
+            <TextView
+                android:id="@+id/btn_cancel_account"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginRight="@dimen/dp_16"
+                android:drawableRight="@mipmap/mh_zql_arrow"
+                android:gravity="center_vertical"
+                android:text="注销账号"
+                android:textColor="@color/color_FF333333" />
+
+            <View style="@style/line" />
+
+            <TextView
+                android:id="@+id/btn_setting_logout"
+                style="@style/tv_style_1"
+                android:layout_width="280dp"
+                android:layout_height="@dimen/dp_48"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_50"
+                android:background="@drawable/mh_zql_send_task"
+                android:gravity="center"
+                android:text="退出登录"
+                android:textColor="@color/text_color_btn" />
+
+            <TextView
+                android:id="@+id/btn_logout_other"
+                style="@style/tv_style_1"
+                android:layout_width="280dp"
+                android:layout_height="@dimen/dp_48"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_30"
+                android:background="@drawable/mh_zql_other_logout"
+                android:gravity="center"
+                android:text="退出其他设备"
+                android:textColor="@color/text_color_btn" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>

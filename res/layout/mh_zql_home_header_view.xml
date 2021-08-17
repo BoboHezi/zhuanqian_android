@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/home_top_task_recy_view"
-        android:background="@drawable/mh_zql_home_white_shape"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:background="@drawable/mh_zql_home_white_shape"
         android:nestedScrollingEnabled="false" />
 
     <com.youchen.mhlite.widget.qmui.QMUILinearLayout
-        android:orientation="vertical"
         android:id="@+id/ll_tt"
-        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp_16"
         android:layout_marginTop="10dp"
         android:layout_marginRight="16dp"
+        android:background="@color/white"
+        android:orientation="vertical"
         app:qmui_borderColor="@color/qmui_config_color_separator"
         app:qmui_outerNormalColor="@color/qmui_config_color_background"
         app:qmui_showBorderOnlyBeforeL="true">
@@ -35,10 +35,10 @@
         <TextView style="@style/line" />
 
         <LinearLayout
-            android:gravity="center_vertical"
-            android:paddingLeft="12dp"
             android:layout_width="match_parent"
-            android:layout_height="49dp">
+            android:layout_height="49dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -53,30 +53,30 @@
     </com.youchen.mhlite.widget.qmui.QMUILinearLayout>
 
     <LinearLayout
+        android:id="@+id/btn_more_money"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/white"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:id="@+id/btn_more_money"
-        android:background="@color/white"
         android:paddingLeft="16dp"
-        android:paddingRight="@dimen/dp_16"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_48">
+        android:paddingRight="@dimen/dp_16">
 
         <TextView
-            android:textSize="16sp"
-            android:textColor="@color/color_FF333333"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="推荐赚钱"
-            android:layout_weight="1" />
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
 
         <TextView
-            android:textSize="16sp"
-            android:textColor="@color/color_FF333333"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:drawableRight="@mipmap/mh_zql_me_arrow_icon"
+            android:gravity="center"
             android:text="新人新单"
-            android:drawableRight="@mipmap/mh_zql_me_arrow_icon" />
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
     </LinearLayout>
 </LinearLayout>

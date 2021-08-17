@@ -1,15 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include layout="@layout/mh_zql_common_white_header_layout"/>
-    <LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingLeft="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <RelativeLayout android:id="@+id/btn_sex_boy" android:layout_width="match_parent" android:layout_height="@dimen/dp_48">
-            <TextView android:text="男" android:layout_centerVertical="true" style="@style/tv_style_1"/>
-            <ImageView android:id="@+id/img_sex_boy" android:layout_width="@dimen/dp_24" android:layout_height="@dimen/dp_24" android:layout_marginRight="@dimen/dp_16" android:src="@drawable/mh_zql_sex_checkbox_style" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/mh_zql_common_white_header_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_16">
+
+        <RelativeLayout
+            android:id="@+id/btn_sex_boy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48">
+
+            <TextView
+                style="@style/tv_style_1"
+                android:layout_centerVertical="true"
+                android:text="男" />
+
+            <ImageView
+                android:id="@+id/img_sex_boy"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_16"
+                android:src="@drawable/mh_zql_sex_checkbox_style" />
         </RelativeLayout>
-        <View style="@style/line"/>
-        <RelativeLayout android:id="@+id/btn_sex_girl" android:layout_width="match_parent" android:layout_height="@dimen/dp_48">
-            <TextView android:text="女" android:layout_centerVertical="true" style="@style/tv_style_1"/>
-            <ImageView android:id="@+id/img_sex_girl" android:layout_width="@dimen/dp_24" android:layout_height="@dimen/dp_24" android:layout_marginRight="@dimen/dp_16" android:src="@drawable/mh_zql_sex_checkbox_style" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+
+        <View style="@style/line" />
+
+        <RelativeLayout
+            android:id="@+id/btn_sex_girl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48">
+
+            <TextView
+                style="@style/tv_style_1"
+                android:layout_centerVertical="true"
+                android:text="女" />
+
+            <ImageView
+                android:id="@+id/img_sex_girl"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_16"
+                android:src="@drawable/mh_zql_sex_checkbox_style" />
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

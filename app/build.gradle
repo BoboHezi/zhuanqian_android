@@ -51,4 +51,5 @@ dependencies {
     implementation 'com.github.Ye-Miao:StatusBarUtil:1.7.5'
     implementation 'com.jakewharton:butterknife:10.2.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+    implementation 'com.youth.banner:banner:1.4.10'
 }

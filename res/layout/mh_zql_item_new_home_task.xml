@@ -1,18 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:layout_width="170dp" android:layout_height="wrap_content">
-    <RelativeLayout android:orientation="vertical" android:background="@drawable/mh_zql_white_shape" android:paddingLeft="8dp" android:paddingTop="9dp" android:paddingRight="3dp" android:paddingBottom="4dp" android:layout_width="163dp" android:layout_height="wrap_content" android:layout_marginTop="8dp">
-        <ImageView android:id="@+id/img_user_header" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginTop="2dp" android:src="@mipmap/mh_zql_user_default"/>
-        <ImageView android:id="@+id/iv_member" android:visibility="gone" android:layout_width="@dimen/dp_12" android:layout_height="@dimen/dp_12" android:layout_alignRight="@+id/img_user_header" android:layout_alignBottom="@+id/img_user_header"/>
-        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="24dp" android:layout_height="wrap_content" android:layout_below="@+id/img_user_header">
-            <ImageView android:id="@+id/bail_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1dp" android:src="@mipmap/mh_zql_bail_icon"/>
-            <ImageView android:id="@+id/img_top" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1dp" android:src="@mipmap/mh_zql_top"/>
-            <ImageView android:id="@+id/img_recommend" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1dp" android:src="@mipmap/mh_zql_recommend"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="170dp"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+
+    <RelativeLayout
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/mh_zql_white_shape"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingTop="9dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="4dp">
+
+        <ImageView
+            android:id="@+id/img_user_header"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="2dp"
+            android:src="@mipmap/mh_zql_user_default" />
+
+        <ImageView
+            android:id="@+id/iv_member"
+            android:layout_width="@dimen/dp_12"
+            android:layout_height="@dimen/dp_12"
+            android:layout_alignRight="@+id/img_user_header"
+            android:layout_alignBottom="@+id/img_user_header"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_user_header"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/bail_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:src="@mipmap/mh_zql_bail_icon"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:src="@mipmap/mh_zql_top"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:src="@mipmap/mh_zql_recommend"
+                android:visibility="gone" />
         </LinearLayout>
-        <TextView android:textSize="@dimen/sp_15" android:textColor="@color/color_FF333333" android:ellipsize="end" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:text="关注微信公众号" android:maxLines="1" android:singleLine="true" android:layout_toRightOf="@+id/img_user_header"/>
-        <TextView android:textSize="@dimen/sp_11" android:textColor="@color/color_FF999999" android:ellipsize="end" android:id="@+id/tv_key" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="544544545" android:maxLines="1" android:layout_below="@+id/tv_title" android:layout_alignLeft="@+id/tv_title"/>
-        <TextView android:textSize="@dimen/sp_11" android:textColor="@color/color_FF999999" android:ellipsize="end" android:id="@+id/tv_reminding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="555555555" android:maxLines="1" android:layout_below="@+id/tv_key" android:layout_alignLeft="@+id/tv_title"/>
-        <TextView android:textSize="@dimen/sp_16" android:textStyle="bold" android:textColor="@color/color_FF4343" android:id="@+id/tv_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="6dp" android:text="55555555" android:layout_below="@+id/tv_reminding" android:layout_alignLeft="@+id/tv_key"/>
-        <TextView android:textSize="@dimen/sp_14" android:textStyle="bold" android:textColor="@color/color_FF4343" android:id="@+id/tv_money_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="1dp" android:text="元" android:layout_toRightOf="@+id/tv_money" android:layout_alignBottom="@+id/tv_money"/>
-        <ImageView android:id="@+id/img_packet" android:padding="5dp" android:visibility="visible" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginBottom="-3dp" android:src="@mipmap/mh_zql_packet_1" android:layout_alignBottom="@+id/tv_money" android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/img_user_header"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="关注微信公众号"
+            android:textColor="@color/color_FF333333"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tv_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_alignLeft="@+id/tv_title"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="544544545"
+            android:textColor="@color/color_FF999999"
+            android:textSize="@dimen/sp_11" />
+
+        <TextView
+            android:id="@+id/tv_reminding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_key"
+            android:layout_alignLeft="@+id/tv_title"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="555555555"
+            android:textColor="@color/color_FF999999"
+            android:textSize="@dimen/sp_11" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_reminding"
+            android:layout_alignLeft="@+id/tv_key"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp"
+            android:text="55555555"
+            android:textColor="@color/color_FF4343"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_money_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_money"
+            android:layout_marginBottom="1dp"
+            android:layout_toRightOf="@+id/tv_money"
+            android:text="元"
+            android:textColor="@color/color_FF4343"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_packet"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/tv_money"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="-3dp"
+            android:padding="5dp"
+            android:src="@mipmap/mh_zql_packet_1"
+            android:visibility="visible" />
     </RelativeLayout>
 </LinearLayout>

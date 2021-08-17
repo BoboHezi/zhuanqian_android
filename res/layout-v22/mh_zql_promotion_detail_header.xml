@@ -1,20 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16">
-        <ImageView android:id="@+id/img_user_header" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginTop="@dimen/dp_18" android:layout_marginRight="@dimen/dp_12" android:src="@mipmap/mh_zql_user_default"/>
-        <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/color_FF333333" android:id="@+id/tv_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:text="" android:layout_toRightOf="@+id/img_user_header"/>
-        <TextView android:textSize="13sp" android:textColor="#ffbcbfc2" android:id="@+id/tv_user_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_2" android:text="" android:layout_toRightOf="@+id/img_user_header" android:layout_below="@+id/tv_user_name"/>
-        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_5" android:src="@mipmap/mh_zql_store_realname" android:layout_toRightOf="@+id/tv_user_name" android:layout_alignTop="@+id/img_user_header"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16">
+
+        <ImageView
+            android:id="@+id/img_user_header"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="@dimen/dp_18"
+            android:layout_marginRight="@dimen/dp_12"
+            android:src="@mipmap/mh_zql_user_default" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_toRightOf="@+id/img_user_header"
+            android:text=""
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_user_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_user_name"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_toRightOf="@+id/img_user_header"
+            android:text=""
+            android:textColor="#ffbcbfc2"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/img_user_header"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_toRightOf="@+id/tv_user_name"
+            android:src="@mipmap/mh_zql_store_realname" />
     </RelativeLayout>
-    <TextView android:textSize="17sp" android:textColor="#ff262728" android:id="@+id/tv_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="16dp" android:layout_marginRight="@dimen/dp_16" android:text=""/>
-    <com.lzy.ninegrid.NineGridView android:id="@+id/img_nine_gd" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="8dp" android:layout_marginRight="@dimen/dp_16" app:ngv_gridSpacing="5dp" app:ngv_mode="1" app:ngv_singleImageSize="90dp"/>
-    <TextView android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_16" android:autoSizeMaxTextSize="@dimen/dp_10" style="@style/line"/>
-    <TextView android:textSize="13sp" android:textColor="#ff67696b" android:id="@+id/tv_pay_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16" android:text=""/>
-    <TextView android:textSize="13sp" android:textColor="#ff67696b" android:id="@+id/tv_pb_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="10dp" android:layout_marginRight="@dimen/dp_16" android:text=""/>
-    <TextView android:textSize="13sp" android:textColor="#ff67696b" android:id="@+id/tv_look_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="10dp" android:layout_marginRight="@dimen/dp_16" android:text=""/>
-    <TextView android:layout_marginTop="@dimen/dp_16" style="@style/line_space"/>
-    <com.youchen.mhlite.widget.TextBoldStyle android:textColor="#262728" android:gravity="center_vertical" android:id="@+id/tv_remark_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="14dp" android:text="详细说明" android:drawableLeft="@mipmap/mh_zql_task_detail_remark" android:drawablePadding="2dp"/>
-    <TextView android:textSize="15sp" android:textColor="@color/color_FF333333" android:id="@+id/tv_remark" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_16" android:layout_marginRight="9dp" android:text="" android:lineSpacingExtra="3dp"/>
-    <TextView android:layout_marginTop="@dimen/dp_16" style="@style/line_space"/>
-    <com.youchen.mhlite.widget.TextBoldStyle android:textSize="18sp" android:textColor="@color/color_FF333333" android:id="@+id/tv_comment_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_16" android:text=""/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="@dimen/dp_16"
+        android:text=""
+        android:textColor="#ff262728"
+        android:textSize="17sp" />
+
+    <com.lzy.ninegrid.NineGridView
+        android:id="@+id/img_nine_gd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="@dimen/dp_16"
+        app:ngv_gridSpacing="5dp"
+        app:ngv_mode="1"
+        app:ngv_singleImageSize="90dp" />
+
+    <TextView
+        style="@style/line"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:autoSizeMaxTextSize="@dimen/dp_10" />
+
+    <TextView
+        android:id="@+id/tv_pay_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:text=""
+        android:textColor="#ff67696b"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_pb_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="@dimen/dp_16"
+        android:text=""
+        android:textColor="#ff67696b"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_look_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="@dimen/dp_16"
+        android:text=""
+        android:textColor="#ff67696b"
+        android:textSize="13sp" />
+
+    <TextView
+        style="@style/line_space"
+        android:layout_marginTop="@dimen/dp_16" />
+
+    <com.youchen.mhlite.widget.TextBoldStyle
+        android:id="@+id/tv_remark_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="14dp"
+        android:drawableLeft="@mipmap/mh_zql_task_detail_remark"
+        android:drawablePadding="2dp"
+        android:gravity="center_vertical"
+        android:text="详细说明"
+        android:textColor="#262728" />
+
+    <TextView
+        android:id="@+id/tv_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginRight="9dp"
+        android:lineSpacingExtra="3dp"
+        android:text=""
+        android:textColor="@color/color_FF333333"
+        android:textSize="15sp" />
+
+    <TextView
+        style="@style/line_space"
+        android:layout_marginTop="@dimen/dp_16" />
+
+    <com.youchen.mhlite.widget.TextBoldStyle
+        android:id="@+id/tv_comment_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:text=""
+        android:textColor="@color/color_FF333333"
+        android:textSize="18sp" />
 </LinearLayout>

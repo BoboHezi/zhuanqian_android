@@ -1,10 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/btn_task_dark" android:layout_width="match_parent" android:layout_height="@dimen/dp_48">
-    <TextView android:textSize="@dimen/sp_17" android:textColor="@color/text_color_btn" android:gravity="center" android:id="@+id/tv_up" android:layout_width="0dp" android:layout_height="match_parent" android:text="上一个" android:layout_weight="1"/>
-    <View android:layout_gravity="center" android:background="@color/white" android:layout_width="1px" android:layout_height="33dp"/>
-    <TextView android:textSize="@dimen/sp_17" android:textColor="@color/text_color_btn" android:gravity="center" android:id="@+id/tv_turn_down" android:layout_width="0dp" android:layout_height="match_parent" android:text="驳回" android:layout_weight="1"/>
-    <View android:layout_gravity="center" android:background="@color/white" android:layout_width="1px" android:layout_height="33dp"/>
-    <TextView android:textSize="@dimen/sp_17" android:textColor="@color/text_color_btn" android:gravity="center" android:id="@+id/tv_pass" android:layout_width="0dp" android:layout_height="match_parent" android:text="通过" android:layout_weight="1"/>
-    <View android:layout_gravity="center" android:background="@color/white" android:layout_width="1px" android:layout_height="33dp"/>
-    <TextView android:textSize="@dimen/sp_17" android:textColor="@color/text_color_btn" android:gravity="center" android:id="@+id/tv_next" android:layout_width="0dp" android:layout_height="match_parent" android:text="下一个" android:layout_weight="1"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_48"
+    android:background="@color/btn_task_dark">
+
+    <TextView
+        android:id="@+id/tv_up"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="上一个"
+        android:textColor="@color/text_color_btn"
+        android:textSize="@dimen/sp_17" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="33dp"
+        android:layout_gravity="center"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_turn_down"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="驳回"
+        android:textColor="@color/text_color_btn"
+        android:textSize="@dimen/sp_17" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="33dp"
+        android:layout_gravity="center"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_pass"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="通过"
+        android:textColor="@color/text_color_btn"
+        android:textSize="@dimen/sp_17" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="33dp"
+        android:layout_gravity="center"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="下一个"
+        android:textColor="@color/text_color_btn"
+        android:textSize="@dimen/sp_17" />
 </LinearLayout>

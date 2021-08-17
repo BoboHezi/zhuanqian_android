@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <com.youchen.mhlite.widget.qmui.QMUILinearLayout android:orientation="vertical" android:id="@+id/ll_tt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="10dp" android:layout_marginRight="16dp" android:layout_marginBottom="@dimen/dp_10" app:qmui_borderColor="@color/qmui_config_color_separator" app:qmui_outerNormalColor="@color/qmui_config_color_separator" app:qmui_showBorderOnlyBeforeL="true">
-        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcy_task" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.youchen.mhlite.widget.qmui.QMUILinearLayout
+        android:id="@+id/ll_tt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:qmui_borderColor="@color/qmui_config_color_separator"
+        app:qmui_outerNormalColor="@color/qmui_config_color_separator"
+        app:qmui_showBorderOnlyBeforeL="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcy_task"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16" />
     </com.youchen.mhlite.widget.qmui.QMUILinearLayout>
 </LinearLayout>

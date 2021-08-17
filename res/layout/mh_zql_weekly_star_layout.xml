@@ -1,55 +1,325 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include layout="@layout/mh_zql_common_white_header_layout"/>
-    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
-        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <RelativeLayout android:background="@mipmap/mh_zql_banner_top" android:layout_width="match_parent" android:layout_height="313dp">
-                <TextView android:textSize="@dimen/sp_15" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_publish_rule" android:background="@drawable/mh_zql_act_rules_bg" android:layout_width="82dp" android:layout_height="27dp" android:layout_marginTop="@dimen/dp_16" android:text="活动规则" android:layout_alignParentRight="true"/>
-                <include layout="@layout/mh_zql_weekly_star_tab"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <include layout="@layout/mh_zql_common_white_header_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="313dp"
+                android:background="@mipmap/mh_zql_banner_top">
+
+                <TextView
+                    android:id="@+id/tv_publish_rule"
+                    android:layout_width="82dp"
+                    android:layout_height="27dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@drawable/mh_zql_act_rules_bg"
+                    android:gravity="center"
+                    android:text="活动规则"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_15" />
+
+                <include layout="@layout/mh_zql_weekly_star_tab" />
             </RelativeLayout>
-            <TextView android:textSize="@dimen/sp_17" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@+id/tv_rank_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:text="接单能手排行榜" android:drawableLeft="@mipmap/mh_zql_title_left" android:drawableRight="@mipmap/mh_zql_title_right" android:drawablePadding="@dimen/dp_4"/>
-            <LinearLayout android:id="@+id/ll_rank_first" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_13" android:layout_marginRight="@dimen/dp_13">
-                <RelativeLayout android:id="@+id/rl_nb_2" android:background="@mipmap/mh_zql_ranking" android:layout_width="111dp" android:layout_height="167dp" android:layout_marginTop="27dp">
-                    <ImageView android:id="@+id/iv_no_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:layout_marginTop="7dp" android:src="@mipmap/mh_zql_no2"/>
-                    <ImageView android:id="@+id/iv_user_icon_2" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:layout_marginLeft="@dimen/dp_4" android:layout_marginTop="@dimen/dp_20" android:layout_toRightOf="@+id/iv_no_2"/>
-                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/iv_user_icon_2">
-                        <TextView android:textSize="@dimen/sp_15" android:textColor="@color/colorPrimary" android:id="@+id/tv_amount_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp"/>
-                        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_FF666666" android:id="@+id/tv_name_2" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                        <TextView android:textSize="@dimen/sp_13" android:textColor="@color/color_FF999999" android:id="@+id/tv_user_id_2" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                        <TextView android:textSize="@dimen/sp_15" android:textColor="@color/colorPrimary" android:layout_gravity="right" android:id="@+id/tv_sales_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_13" android:layout_marginBottom="@dimen/dp_13"/>
+
+            <TextView
+                android:id="@+id/tv_rank_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_16"
+                android:drawableLeft="@mipmap/mh_zql_title_left"
+                android:drawableRight="@mipmap/mh_zql_title_right"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center_vertical"
+                android:text="接单能手排行榜"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_17" />
+
+            <LinearLayout
+                android:id="@+id/ll_rank_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_13"
+                android:layout_marginRight="@dimen/dp_13">
+
+                <RelativeLayout
+                    android:id="@+id/rl_nb_2"
+                    android:layout_width="111dp"
+                    android:layout_height="167dp"
+                    android:layout_marginTop="27dp"
+                    android:background="@mipmap/mh_zql_ranking">
+
+                    <ImageView
+                        android:id="@+id/iv_no_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="7dp"
+                        android:src="@mipmap/mh_zql_no2" />
+
+                    <ImageView
+                        android:id="@+id/iv_user_icon_2"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_toRightOf="@+id/iv_no_2" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/iv_user_icon_2"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_amount_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp_15" />
+
+                        <TextView
+                            android:id="@+id/tv_name_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_FF666666"
+                            android:textSize="@dimen/sp_14" />
+
+                        <TextView
+                            android:id="@+id/tv_user_id_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_FF999999"
+                            android:textSize="@dimen/sp_13" />
+
+                        <TextView
+                            android:id="@+id/tv_sales_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="@dimen/dp_13"
+                            android:layout_marginBottom="@dimen/dp_13"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp_15" />
                     </LinearLayout>
                 </RelativeLayout>
-                <RelativeLayout android:id="@+id/rl_nb_1" android:background="@mipmap/mh_zql_ranking" android:layout_width="111dp" android:layout_height="167dp" android:layout_marginTop="11dp">
-                    <ImageView android:id="@+id/iv_no_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:layout_marginTop="7dp" android:src="@mipmap/mh_zql_no1"/>
-                    <ImageView android:id="@+id/iv_user_icon_1" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:layout_marginLeft="@dimen/dp_4" android:layout_marginTop="@dimen/dp_20" android:layout_toRightOf="@+id/iv_no_1"/>
-                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/iv_user_icon_1">
-                        <TextView android:textSize="@dimen/sp_15" android:textColor="@color/colorPrimary" android:id="@+id/tv_amount_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp"/>
-                        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_FF666666" android:id="@+id/tv_name_1" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                        <TextView android:textSize="@dimen/sp_13" android:textColor="@color/color_FF999999" android:id="@+id/tv_user_id_1" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                        <TextView android:textSize="@dimen/sp_15" android:textColor="@color/colorPrimary" android:layout_gravity="right" android:id="@+id/tv_sales_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_13" android:layout_marginBottom="@dimen/dp_13"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_nb_1"
+                    android:layout_width="111dp"
+                    android:layout_height="167dp"
+                    android:layout_marginTop="11dp"
+                    android:background="@mipmap/mh_zql_ranking">
+
+                    <ImageView
+                        android:id="@+id/iv_no_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="7dp"
+                        android:src="@mipmap/mh_zql_no1" />
+
+                    <ImageView
+                        android:id="@+id/iv_user_icon_1"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_toRightOf="@+id/iv_no_1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_user_icon_1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_amount_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp_15" />
+
+                        <TextView
+                            android:id="@+id/tv_name_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_FF666666"
+                            android:textSize="@dimen/sp_14" />
+
+                        <TextView
+                            android:id="@+id/tv_user_id_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_FF999999"
+                            android:textSize="@dimen/sp_13" />
+
+                        <TextView
+                            android:id="@+id/tv_sales_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="@dimen/dp_13"
+                            android:layout_marginBottom="@dimen/dp_13"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp_15" />
                     </LinearLayout>
                 </RelativeLayout>
-                <RelativeLayout android:id="@+id/rl_nb_3" android:background="@mipmap/mh_zql_ranking" android:layout_width="111dp" android:layout_height="167dp" android:layout_marginTop="27dp">
-                    <ImageView android:id="@+id/iv_no_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:layout_marginTop="7dp" android:src="@mipmap/mh_zql_no3"/>
-                    <ImageView android:id="@+id/iv_user_icon_3" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:layout_marginLeft="@dimen/dp_4" android:layout_marginTop="@dimen/dp_20" android:layout_toRightOf="@+id/iv_no_3"/>
-                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/iv_user_icon_3">
-                        <TextView android:textSize="@dimen/sp_15" android:textColor="@color/colorPrimary" android:id="@+id/tv_amount_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp"/>
-                        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_FF666666" android:id="@+id/tv_name_3" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                        <TextView android:textSize="@dimen/sp_13" android:textColor="@color/color_FF999999" android:id="@+id/tv_user_id_3" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                        <TextView android:textSize="@dimen/sp_15" android:textColor="@color/colorPrimary" android:layout_gravity="right" android:id="@+id/tv_sales_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_13" android:layout_marginBottom="@dimen/dp_13"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_nb_3"
+                    android:layout_width="111dp"
+                    android:layout_height="167dp"
+                    android:layout_marginTop="27dp"
+                    android:background="@mipmap/mh_zql_ranking">
+
+                    <ImageView
+                        android:id="@+id/iv_no_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="7dp"
+                        android:src="@mipmap/mh_zql_no3" />
+
+                    <ImageView
+                        android:id="@+id/iv_user_icon_3"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_toRightOf="@+id/iv_no_3" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_user_icon_3"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_amount_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp_15" />
+
+                        <TextView
+                            android:id="@+id/tv_name_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_FF666666"
+                            android:textSize="@dimen/sp_14" />
+
+                        <TextView
+                            android:id="@+id/tv_user_id_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_FF999999"
+                            android:textSize="@dimen/sp_13" />
+
+                        <TextView
+                            android:id="@+id/tv_sales_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="@dimen/dp_13"
+                            android:layout_marginBottom="@dimen/dp_13"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp_15" />
                     </LinearLayout>
                 </RelativeLayout>
             </LinearLayout>
-            <com.youth.banner.Banner android:id="@+id/banner" android:visibility="gone" android:layout_width="match_parent" android:layout_height="67dp" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_16"/>
-            <LinearLayout android:orientation="vertical" android:background="@drawable/mh_zql_rank_user_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dp_16">
-                <LinearLayout android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="44dp">
-                    <TextView android:textSize="@dimen/sp_15" android:textColor="@color/colorPrimary" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:text="用户" android:layout_weight="5"/>
-                    <TextView android:textSize="@dimen/sp_15" android:textColor="@color/colorPrimary" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/tv_orders_title" android:layout_width="0dp" android:layout_height="wrap_content" android:text="接单数" android:layout_weight="3"/>
-                    <TextView android:textSize="@dimen/sp_15" android:textColor="@color/colorPrimary" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/tv_reward" android:layout_width="0dp" android:layout_height="wrap_content" android:text="奖励" android:layout_weight="2"/>
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_16"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_16"
+                android:background="@drawable/mh_zql_rank_user_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:paddingLeft="@dimen/dp_16"
+                    android:paddingRight="@dimen/dp_16">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="5"
+                        android:text="用户"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/tv_orders_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="接单数"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/tv_reward"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="奖励"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/sp_15" />
                 </LinearLayout>
-                <View android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginLeft="@dimen/dp_13" android:layout_marginRight="@dimen/dp_13"/>
-                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recy_rank" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_marginRight="@dimen/dp_13"
+                    android:background="@color/colorPrimary" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recy_rank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>

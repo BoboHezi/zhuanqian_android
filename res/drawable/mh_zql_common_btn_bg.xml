@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_enabled="true" android:drawable="@drawable/mh_zql_common_sel_btn_bg" android:color="@color/white"/>
-    <item android:drawable="@drawable/mh_zql_common_def_btn_bg" android:color="@color/color_BFBFBF"/>
+    <item
+        android:color="@color/white"
+        android:drawable="@drawable/mh_zql_common_sel_btn_bg"
+        android:state_enabled="true" />
+    <item
+        android:color="@color/color_BFBFBF"
+        android:drawable="@drawable/mh_zql_common_def_btn_bg" />
 </selector>

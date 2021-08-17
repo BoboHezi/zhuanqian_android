@@ -1,9 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:psd="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include layout="@layout/mh_zql_common_white_header_layout"/>
-    <TextView android:textSize="20sp" android:textColor="@color/color_FF333333" android:layout_gravity="center_horizontal" android:id="@+id/tv_tip_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" android:text="输入验证码"/>
-    <TextView android:textSize="15sp" android:textColor="@color/color_FF999999" android:layout_gravity="center_horizontal" android:id="@+id/tv_des" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="30dp"/>
-    <ImageView android:layout_gravity="center_horizontal" android:id="@+id/img_user_header" android:visibility="gone" android:layout_width="@dimen/dp_58" android:layout_height="@dimen/dp_58" android:layout_marginTop="@dimen/dp_30" android:layout_marginBottom="@dimen/dp_30" android:src="@mipmap/mh_zql_user_default"/>
-    <com.youchen.mhlite.widget.PayPsdInputView android:id="@+id/ed_verification" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:layout_marginLeft="45dp" android:layout_marginRight="45dp" android:inputType="number" psd:maxCount="6" psd:psdType="1"/>
-    <TextView android:textColor="@color/color_FF999999" android:layout_gravity="center_horizontal" android:id="@+id/tv_verification_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" android:text="验证码已发，56s后重新获取"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:psd="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/mh_zql_common_white_header_layout" />
+
+    <TextView
+        android:id="@+id/tv_tip_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="输入验证码"
+        android:textColor="@color/color_FF333333"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/color_FF999999"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_user_header"
+        android:layout_width="@dimen/dp_58"
+        android:layout_height="@dimen/dp_58"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:src="@mipmap/mh_zql_user_default"
+        android:visibility="gone" />
+
+    <com.youchen.mhlite.widget.PayPsdInputView
+        android:id="@+id/ed_verification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:inputType="number"
+        psd:maxCount="6"
+        psd:psdType="1" />
+
+    <TextView
+        android:id="@+id/tv_verification_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="验证码已发，56s后重新获取"
+        android:textColor="@color/color_FF999999" />
 </LinearLayout>

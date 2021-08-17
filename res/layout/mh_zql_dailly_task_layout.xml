@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include layout="@layout/mh_zql_common_white_header_layout"/>
-    <ImageView android:background="@mipmap/mh_zql_daily_task_banner" android:layout_width="match_parent" android:layout_height="167dp"/>
-    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recy_view" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/mh_zql_common_white_header_layout" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="167dp"
+        android:background="@mipmap/mh_zql_daily_task_banner" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recy_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp" />
 </LinearLayout>

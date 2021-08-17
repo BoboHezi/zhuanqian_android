@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/mh_zql_white_shape" android:layout_width="312dp" android:layout_height="wrap_content" android:minWidth="312dp">
-    <TextView android:textSize="17sp" android:textColor="@color/text_color_btn" android:gravity="center" android:background="@color/bg_top" android:layout_width="match_parent" android:layout_height="@dimen/dp_48" android:text="@string/agreement"/>
-    <TextView android:textColor="@color/color_FF333333" android:id="@+id/tv_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_20" android:layout_marginTop="@dimen/dp_20" android:layout_marginRight="@dimen/dp_20" android:layout_marginBottom="@dimen/dp_20"/>
-    <LinearLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/dp_32" android:layout_marginTop="10dp" android:layout_marginBottom="10dp">
-        <TextView android:textSize="16sp" android:textColor="@color/color_FF666666" android:gravity="center" android:id="@+id/btn_cancel" android:background="@drawable/mh_zql_feedback_bg_nor" android:layout_width="120dp" android:layout_height="match_parent" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:text="暂不使用"/>
-        <TextView android:textSize="16sp" android:textColor="@color/text_color_btn" android:gravity="center" android:id="@+id/btn_sure" android:background="@drawable/mh_zql_chat_btn_send" android:layout_width="120dp" android:layout_height="match_parent" android:text="同意"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="312dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/mh_zql_white_shape"
+    android:minWidth="312dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/bg_top"
+        android:gravity="center"
+        android:text="@string/agreement"
+        android:textColor="@color/text_color_btn"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:textColor="@color/color_FF333333" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_32"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/mh_zql_feedback_bg_nor"
+            android:gravity="center"
+            android:text="暂不使用"
+            android:textColor="@color/color_FF666666"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/btn_sure"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/mh_zql_chat_btn_send"
+            android:gravity="center"
+            android:text="同意"
+            android:textColor="@color/text_color_btn"
+            android:textSize="16sp" />
     </LinearLayout>
 </LinearLayout>

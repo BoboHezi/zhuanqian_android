@@ -1,10 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include layout="@layout/mh_zql_common_white_header_layout"/>
-    <ProgressBar android:id="@+id/progressBar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dp_4" android:progressDrawable="@drawable/mh_zql_progress_bg" style="?android:attr/progressBarStyleHorizontal"/>
-    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
-        <WebView android:id="@+id/webView" android:background="@color/color_f4f4f6" android:layout_width="match_parent" android:layout_height="match_parent"/>
-        <TextView android:textSize="15sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@+id/tv_tip" android:background="#000" android:paddingLeft="16dp" android:paddingRight="16dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/dp_30" android:layout_marginBottom="15dp" android:text="当前已经看了1/5，继续加油" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/mh_zql_common_white_header_layout" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_4"
+        android:progressDrawable="@drawable/mh_zql_progress_bg"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_f4f4f6" />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_30"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:background="#000"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="当前已经看了1/5，继续加油"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="gone" />
     </RelativeLayout>
-    <TextView android:textSize="13sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_count" android:background="@drawable/mh_zql_login_btn_pre" android:visibility="gone" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginLeft="16dp" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="16dp" android:layout_marginBottom="@dimen/dp_10"/>
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/mh_zql_login_btn_pre"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:visibility="gone" />
 </LinearLayout>

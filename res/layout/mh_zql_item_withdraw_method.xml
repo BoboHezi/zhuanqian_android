@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/mh_zql_bottom_line" android:paddingRight="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="@dimen/dp_72" android:layout_marginLeft="16dp">
-    <ImageView android:id="@+id/img_method" android:layout_width="40dp" android:layout_height="40dp" android:src="@mipmap/mh_zql_withdrawal_zfb"/>
-    <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="支付宝" android:layout_weight="1"/>
-    <ImageView android:layout_width="@dimen/dp_18" android:layout_height="@dimen/dp_18" android:src="@mipmap/mh_zql_me_arrow_icon" android:layout_alignParentRight="true"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_72"
+    android:layout_marginLeft="16dp"
+    android:background="@drawable/mh_zql_bottom_line"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingRight="@dimen/dp_10">
+
+    <ImageView
+        android:id="@+id/img_method"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/mh_zql_withdrawal_zfb" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:text="支付宝"
+        android:textColor="@color/color_FF333333"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="@dimen/dp_18"
+        android:layout_height="@dimen/dp_18"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/mh_zql_me_arrow_icon" />
 </LinearLayout>

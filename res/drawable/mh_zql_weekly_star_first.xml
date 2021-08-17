@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_selected="true" android:drawable="@drawable/mh_zql_weekly_star_first_pre"/>
-    <item android:drawable="@drawable/mh_zql_weekly_star_first_nor"/>
+    <item
+        android:drawable="@drawable/mh_zql_weekly_star_first_pre"
+        android:state_selected="true" />
+    <item android:drawable="@drawable/mh_zql_weekly_star_first_nor" />
 </selector>

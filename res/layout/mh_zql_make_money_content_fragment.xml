@@ -1,17 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tl="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_type" android:background="@color/color_f4f4f6" android:paddingRight="@dimen/dp_10" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dp_48"/>
-    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="35dp" android:layout_marginBottom="5dp">
-        <LinearLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/ll_filter_type" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
-            <TextView android:textSize="16sp" android:textColor="@drawable/mh_zql_task_filter_text_bg" android:id="@+id/tv_filter_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="筛选"/>
-            <ImageView android:id="@+id/img_filter_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2dp" android:src="@drawable/mh_zql_task_filter_arrow"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_type"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/color_f4f4f6"
+        android:paddingRight="@dimen/dp_10"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_filter_type"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom|center_vertical|center_horizontal|center">
+
+            <TextView
+                android:id="@+id/tv_filter_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="筛选"
+                android:textColor="@drawable/mh_zql_task_filter_text_bg"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img_filter_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:src="@drawable/mh_zql_task_filter_arrow" />
         </LinearLayout>
-        <TextView android:textSize="16sp" android:textColor="@drawable/mh_zql_task_filter_text_bg" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/tv_filter_1" android:layout_width="0dp" android:layout_height="match_parent" android:text="综合" android:layout_weight="1"/>
-        <TextView android:textSize="16sp" android:textColor="@drawable/mh_zql_task_filter_text_bg" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/tv_filter_2" android:layout_width="0dp" android:layout_height="match_parent" android:text="最新" android:layout_weight="1"/>
-        <TextView android:textSize="16sp" android:textColor="@drawable/mh_zql_task_filter_text_bg" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/tv_filter_3" android:layout_width="0dp" android:layout_height="match_parent" android:text="价格" android:layout_weight="1"/>
-        <TextView android:textSize="16sp" android:textColor="@drawable/mh_zql_task_filter_text_bg" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/tv_filter_4" android:layout_width="0dp" android:layout_height="match_parent" android:text="人气" android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_filter_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom|center_vertical|center_horizontal|center"
+            android:text="综合"
+            android:textColor="@drawable/mh_zql_task_filter_text_bg"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_filter_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom|center_vertical|center_horizontal|center"
+            android:text="最新"
+            android:textColor="@drawable/mh_zql_task_filter_text_bg"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_filter_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom|center_vertical|center_horizontal|center"
+            android:text="价格"
+            android:textColor="@drawable/mh_zql_task_filter_text_bg"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_filter_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom|center_vertical|center_horizontal|center"
+            android:text="人气"
+            android:textColor="@drawable/mh_zql_task_filter_text_bg"
+            android:textSize="16sp" />
     </LinearLayout>
-    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/refreshLayout" android:layout_width="match_parent" android:layout_height="match_parent" tl:srlEnableAutoLoadMore="true">
-        <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@+id/recy_view" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent"/>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tl:srlEnableAutoLoadMore="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recy_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical" />
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 </LinearLayout>
