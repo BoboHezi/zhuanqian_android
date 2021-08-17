@@ -1,16 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <RelativeLayout android:id="@+id/ll_member_info" android:background="@drawable/mh_zql_member_info_style" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="27dp" android:minHeight="179dp">
-        <LinearLayout android:id="@+id/ll_member_level" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
-            <TextView android:textSize="13sp" android:textColor="#ffce984e" android:id="@+id/tv_user" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="月卡会员" android:layout_toRightOf="@+id/img_member_flag"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_member_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/mh_zql_member_info_style"
+        android:minHeight="179dp">
+
+        <LinearLayout
+            android:id="@+id/ll_member_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/tv_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_toRightOf="@+id/img_member_flag"
+                android:text="月卡会员"
+                android:textColor="#ffce984e"
+                android:textSize="13sp" />
         </LinearLayout>
-        <LinearLayout android:gravity="bottom" android:id="@+id/ll_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_8" android:layout_below="@+id/ll_member_level" android:layout_centerHorizontal="true">
-            <TextView android:textSize="15sp" android:textColor="#ffce984e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="¥" android:layout_below="@+id/img_member_flag"/>
-            <TextView android:textSize="22sp" android:textColor="#ffce984e" android:id="@+id/tv_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="40" android:layout_below="@+id/img_member_flag"/>
-            <TextView android:textSize="15sp" android:textColor="#ffce984e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/月" android:layout_below="@+id/img_member_flag"/>
+
+        <LinearLayout
+            android:id="@+id/ll_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_member_level"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_8"
+            android:gravity="bottom">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_member_flag"
+                android:text="¥"
+                android:textColor="#ffce984e"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_member_flag"
+                android:text="40"
+                android:textColor="#ffce984e"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_member_flag"
+                android:text="/月"
+                android:textColor="#ffce984e"
+                android:textSize="15sp" />
         </LinearLayout>
-        <TextView android:textSize="12sp" android:textColor="#ff999999" android:gravity="center" android:id="@+id/tv_des" android:paddingLeft="13dp" android:paddingRight="@dimen/dp_13" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="开通立即生效，专享省钱权益" android:layout_below="@+id/ll_money" android:layout_centerHorizontal="true"/>
-        <TextView android:textSize="12sp" android:textColor="#ff764e1a" android:gravity="center" android:id="@+id/btn_share" android:background="@drawable/mh_zql_share_member" android:visibility="gone" android:layout_width="126dp" android:layout_height="32dp" android:layout_marginTop="@dimen/dp_10" android:text="立即分享，体验1天" android:layout_below="@+id/tv_des" android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_money"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:paddingLeft="13dp"
+            android:paddingRight="@dimen/dp_13"
+            android:text="开通立即生效，专享省钱权益"
+            android:textColor="#ff999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/btn_share"
+            android:layout_width="126dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/tv_des"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/mh_zql_share_member"
+            android:gravity="center"
+            android:text="立即分享，体验1天"
+            android:textColor="#ff764e1a"
+            android:textSize="12sp"
+            android:visibility="gone" />
     </RelativeLayout>
-    <TextView android:textSize="@dimen/sp_12" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_member_level" android:background="@mipmap/mh_zql_member_flag_orange" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:text="VIP初体验"/>
+
+    <TextView
+        android:id="@+id/tv_member_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@mipmap/mh_zql_member_flag_orange"
+        android:gravity="center"
+        android:text="VIP初体验"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12" />
 </RelativeLayout>

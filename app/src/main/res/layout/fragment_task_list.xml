@@ -23,14 +23,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="类型"
-                android:textColor="@drawable/yd_xo_task_filter_text_bg"
+                android:textColor="@drawable/zq_task_filter_text_bg"
                 android:textSize="16sp" />
 
             <ImageView
                 android:id="@+id/img_filter_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/yd_xo_task_filter_arrow" />
+                android:src="@drawable/zq_task_filter_arrow" />
         </LinearLayout>
 
         <TextView
@@ -40,7 +40,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="综合"
-            android:textColor="@drawable/yd_xo_task_filter_text_bg"
+            android:textColor="@drawable/zq_task_filter_text_bg"
             android:textSize="16sp" />
 
         <TextView
@@ -50,7 +50,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="最新"
-            android:textColor="@drawable/yd_xo_task_filter_text_bg"
+            android:textColor="@drawable/zq_task_filter_text_bg"
             android:textSize="16sp" />
 
         <TextView
@@ -60,7 +60,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="价格"
-            android:textColor="@drawable/yd_xo_task_filter_text_bg"
+            android:textColor="@drawable/zq_task_filter_text_bg"
             android:textSize="16sp" />
 
         <TextView
@@ -70,7 +70,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="人气"
-            android:textColor="@drawable/yd_xo_task_filter_text_bg"
+            android:textColor="@drawable/zq_task_filter_text_bg"
             android:textSize="16sp" />
     </LinearLayout>
 

@@ -1,10 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tl="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="#e3f7ff" android:layout_width="match_parent" android:layout_height="match_parent">
-    <RelativeLayout android:background="@drawable/mh_zql_sign_day_record_top" android:paddingTop="@dimen/dp_25" android:paddingBottom="6dp" android:layout_width="match_parent" android:layout_height="72dp">
-        <com.youchen.mhlite.widget.tablayout.CommonTabLayout android:layout_gravity="center_horizontal" android:id="@+id/commonTabLayout" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16" android:layout_centerHorizontal="true" tl:tl_iconVisible="false" tl:tl_indicator_color="@color/white" tl:tl_indicator_corner_radius="1dp" tl:tl_indicator_height="2dp" tl:tl_indicator_width="65dp" tl:tl_tab_width="90dp" tl:tl_textSelectColor="@color/white" tl:tl_textUnselectColor="@color/white" tl:tl_textsize="@dimen/sp_16"/>
-        <LinearLayout android:id="@+id/ll_left" android:layout_width="@dimen/dp_100" android:layout_height="match_parent">
-            <ImageView android:id="@+id/iv_left" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_10" android:src="@mipmap/mh_zql_back_white"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e3f7ff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@drawable/mh_zql_sign_day_record_top"
+        android:paddingTop="@dimen/dp_25"
+        android:paddingBottom="6dp">
+
+        <com.youchen.mhlite.widget.tablayout.CommonTabLayout
+            android:id="@+id/commonTabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            tl:tl_iconVisible="false"
+            tl:tl_indicator_color="@color/white"
+            tl:tl_indicator_corner_radius="1dp"
+            tl:tl_indicator_height="2dp"
+            tl:tl_indicator_width="65dp"
+            tl:tl_tab_width="90dp"
+            tl:tl_textSelectColor="@color/white"
+            tl:tl_textUnselectColor="@color/white"
+            tl:tl_textsize="@dimen/sp_16" />
+
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@mipmap/mh_zql_back_white" />
         </LinearLayout>
     </RelativeLayout>
-    <androidx.viewpager.widget.ViewPager android:id="@+id/view_pager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

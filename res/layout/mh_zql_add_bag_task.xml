@@ -1,72 +1,405 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include layout="@layout/mh_zql_common_white_header_layout"/>
-    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
-        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <RelativeLayout android:paddingLeft="@dimen/dp_16" android:paddingBottom="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:id="@+id/tv_lab_crowd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:text="任务基数"/>
-                <EditText android:textSize="16sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:id="@+id/ed_crowd_num" android:background="@color/transparent" android:paddingTop="@dimen/dp_15" android:paddingBottom="@dimen/dp_12" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:text="" android:hint="请输入任务基数" android:maxEms="6" android:layout_toRightOf="@+id/tv_lab_crowd" android:inputType="number"/>
-                <TextView android:textSize="13sp" android:textColor="#ffbbbbbb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="单个任务包所包含的任务数" android:layout_below="@+id/ed_crowd_num" android:layout_alignLeft="@+id/ed_crowd_num"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/mh_zql_common_white_header_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/tv_lab_crowd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:text="任务基数"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/ed_crowd_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_toRightOf="@+id/tv_lab_crowd"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="请输入任务基数"
+                    android:inputType="number"
+                    android:maxEms="6"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_12"
+                    android:text=""
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ed_crowd_num"
+                    android:layout_alignLeft="@+id/ed_crowd_num"
+                    android:text="单个任务包所包含的任务数"
+                    android:textColor="#ffbbbbbb"
+                    android:textSize="13sp" />
             </RelativeLayout>
-            <TextView android:layout_marginLeft="@dimen/dp_16" style="@style/line"/>
-            <LinearLayout android:paddingLeft="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="@dimen/dp_46">
-                <TextView android:id="@+id/tv_price" android:text="悬赏单价" style="@style/rl_task_title"/>
-                <EditText android:id="@+id/et_price" android:hint="请输入悬赏单价" android:singleLine="true" android:maxLength="8" android:layout_toRightOf="@+id/tv_price" android:inputType="numberDecimal" android:imeOptions="actionNext" style="@style/rl_task_content"/>
+
+            <TextView
+                style="@style/line"
+                android:layout_marginLeft="@dimen/dp_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_46"
+                android:paddingLeft="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    style="@style/rl_task_title"
+                    android:text="悬赏单价" />
+
+                <EditText
+                    android:id="@+id/et_price"
+                    style="@style/rl_task_content"
+                    android:layout_toRightOf="@+id/tv_price"
+                    android:hint="请输入悬赏单价"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLength="8"
+                    android:singleLine="true" />
             </LinearLayout>
-            <TextView android:layout_marginLeft="@dimen/dp_16" style="@style/line"/>
-            <LinearLayout android:paddingLeft="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="@dimen/dp_46">
-                <TextView android:text="悬赏数量" style="@style/rl_task_title"/>
-                <EditText android:id="@+id/et_task_count" android:text="1" android:hint="请输入悬赏数量" android:singleLine="true" android:maxLength="8" android:inputType="numberDecimal" android:imeOptions="actionNext" style="@style/rl_task_content"/>
+
+            <TextView
+                style="@style/line"
+                android:layout_marginLeft="@dimen/dp_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_46"
+                android:paddingLeft="@dimen/dp_16">
+
+                <TextView
+                    style="@style/rl_task_title"
+                    android:text="悬赏数量" />
+
+                <EditText
+                    android:id="@+id/et_task_count"
+                    style="@style/rl_task_content"
+                    android:hint="请输入悬赏数量"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLength="8"
+                    android:singleLine="true"
+                    android:text="1" />
             </LinearLayout>
-            <TextView android:layout_marginLeft="@dimen/dp_16" style="@style/line"/>
-            <LinearLayout android:id="@+id/ll_fee_money" style="@style/rl_task_row">
-                <TextView android:layout_gravity="center_vertical" android:id="@+id/tv_fee_title" android:text="预付赏金" style="@style/rl_task_title"/>
-                <TextView android:gravity="center_vertical" android:id="@+id/et_task_fee" android:layout_width="0dp" android:hint="悬赏佣金+服务费" android:layout_weight="1" style="@style/rl_task_content"/>
-                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/tv_to_member_center" android:paddingRight="16dp" android:layout_width="wrap_content" android:layout_height="match_parent">
-                    <TextView android:textSize="12sp" android:textColor="#ff999999" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="降低" android:drawableLeft="@mipmap/mh_zql_i2"/>
-                    <TextView android:textSize="12sp" android:textColor="#ff999999" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="服务费"/>
+
+            <TextView
+                style="@style/line"
+                android:layout_marginLeft="@dimen/dp_16" />
+
+            <LinearLayout
+                android:id="@+id/ll_fee_money"
+                style="@style/rl_task_row">
+
+                <TextView
+                    android:id="@+id/tv_fee_title"
+                    style="@style/rl_task_title"
+                    android:layout_gravity="center_vertical"
+                    android:text="预付赏金" />
+
+                <TextView
+                    android:id="@+id/et_task_fee"
+                    style="@style/rl_task_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="悬赏佣金+服务费" />
+
+                <LinearLayout
+                    android:id="@+id/tv_to_member_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/mh_zql_i2"
+                        android:gravity="center"
+                        android:text="降低"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="服务费"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
-            <TextView android:background="#f3f3f3" android:layout_width="match_parent" android:layout_height="10dp"/>
-            <RelativeLayout android:layout_marginTop="@dimen/dp_10" style="@style/rl_task_row">
-                <TextView android:id="@+id/tv_time" android:text="接单限时" style="@style/rl_task_title"/>
-                <TextView android:gravity="center_vertical" android:id="@+id/tv_limit_time" android:layout_width="match_parent" android:drawableRight="@mipmap/mh_zql_arrow" android:layout_toRightOf="@+id/tv_time" style="@style/rl_task_content"/>
-                <View android:layout_alignParentBottom="true" style="@style/line"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f3f3f3" />
+
+            <RelativeLayout
+                style="@style/rl_task_row"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    style="@style/rl_task_title"
+                    android:text="接单限时" />
+
+                <TextView
+                    android:id="@+id/tv_limit_time"
+                    style="@style/rl_task_content"
+                    android:layout_width="match_parent"
+                    android:layout_toRightOf="@+id/tv_time"
+                    android:drawableRight="@mipmap/mh_zql_arrow"
+                    android:gravity="center_vertical" />
+
+                <View
+                    style="@style/line"
+                    android:layout_alignParentBottom="true" />
             </RelativeLayout>
-            <RelativeLayout android:id="@+id/ll_check_time" android:background="@color/white" android:paddingLeft="@dimen/dp_16" android:paddingTop="@dimen/dp_12" android:paddingBottom="@dimen/dp_12" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:textColor="@color/color_FF333333" android:id="@+id/tv_check_time_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="审核时间" android:minEms="4"/>
-                <TextView android:textColor="@color/color_FF333333" android:id="@+id/tv_check_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_5" android:text="" android:layout_toRightOf="@+id/tv_check_time_title"/>
-                <TextView android:textSize="@dimen/sp_12" android:textColor="@color/color_FF4343" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="若未按时审核，悬赏单将自动通过，发放佣金！" android:layout_toRightOf="@+id/tv_check_time_title" android:layout_below="@+id/tv_check_time" android:layout_alignLeft="@+id/tv_check_time"/>
-                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_16" android:src="@mipmap/mh_zql_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+
+            <RelativeLayout
+                android:id="@+id/ll_check_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_12">
+
+                <TextView
+                    android:id="@+id/tv_check_time_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="4"
+                    android:text="审核时间"
+                    android:textColor="@color/color_FF333333" />
+
+                <TextView
+                    android:id="@+id/tv_check_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_toRightOf="@+id/tv_check_time_title"
+                    android:text=""
+                    android:textColor="@color/color_FF333333" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_check_time"
+                    android:layout_alignLeft="@+id/tv_check_time"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/tv_check_time_title"
+                    android:text="若未按时审核，悬赏单将自动通过，发放佣金！"
+                    android:textColor="@color/color_FF4343"
+                    android:textSize="@dimen/sp_12" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:src="@mipmap/mh_zql_arrow" />
             </RelativeLayout>
-            <TextView android:background="#f3f3f3" android:layout_width="match_parent" android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f3f3f3" />
+
             <LinearLayout style="@style/rl_task_row">
-                <TextView android:text="提交方式" style="@style/rl_task_title"/>
-                <TextView android:gravity="center_vertical" android:id="@+id/btn_commit_model" android:layout_width="match_parent" android:text="批量提交" android:drawableRight="@mipmap/mh_zql_arrow" android:layout_toRightOf="@+id/tv_time" style="@style/rl_task_content"/>
+
+                <TextView
+                    style="@style/rl_task_title"
+                    android:text="提交方式" />
+
+                <TextView
+                    android:id="@+id/btn_commit_model"
+                    style="@style/rl_task_content"
+                    android:layout_width="match_parent"
+                    android:layout_toRightOf="@+id/tv_time"
+                    android:drawableRight="@mipmap/mh_zql_arrow"
+                    android:gravity="center_vertical"
+                    android:text="批量提交" />
             </LinearLayout>
-            <View android:layout_marginLeft="@dimen/dp_16" style="@style/line"/>
-            <LinearLayout android:paddingLeft="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="@dimen/dp_46">
-                <TextView android:text="指定包工头" style="@style/rl_task_title"/>
-                <TextView android:gravity="center_vertical" android:id="@+id/et_to_user" android:layout_width="match_parent" android:hint="请选择指定包工头" android:drawableRight="@mipmap/mh_zql_arrow" style="@style/rl_task_content"/>
+
+            <View
+                style="@style/line"
+                android:layout_marginLeft="@dimen/dp_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_46"
+                android:paddingLeft="@dimen/dp_16">
+
+                <TextView
+                    style="@style/rl_task_title"
+                    android:text="指定包工头" />
+
+                <TextView
+                    android:id="@+id/et_to_user"
+                    style="@style/rl_task_content"
+                    android:layout_width="match_parent"
+                    android:drawableRight="@mipmap/mh_zql_arrow"
+                    android:gravity="center_vertical"
+                    android:hint="请选择指定包工头" />
             </LinearLayout>
-            <TextView android:background="#f3f3f3" android:layout_width="match_parent" android:layout_height="10dp"/>
-            <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:id="@+id/tv_task_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_16" android:text="登录送三元秒审"/>
-            <TextView android:textSize="12sp" android:textColor="@color/color_FF999999" android:id="@+id/tv_task_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="10dp" android:text="微信关注注册免费注册"/>
-            <View android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_16" style="@style/line"/>
-            <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/dp_16" android:paddingTop="@dimen/dp_12" android:paddingRight="@dimen/dp_16" android:paddingBottom="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:textSize="12sp" android:textColor="@color/color_FF999999" android:gravity="center_vertical" android:id="@+id/tv_device" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@mipmap/mh_zql_detail_mobile" android:drawablePadding="@dimen/dp_5" android:layout_weight="1"/>
-                <TextView android:textSize="12sp" android:textColor="@color/color_FF999999" android:gravity="center_vertical" android:id="@+id/tv_repeat_tip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:drawableLeft="@mipmap/mh_zql_detail_time" android:drawablePadding="@dimen/dp_5"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f3f3f3" />
+
+            <TextView
+                android:id="@+id/tv_task_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="登录送三元秒审"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_task_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="10dp"
+                android:text="微信关注注册免费注册"
+                android:textColor="@color/color_FF999999"
+                android:textSize="12sp" />
+
+            <View
+                style="@style/line"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_12"
+                android:paddingRight="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/tv_device"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@mipmap/mh_zql_detail_mobile"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_FF999999"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_repeat_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/mh_zql_detail_time"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/color_FF999999"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
             </LinearLayout>
-            <TextView android:background="#f3f3f3" android:layout_width="match_parent" android:layout_height="10dp"/>
-            <LinearLayout android:orientation="vertical" android:id="@+id/ll_task_explain" android:background="@color/white" android:paddingLeft="13dp" android:paddingTop="@dimen/dp_16" android:paddingRight="13dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
-                    <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@mipmap/mh_zql_detail_task_explain"/>
-                    <TextView android:textColor="@color/color_FF4343" android:gravity="center_vertical" android:id="@+id/tv_remark_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:text="任务说明："/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f3f3f3" />
+
+            <LinearLayout
+                android:id="@+id/ll_task_explain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="13dp"
+                android:paddingTop="@dimen/dp_16"
+                android:paddingRight="13dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@mipmap/mh_zql_detail_task_explain" />
+
+                    <TextView
+                        android:id="@+id/tv_remark_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="任务说明："
+                        android:textColor="@color/color_FF4343" />
                 </LinearLayout>
-                <com.youchen.mhlite.widget.TextBoldStyle android:textSize="@dimen/sp_14" android:textColor="@color/color_FF333333" android:id="@+id/tv_remark" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_28" android:layout_marginTop="@dimen/dp_10" android:text=""/>
+
+                <com.youchen.mhlite.widget.TextBoldStyle
+                    android:id="@+id/tv_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_28"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text=""
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="@dimen/sp_14" />
             </LinearLayout>
-            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcy_step" android:paddingLeft="13dp" android:paddingRight="13dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcy_step"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:paddingBottom="20dp" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-    <TextView android:textSize="17sp" android:textColor="@color/text_color_btn" android:gravity="center" android:id="@+id/btn_public" android:background="@color/btn_task_dark" android:layout_width="match_parent" android:layout_height="@dimen/dp_48" android:text="生成众包任务"/>
+
+    <TextView
+        android:id="@+id/btn_public"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/btn_task_dark"
+        android:gravity="center"
+        android:text="生成众包任务"
+        android:textColor="@color/text_color_btn"
+        android:textSize="17sp" />
 </LinearLayout>

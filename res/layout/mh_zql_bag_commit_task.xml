@@ -1,15 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include layout="@layout/mh_zql_common_white_header_layout"/>
-    <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="@dimen/dp_48" android:layout_marginLeft="@dimen/dp_16">
-        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_16" android:text="提交单数"/>
-        <EditText android:textSize="13sp" android:textColor="@color/color_FF333333" android:textColorHint="#ffbbbbbb" android:gravity="center_vertical" android:id="@+id/et_pass_count" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="请输入提交单数" android:maxLength="6" android:inputType="number"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/mh_zql_common_white_header_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_16"
+            android:text="提交单数"
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_pass_count"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="请输入提交单数"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textColor="@color/color_FF333333"
+            android:textColorHint="#ffbbbbbb"
+            android:textSize="13sp" />
     </LinearLayout>
-    <TextView android:layout_marginLeft="@dimen/dp_16" style="@style/line"/>
-    <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_16" android:text="备注"/>
-    <EditText android:textSize="13sp" android:textColor="@color/color_FF333333" android:textColorHint="#ffbbbbbb" android:gravity="center_vertical" android:id="@+id/et_remark" android:background="@color/transparent" android:padding="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="为了更好的解释提交，请添加相关文字说明" android:maxLength="500"/>
-    <TextView android:background="#f3f3f3" android:layout_width="match_parent" android:layout_height="10dp" android:layout_marginTop="@dimen/dp_10"/>
-    <ImageView android:id="@+id/btn_commit_file" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_16" android:src="@mipmap/mh_zql_bag_commit"/>
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
-    <TextView android:textSize="17sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_commit" android:background="@color/color_FF4343" android:layout_width="match_parent" android:layout_height="45dp" android:text="确认提交"/>
+
+    <TextView
+        style="@style/line"
+        android:layout_marginLeft="@dimen/dp_16" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:text="备注"
+        android:textColor="@color/color_FF333333"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:gravity="center_vertical"
+        android:hint="为了更好的解释提交，请添加相关文字说明"
+        android:maxLength="500"
+        android:padding="@dimen/dp_16"
+        android:textColor="@color/color_FF333333"
+        android:textColorHint="#ffbbbbbb"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="#f3f3f3" />
+
+    <ImageView
+        android:id="@+id/btn_commit_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:src="@mipmap/mh_zql_bag_commit" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/btn_commit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_FF4343"
+        android:gravity="center"
+        android:text="确认提交"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
 </LinearLayout>

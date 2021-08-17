@@ -1,14 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/color_FFFBF2" android:layout_width="match_parent" android:layout_height="match_parent">
-    <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@mipmap/mh_zql_packet_own_record" android:scaleType="centerCrop"/>
-    <RelativeLayout android:layout_width="307dp" android:layout_height="479dp" android:layout_centerInParent="true">
-        <ImageView android:layout_width="307dp" android:layout_height="479dp" android:src="@mipmap/mh_zql_send_packet"/>
-        <ImageView android:id="@+id/btn_close" android:padding="5dp" android:layout_width="35dp" android:layout_height="35dp" android:src="@mipmap/mh_zql_close4" android:layout_alignParentRight="true"/>
-        <ImageView android:id="@+id/img_user_header" android:layout_width="58dp" android:layout_height="58dp" android:layout_marginTop="55dp" android:src="@mipmap/mh_zql_user_default" android:layout_centerHorizontal="true"/>
-        <TextView android:textSize="17sp" android:textColor="#fffff1bc" android:id="@+id/tv_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_below="@+id/img_user_header" android:layout_centerHorizontal="true"/>
-        <TextView android:textSize="17sp" android:textColor="#fffff1bc" android:id="@+id/tv_send_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="给你发了一个红包" android:layout_below="@+id/tv_user_name" android:layout_centerHorizontal="true"/>
-        <TextView android:textSize="15sp" android:textColor="#87fff1bc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="完成任务领红包" android:layout_below="@+id/tv_send_tip" android:layout_centerHorizontal="true"/>
-        <ImageView android:id="@+id/btn_open_packet" android:layout_width="97dp" android:layout_height="97dp" android:layout_marginBottom="67dp" android:src="@mipmap/mh_zql_open_packet" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
-        <TextView android:textSize="15sp" android:textColor="#fff1bc" android:id="@+id/btn_look_record" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="19dp" android:text="查看领取详情  &gt;" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_FFFBF2">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/mh_zql_packet_own_record" />
+
+    <RelativeLayout
+        android:layout_width="307dp"
+        android:layout_height="479dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="307dp"
+            android:layout_height="479dp"
+            android:src="@mipmap/mh_zql_send_packet" />
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:src="@mipmap/mh_zql_close4" />
+
+        <ImageView
+            android:id="@+id/img_user_header"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp"
+            android:src="@mipmap/mh_zql_user_default" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_user_header"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:textColor="#fffff1bc"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_send_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_user_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="给你发了一个红包"
+            android:textColor="#fffff1bc"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_send_tip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="完成任务领红包"
+            android:textColor="#87fff1bc"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/btn_open_packet"
+            android:layout_width="97dp"
+            android:layout_height="97dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="67dp"
+            android:src="@mipmap/mh_zql_open_packet" />
+
+        <TextView
+            android:id="@+id/btn_look_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="19dp"
+            android:text="查看领取详情  &gt;"
+            android:textColor="#fff1bc"
+            android:textSize="15sp" />
     </RelativeLayout>
 </RelativeLayout>

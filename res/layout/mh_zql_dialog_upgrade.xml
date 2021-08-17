@@ -1,18 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-    <RelativeLayout android:background="@color/white" android:paddingBottom="16dp" android:layout_width="276dp" android:layout_height="wrap_content">
-        <RelativeLayout android:id="@+id/img_upgrade" android:background="@mipmap/mh_zql_upgrade" android:layout_width="match_parent" android:layout_height="160dp"/>
-        <TextView android:textSize="8sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_version_name" android:background="@drawable/mh_zql_upgrade_version" android:layout_width="32dp" android:layout_height="11dp" android:layout_marginTop="55dp" android:layout_marginRight="77dp" android:text="v1.2.3" android:layout_alignParentRight="true"/>
-        <ImageView android:id="@+id/btn_close" android:padding="@dimen/dp_5" android:visibility="gone" android:layout_width="40dp" android:layout_height="40dp" android:src="@mipmap/mh_zql_close4" android:layout_alignParentRight="true"/>
-        <LinearLayout android:orientation="vertical" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/img_upgrade">
-            <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="23dp" android:text="版本更新内容"/>
-            <TextView android:textSize="15sp" android:textColor="@color/color_FF666666" android:id="@+id/tv_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp"/>
-            <TextView android:textSize="16sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/btn_update" android:background="@mipmap/mh_zql_updata" android:visibility="gone" android:layout_width="187dp" android:layout_height="34dp" android:layout_marginTop="17dp" android:text="立即更新"/>
-            <LinearLayout android:layout_gravity="center_horizontal" android:id="@+id/ll_bottom" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="34dp" android:layout_marginTop="17dp">
-                <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF999999" android:gravity="center" android:id="@+id/btn_ignore" android:background="@drawable/mh_zql_upgrade_cancel" android:layout_width="100dp" android:layout_height="32dp" android:text="残忍拒绝"/>
-                <TextView android:textSize="@dimen/sp_16" android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_update_2" android:background="@mipmap/mh_zql_new_task_finish" android:layout_width="100dp" android:layout_height="32dp" android:layout_marginLeft="@dimen/dp_30" android:text="立即更新"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="276dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="16dp">
+
+        <RelativeLayout
+            android:id="@+id/img_upgrade"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@mipmap/mh_zql_upgrade" />
+
+        <TextView
+            android:id="@+id/tv_version_name"
+            android:layout_width="32dp"
+            android:layout_height="11dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="55dp"
+            android:layout_marginRight="77dp"
+            android:background="@drawable/mh_zql_upgrade_version"
+            android:gravity="center"
+            android:text="v1.2.3"
+            android:textColor="@color/white"
+            android:textSize="8sp" />
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/dp_5"
+            android:src="@mipmap/mh_zql_close4"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_upgrade"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:text="版本更新内容"
+                android:textColor="@color/color_FF333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/color_FF666666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/btn_update"
+                android:layout_width="187dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="17dp"
+                android:background="@mipmap/mh_zql_updata"
+                android:gravity="center"
+                android:text="立即更新"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="17dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/btn_ignore"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/mh_zql_upgrade_cancel"
+                    android:gravity="center"
+                    android:text="残忍拒绝"
+                    android:textColor="@color/color_FF999999"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:id="@+id/btn_update_2"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="@dimen/dp_30"
+                    android:background="@mipmap/mh_zql_new_task_finish"
+                    android:gravity="center"
+                    android:text="立即更新"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
             </LinearLayout>
-            <ProgressBar android:id="@+id/progress" android:visibility="gone" android:layout_width="match_parent" android:layout_height="34dp" android:layout_marginTop="17dp" android:progressDrawable="@drawable/mh_zql_common_progressdialog_progressbar_background" style="?android:attr/progressBarStyleHorizontal"/>
+
+            <ProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginTop="17dp"
+                android:progressDrawable="@drawable/mh_zql_common_progressdialog_progressbar_background"
+                android:visibility="gone" />
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

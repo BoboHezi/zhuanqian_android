@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-    <ImageView android:id="@+id/tt_splash_icon_image" android:layout_width="match_parent" android:layout_height="match_parent"/>
-    <FrameLayout android:id="@+id/tt_splash_icon_video_container" android:layout_width="match_parent" android:layout_height="match_parent"/>
-    <ImageView android:layout_gravity="top|right|center_vertical|center_horizontal|center|end" android:id="@+id/tt_splash_icon_close" android:background="@drawable/tt_dislike_icon" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginTop="10dp" android:scaleType="fitXY"/>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/tt_splash_icon_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/tt_splash_icon_video_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/tt_splash_icon_close"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="top|right|center_vertical|center_horizontal|center|end"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/tt_dislike_icon"
+        android:scaleType="fitXY" />
 </FrameLayout>

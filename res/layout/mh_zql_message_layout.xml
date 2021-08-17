@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_fff3f3f3" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include layout="@layout/mh_zql_common_white_header_layout"/>
-    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/srl" android:layout_width="match_parent" android:layout_height="match_parent" app:srlEnableAutoLoadMore="true">
-        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_message" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fff3f3f3"
+    android:orientation="vertical">
+
+    <include layout="@layout/mh_zql_common_white_header_layout" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadMore="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 </LinearLayout>

@@ -1,12 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-    <RelativeLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
-        <LinearLayout android:orientation="vertical" android:id="@+id/img_risk_tip" android:background="@mipmap/mh_zql_banner_invite" android:layout_width="267dp" android:layout_height="wrap_content" android:scaleType="fitStart"/>
-        <LinearLayout android:id="@+id/ll_check_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_20" android:layout_alignBottom="@+id/img_risk_tip" android:layout_centerHorizontal="true">
-            <ImageView android:id="@+id/img_check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mh_zql_invite_check_style"/>
-            <TextView android:textSize="13sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:text="不再提醒"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/img_risk_tip"
+            android:layout_width="267dp"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/mh_zql_banner_invite"
+            android:orientation="vertical"
+            android:scaleType="fitStart" />
+
+        <LinearLayout
+            android:id="@+id/ll_check_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/img_risk_tip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_20">
+
+            <ImageView
+                android:id="@+id/img_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mh_zql_invite_check_style" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:text="不再提醒"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
         </LinearLayout>
-        <TextView android:textSize="15sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_go" android:background="@drawable/mh_zql_btn_invite_shape" android:layout_width="120dp" android:layout_height="32dp" android:layout_marginTop="160dp" android:text="立即参加" android:layout_centerHorizontal="true"/>
-        <ImageView android:id="@+id/btn_close" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginTop="@dimen/dp_20" android:src="@mipmap/mh_zql_close_7" android:layout_below="@+id/img_risk_tip" android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/btn_go"
+            android:layout_width="120dp"
+            android:layout_height="32dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="160dp"
+            android:background="@drawable/mh_zql_btn_invite_shape"
+            android:gravity="center"
+            android:text="立即参加"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/img_risk_tip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_20"
+            android:src="@mipmap/mh_zql_close_7" />
     </RelativeLayout>
 </RelativeLayout>

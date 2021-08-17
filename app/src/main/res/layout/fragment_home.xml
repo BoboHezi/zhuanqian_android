@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="331dp"
-        android:background="@drawable/yd_xo_top_home" />
+        android:background="@drawable/zq_top_home" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginLeft="16dp"
-                android:background="@drawable/yd_xo_new_home_search"
+                android:background="@drawable/zq_new_home_search"
                 android:drawableLeft="@mipmap/yd_xo_search_1"
                 android:drawablePadding="2dp"
                 android:gravity="center_vertical"

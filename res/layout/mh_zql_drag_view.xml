@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/ll_order" android:background="@drawable/mh_zql_deal_bg" android:layout_width="51dp" android:layout_height="51dp">
-    <TextView android:textSize="@dimen/sp_11" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="待处理" android:drawableTop="@mipmap/mh_zql_deal" android:layout_centerInParent="true"/>
-    <TextView android:textSize="10sp" android:textColor="@color/white" android:id="@+id/tv_order_number" android:background="@drawable/mh_zql_red_home_shape" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:layout_marginRight="-2dp" android:text="" android:layout_alignRight="@+id/tv_status"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_order"
+    android:layout_width="51dp"
+    android:layout_height="51dp"
+    android:background="@drawable/mh_zql_deal_bg">
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableTop="@mipmap/mh_zql_deal"
+        android:gravity="center"
+        android:text="待处理"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_11" />
+
+    <TextView
+        android:id="@+id/tv_order_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tv_status"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="-2dp"
+        android:background="@drawable/mh_zql_red_home_shape"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:visibility="gone" />
 </RelativeLayout>

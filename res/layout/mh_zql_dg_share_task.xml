@@ -1,20 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-    <RelativeLayout android:orientation="vertical" android:background="@drawable/mh_zql_bg_share_task" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_24" android:layout_marginRight="@dimen/dp_24">
-        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/mh_zql_share_task_time"/>
-        <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_user_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:layout_centerHorizontal="true">
-            <ImageView android:id="@+id/img_logo" android:layout_width="24dp" android:layout_height="24dp"/>
-            <TextView android:textSize="13sp" android:textColor="@color/white" android:id="@+id/dialog_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="给你分享了一个任务"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginRight="@dimen/dp_24"
+        android:background="@drawable/mh_zql_bg_share_task"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/mh_zql_share_task_time" />
+
+        <LinearLayout
+            android:id="@+id/ll_user_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+
+            <TextView
+                android:id="@+id/dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="给你分享了一个任务"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
         </LinearLayout>
-        <LinearLayout android:orientation="vertical" android:background="@drawable/mh_zql_white_shape_18" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16" android:layout_marginBottom="@dimen/dp_32" android:layout_below="@+id/ll_user_info">
-            <TextView android:textSize="18sp" android:textColor="@color/color_FF333333" android:ellipsize="end" android:gravity="center" android:id="@+id/tv_task_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="" android:singleLine="true"/>
-            <TextView android:textSize="12sp" android:textColor="@color/color_FF999999" android:ellipsize="end" android:gravity="center" android:id="@+id/tv_type" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="" android:singleLine="true"/>
-            <LinearLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp">
-                <TextView android:textSize="16sp" android:textColor="#fff2532e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="¥"/>
-                <TextView android:textSize="32sp" android:textColor="#fff2532e" android:id="@+id/tv_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_user_info"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_32"
+            android:background="@drawable/mh_zql_white_shape_18"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_task_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/color_FF333333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/color_FF999999"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥"
+                    android:textColor="#fff2532e"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#fff2532e"
+                    android:textSize="32sp" />
             </LinearLayout>
-            <TextView android:textSize="15sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_go" android:background="@drawable/mh_zql_share_go_money" android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginLeft="@dimen/dp_20" android:layout_marginTop="@dimen/dp_20" android:layout_marginRight="@dimen/dp_20" android:layout_marginBottom="24dp" android:text="去赚钱"/>
+
+            <TextView
+                android:id="@+id/btn_go"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/mh_zql_share_go_money"
+                android:gravity="center"
+                android:text="去赚钱"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
         </LinearLayout>
     </RelativeLayout>
-    <ImageView android:id="@+id/btn_close" android:padding="@dimen/dp_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:src="@mipmap/mh_zql_close_7"/>
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:padding="@dimen/dp_8"
+        android:src="@mipmap/mh_zql_close_7" />
 </LinearLayout>

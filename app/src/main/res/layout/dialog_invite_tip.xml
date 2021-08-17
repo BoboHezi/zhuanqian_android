@@ -30,7 +30,7 @@
                 android:id="@+id/img_check"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/yd_xo_invite_check_style" />
+                android:src="@drawable/zq_invite_check_style" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
             android:layout_height="32dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="160dp"
-            android:background="@drawable/yd_xo_btn_invite_shape"
+            android:background="@drawable/zq_btn_invite_shape"
             android:gravity="center"
             android:text="立即参加"
             android:textColor="@color/white"

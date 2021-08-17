@@ -146,7 +146,7 @@
     </RelativeLayout>
 
     <include
-        layout="@layout/yd_xo_drag_view"
+        layout="@layout/float_drag_view"
         android:layout_width="51dp"
         android:layout_height="51dp"
         android:layout_alignParentRight="true"

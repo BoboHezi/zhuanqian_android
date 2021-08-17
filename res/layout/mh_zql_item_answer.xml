@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="@dimen/dp_10" android:paddingBottom="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <TextView android:textColor="@color/color_FF333333" android:id="@+id/tv_position" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-    <TextView android:textColor="@color/color_FF333333" android:id="@+id/tv_ask_check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10" android:text="" android:layout_weight="1"/>
-    <ImageView android:id="@+id/iv_is_right" android:visibility="invisible" android:layout_width="@dimen/dp_20" android:layout_height="@dimen/dp_20" android:src="@mipmap/checkbox_checked"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/dp_10"
+    android:paddingBottom="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/tv_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_FF333333" />
+
+    <TextView
+        android:id="@+id/tv_ask_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_weight="1"
+        android:text=""
+        android:textColor="@color/color_FF333333" />
+
+    <ImageView
+        android:id="@+id/iv_is_right"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:src="@mipmap/checkbox_checked"
+        android:visibility="invisible" />
 </LinearLayout>

@@ -7,17 +7,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="331dp"
-        android:background="@drawable/yd_xo_top_home" />
+        android:background="@drawable/zq_top_home" />
 
     <TextView
         android:id="@id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:text="发现"
         android:textColor="@color/white"
-        android:textSize="20sp" />
+        android:textSize="17sp" />
 
     <LinearLayout
         android:layout_width="match_parent"

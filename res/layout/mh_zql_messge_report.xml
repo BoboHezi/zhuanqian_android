@@ -1,27 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include layout="@layout/mh_zql_common_white_header_layout"/>
-    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
-        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <LinearLayout android:id="@+id/ll_report_id" android:background="@drawable/mh_zql_bottom_line" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="16dp">
-                <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="被举报人ID" android:minEms="5"/>
-                <TextView android:textSize="14sp" android:textColor="@color/color_FF333333" android:textColorHint="#ffbcbcbc" android:gravity="center_vertical" android:id="@+id/ed_user_id" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_10" android:hint=""/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/mh_zql_common_white_header_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_report_id"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/mh_zql_bottom_line">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:minEms="5"
+                    android:text="被举报人ID"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/ed_user_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:textColor="@color/color_FF333333"
+                    android:textColorHint="#ffbcbcbc"
+                    android:textSize="14sp" />
             </LinearLayout>
-            <LinearLayout android:id="@+id/ll_report_task" android:background="@drawable/mh_zql_bottom_line" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="16dp">
-                <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="任务编号" android:minEms="5"/>
-                <TextView android:textSize="14sp" android:textColor="@color/color_FF333333" android:textColorHint="#ffbcbcbc" android:gravity="center_vertical" android:id="@+id/ed_task_no" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10" android:hint=" " android:drawableRight="@mipmap/mh_zql_arrow"/>
+
+            <LinearLayout
+                android:id="@+id/ll_report_task"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/mh_zql_bottom_line">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:minEms="5"
+                    android:text="任务编号"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/ed_task_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@color/transparent"
+                    android:drawableRight="@mipmap/mh_zql_arrow"
+                    android:gravity="center_vertical"
+                    android:hint=" "
+                    android:textColor="@color/color_FF333333"
+                    android:textColorHint="#ffbcbcbc"
+                    android:textSize="14sp" />
             </LinearLayout>
-            <LinearLayout android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="50dp">
-                <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="举报类型" android:minEms="5"/>
-                <TextView android:textSize="14sp" android:textColor="@color/color_FF333333" android:textColorHint="#ffbcbcbc" android:gravity="center_vertical" android:id="@+id/tv_report_type" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10" android:hint="请选择举报类型" android:drawableRight="@mipmap/mh_zql_arrow"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:minEms="5"
+                    android:text="举报类型"
+                    android:textColor="@color/color_FF333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_report_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:drawableRight="@mipmap/mh_zql_arrow"
+                    android:gravity="center_vertical"
+                    android:hint="请选择举报类型"
+                    android:textColor="@color/color_FF333333"
+                    android:textColorHint="#ffbcbcbc"
+                    android:textSize="14sp" />
             </LinearLayout>
-            <TextView android:background="@color/bg_activity" android:layout_marginTop="@dimen/dp_10" style="@style/line_space"/>
-            <EditText android:textSize="14sp" android:textColor="@color/color_FF333333" android:textColorHint="#ff9a9a9a" android:gravity="left" android:id="@+id/ed_report_reason" android:background="@color/transparent" android:paddingLeft="@dimen/dp_16" android:paddingTop="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/dp_100" android:hint="请输入举报原因（最少5个字）" android:maxLength="200"/>
-            <TextView android:background="@color/bg_activity" android:layout_marginTop="@dimen/dp_16" style="@style/line_space"/>
-            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10">
-                <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcy_img" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+
+            <TextView
+                style="@style/line_space"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/bg_activity" />
+
+            <EditText
+                android:id="@+id/ed_report_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="left"
+                android:hint="请输入举报原因（最少5个字）"
+                android:maxLength="200"
+                android:minHeight="@dimen/dp_100"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"
+                android:textColor="@color/color_FF333333"
+                android:textColorHint="#ff9a9a9a"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/line_space"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@color/bg_activity" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcy_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
             </RelativeLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-    <TextView android:textSize="17sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_sure" android:background="@drawable/mh_zql_task_public" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_16" android:layout_marginBottom="@dimen/dp_10" android:text="提交举报"/>
+
+    <TextView
+        android:id="@+id/btn_sure"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/mh_zql_task_public"
+        android:gravity="center"
+        android:text="提交举报"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
 </LinearLayout>

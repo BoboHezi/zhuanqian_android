@@ -3,7 +3,7 @@
     android:id="@+id/ll_order"
     android:layout_width="51dp"
     android:layout_height="51dp"
-    android:background="@drawable/yd_xo_deal_bg">
+    android:background="@drawable/zq_deal_bg">
 
     <TextView
         android:id="@+id/tv_status"
@@ -23,7 +23,7 @@
         android:layout_alignRight="@+id/tv_status"
         android:layout_marginTop="2dp"
         android:layout_marginRight="-2dp"
-        android:background="@drawable/yd_xo_red_home_shape"
+        android:background="@drawable/zq_red_home_shape"
         android:text=""
         android:textColor="@color/white"
         android:textSize="10sp"

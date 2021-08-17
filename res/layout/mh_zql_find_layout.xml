@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="#f4f4f6" android:layout_width="match_parent" android:layout_height="match_parent">
-    <LinearLayout android:background="@color/bg_top" android:layout_width="match_parent" android:layout_height="20dp"/>
-    <include layout="@layout/mh_zql_common_header_layout"/>
-    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recy_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="11dp" android:layout_marginRight="@dimen/dp_11" android:layout_marginBottom="20dp"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f6"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/bg_top" />
+
+    <include layout="@layout/mh_zql_common_header_layout" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recy_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="@dimen/dp_11"
+        android:layout_marginBottom="20dp" />
 </LinearLayout>

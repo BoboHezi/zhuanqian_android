@@ -1,11 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
-    <LinearLayout android:orientation="vertical" android:id="@+id/ll_tt" android:layout_width="match_parent" android:layout_height="match_parent">
-        <FrameLayout android:id="@+id/splash_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
-        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="@dimen/dp_100">
-            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/mh_zql_start_logo"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_tt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/splash_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/mh_zql_start_logo" />
         </LinearLayout>
     </LinearLayout>
-    <ImageView android:id="@+id/img_open" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:layout_centerInParent="true"/>
-    <TextView android:textSize="14sp" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/skip_view" android:background="@drawable/background_circle" android:visibility="gone" android:layout_width="96dp" android:layout_height="wrap_content" android:layout_margin="16dp" android:text="点击跳过" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+
+    <ImageView
+        android:id="@+id/img_open"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/skip_view"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/background_circle"
+        android:gravity="center"
+        android:text="点击跳过"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:visibility="gone" />
 </RelativeLayout>

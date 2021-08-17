@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:id="@+id/head_container" android:background="@color/color_f4f4f6" android:layout_width="match_parent" android:layout_height="85dp">
-    <ImageView android:id="@+id/image_view" android:background="@drawable/mh_zql_progress_dialog_anim" android:layout_width="45dp" android:layout_height="45dp" android:layout_centerInParent="true" android:layout_centerVertical="true" android:contentDescription="@null"/>
-    <TextView android:textSize="@dimen/sp_12" android:textColor="@color/color_FF999999" android:id="@+id/text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_2" android:text="刷新中" android:layout_alignParentBottom="true" android:layout_centerInParent="true"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/head_container"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:background="@color/color_f4f4f6"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/mh_zql_progress_dialog_anim"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dp_2"
+        android:text="刷新中"
+        android:textColor="@color/color_FF999999"
+        android:textSize="@dimen/sp_12" />
 </LinearLayout>

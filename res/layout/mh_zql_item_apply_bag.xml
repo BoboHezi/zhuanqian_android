@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="@dimen/dp_20" android:paddingRight="@dimen/dp_20" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20">
-    <TextView android:textSize="16sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_update" android:background="@mipmap/mh_zql_bag_small_circle" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:layout_marginRight="@dimen/dp_10" android:text="小"/>
-    <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="小包头" android:layout_toRightOf="@+id/tv_update"/>
-    <TextView android:textSize="13sp" android:textColor="#ff999999" android:id="@+id/tv_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="接5单，通过率80%以上，成为小包头。" android:layout_toRightOf="@+id/tv_update" android:layout_below="@+id/tv_title"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_20"
+    android:paddingLeft="@dimen/dp_20"
+    android:paddingRight="@dimen/dp_20">
+
+    <TextView
+        android:id="@+id/tv_update"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@mipmap/mh_zql_bag_small_circle"
+        android:gravity="center"
+        android:text="小"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_update"
+        android:text="小包头"
+        android:textColor="@color/color_FF333333"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/tv_update"
+        android:text="接5单，通过率80%以上，成为小包头。"
+        android:textColor="#ff999999"
+        android:textSize="13sp" />
 </RelativeLayout>

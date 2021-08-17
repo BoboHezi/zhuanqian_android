@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-    <LinearLayout android:gravity="center_vertical" android:background="@color/white" android:paddingLeft="@dimen/dp_16" android:paddingTop="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:paddingBottom="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <EditText android:textSize="@dimen/sp_14" android:textColor="@color/color_FF333333" android:gravity="top|left|center_vertical|center_horizontal|center" android:id="@+id/ed_comment_content" android:background="@drawable/mh_zql_comment_send" android:paddingLeft="@dimen/dp_10" android:paddingTop="@dimen/dp_10" android:paddingRight="@dimen/dp_10" android:paddingBottom="@dimen/dp_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="80dp" android:hint="禁止留言微信、QQ、手机号等联系方式，违规将被封号。" android:maxLength="300" android:layout_weight="1"/>
-        <TextView android:textSize="@dimen/sp_17" android:textColor="@color/btn_task_dark" android:gravity="center" android:id="@+id/btn_send" android:layout_width="80dp" android:layout_height="80dp" android:text="发送"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_16">
+
+        <EditText
+            android:id="@+id/ed_comment_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mh_zql_comment_send"
+            android:gravity="top|left|center_vertical|center_horizontal|center"
+            android:hint="禁止留言微信、QQ、手机号等联系方式，违规将被封号。"
+            android:maxLength="300"
+            android:minHeight="80dp"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:textColor="@color/color_FF333333"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/btn_send"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="发送"
+            android:textColor="@color/btn_task_dark"
+            android:textSize="@dimen/sp_17" />
     </LinearLayout>
 </LinearLayout>

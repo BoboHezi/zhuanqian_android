@@ -1,12 +1,16 @@
 package com.ewq.zq.module.dynamic.view;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ewq.tools.log.Logger;
 import com.ewq.zq.R;
+import com.ewq.zq.adapter.ShopListAdapter;
 import com.ewq.zq.base.BaseFragment;
 import com.ewq.zq.module.dynamic.model.ShopBean;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
@@ -42,6 +46,10 @@ public class ShopListFragment extends BaseFragment {
         contentRecyclerView.setLayoutManager(new LinearLayoutManager(mContext,
                 RecyclerView.VERTICAL, false));
         beans = getFakeData();
+        View header = LayoutInflater.from(mContext).
+                inflate(R.layout.header_shop_list, contentRecyclerView, false);
+        ShopListAdapter adapter = new ShopListAdapter(mContext, beans, header);
+        contentRecyclerView.setAdapter(adapter);
     }
 
     @Override
@@ -50,16 +58,17 @@ public class ShopListFragment extends BaseFragment {
     }
 
     private ArrayList<ShopBean> getFakeData() {
+        Drawable header = getResources().getDrawable(R.mipmap.yd_xo_bag_identify);
         ArrayList<ShopBean> beans = new ArrayList<>(10);
-        beans.add(new ShopBean());
-        beans.add(new ShopBean());
-        beans.add(new ShopBean());
-        beans.add(new ShopBean());
-        beans.add(new ShopBean());
-        beans.add(new ShopBean());
-        beans.add(new ShopBean());
-        beans.add(new ShopBean());
-        beans.add(new ShopBean());
+        beans.add(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false));
+        beans.add(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false));
+        beans.add(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false));
+        beans.add(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false));
+        beans.add(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false));
+        beans.add(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false));
+        beans.add(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false));
+        beans.add(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false));
+        beans.add(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false));
         return beans;
     }
 

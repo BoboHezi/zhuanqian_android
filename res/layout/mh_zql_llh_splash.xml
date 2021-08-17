@@ -1,19 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
-    <ImageView android:id="@+id/oneshot_image" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="400px" android:layout_marginRight="10dp"/>
-    <RelativeLayout android:id="@+id/splash_main" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent">
-        <LinearLayout android:gravity="center" android:id="@+id/app_logo" android:layout_width="match_parent" android:layout_height="@dimen/dp_100" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
-            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/mh_zql_start_logo"/>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/oneshot_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="400px"
+        android:layout_marginRight="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/splash_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:id="@+id/app_logo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/mh_zql_start_logo" />
         </LinearLayout>
-        <ImageView android:id="@+id/splash_holder" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:layout_above="@+id/app_logo"/>
-        <FrameLayout android:id="@+id/splash_llh_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/app_logo"/>
-        <TextView android:textSize="14sp" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/skip_view" android:background="@drawable/mh_zql_start_circle" android:visibility="gone" android:layout_width="96dp" android:layout_height="wrap_content" android:layout_margin="16dp" android:text="点击跳过" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
-        <TextView android:textSize="14sp" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/preload_view" android:background="@drawable/mh_zql_start_circle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16dp" android:text="已Wi-Fi预加载" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+
+        <ImageView
+            android:id="@+id/splash_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/app_logo"
+            android:scaleType="fitXY" />
+
+        <FrameLayout
+            android:id="@+id/splash_llh_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/app_logo" />
+
+        <TextView
+            android:id="@+id/skip_view"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:background="@drawable/mh_zql_start_circle"
+            android:gravity="center"
+            android:text="点击跳过"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/preload_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="16dp"
+            android:background="@drawable/mh_zql_start_circle"
+            android:gravity="center"
+            android:text="已Wi-Fi预加载"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:visibility="gone" />
     </RelativeLayout>
-    <LinearLayout android:orientation="vertical" android:id="@+id/splash_load_ad_only" android:background="@color/white" android:paddingLeft="@dimen/dp_16" android:paddingTop="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:paddingBottom="@dimen/dp_16" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
-        <Button android:id="@+id/splash_load_ad_close" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="关闭"/>
-        <Button android:id="@+id/splash_load_ad_refresh" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="刷新"/>
-        <Button android:id="@+id/splash_load_ad_display" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="显示广告"/>
-        <TextView android:id="@+id/splash_load_ad_status" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="当前状态"/>
+
+    <LinearLayout
+        android:id="@+id/splash_load_ad_only"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_16"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/splash_load_ad_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="关闭" />
+
+        <Button
+            android:id="@+id/splash_load_ad_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="刷新" />
+
+        <Button
+            android:id="@+id/splash_load_ad_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="显示广告" />
+
+        <TextView
+            android:id="@+id/splash_load_ad_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="当前状态" />
     </LinearLayout>
 </FrameLayout>

@@ -1,12 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include layout="@layout/mh_zql_common_white_header_layout"/>
-    <TextView android:textSize="20sp" android:textColor="@color/color_FF333333" android:layout_gravity="center_horizontal" android:id="@+id/tv_tip_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:text="@string/login_title"/>
-    <TextView android:textSize="15sp" android:textColor="@color/color_FF999999" android:layout_gravity="center_horizontal" android:id="@+id/tv_des" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="验证即登录，未注册则自动创建新账号"/>
-    <ImageView android:layout_gravity="center_horizontal" android:id="@+id/img_user_header" android:visibility="gone" android:layout_width="@dimen/dp_58" android:layout_height="@dimen/dp_58" android:layout_marginTop="@dimen/dp_30" android:layout_marginBottom="@dimen/dp_30" android:src="@mipmap/mh_zql_user_default"/>
-    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_27" android:layout_marginTop="@dimen/dp_43" android:layout_marginRight="@dimen/dp_27">
-        <TextView android:textColor="@color/color_FF333333" android:id="@+id/tv_area" android:background="@drawable/mh_zql_bottom_line" android:paddingLeft="@dimen/dp_10" android:paddingTop="@dimen/dp_10" android:paddingRight="@dimen/dp_10" android:paddingBottom="@dimen/dp_10" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:text="+ 86"/>
-        <com.youchen.mhlite.widget.ClearEditText android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:id="@+id/et_phone" android:background="@drawable/mh_zql_bottom_line" android:paddingLeft="10dp" android:paddingTop="@dimen/dp_10" android:paddingBottom="@dimen/dp_10" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/phone_tip" android:maxLength="11" android:inputType="number" android:textCursorDrawable="@drawable/mh_zql_common_cursor"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/mh_zql_common_white_header_layout" />
+
+    <TextView
+        android:id="@+id/tv_tip_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="@string/login_title"
+        android:textColor="@color/color_FF333333"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:text="验证即登录，未注册则自动创建新账号"
+        android:textColor="@color/color_FF999999"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_user_header"
+        android:layout_width="@dimen/dp_58"
+        android:layout_height="@dimen/dp_58"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:src="@mipmap/mh_zql_user_default"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_27"
+        android:layout_marginTop="@dimen/dp_43"
+        android:layout_marginRight="@dimen/dp_27"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/mh_zql_bottom_line"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="+ 86"
+            android:textColor="@color/color_FF333333"
+            android:visibility="gone" />
+
+        <com.youchen.mhlite.widget.ClearEditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mh_zql_bottom_line"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="@string/phone_tip"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="10dp"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:textColor="@color/color_FF333333"
+            android:textCursorDrawable="@drawable/mh_zql_common_cursor"
+            android:textSize="@dimen/sp_16" />
     </LinearLayout>
-    <TextView android:enabled="false" android:textSize="@dimen/sp_17" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_to_verification" android:background="@drawable/mh_zql_login_btn_bg" android:layout_width="match_parent" android:layout_height="@dimen/dp_40" android:layout_marginLeft="@dimen/dp_27" android:layout_marginTop="27dp" android:layout_marginRight="@dimen/dp_27" android:text="获取验证码"/>
+
+    <TextView
+        android:id="@+id/tv_to_verification"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_27"
+        android:layout_marginTop="27dp"
+        android:layout_marginRight="@dimen/dp_27"
+        android:background="@drawable/mh_zql_login_btn_bg"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="获取验证码"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_17" />
 </LinearLayout>
