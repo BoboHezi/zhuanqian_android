@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.youchen.mhlite.widget.CommonTextView android:textSize="20sp" android:textColor="@color/color_FF333333" android:id="@+id/tv_me_username" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_24" android:text=""/>
+        <com.youchen.mhlite.widget.CommonTextView android:textSize="@dimen/sp_15" android:textColor="#67696b" android:id="@+id/tv_user_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_13" android:text="" android:layout_below="@+id/tv_me_username" android:layout_alignLeft="@+id/tv_me_username"/>
+        <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_integral" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_13" android:layout_below="@+id/tv_user_id">
+            <TextView android:textSize="14sp" android:textColor="#ff67696b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="粉丝数："/>
+            <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_FF333333" android:id="@+id/tv_follow_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/img_real_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="14dp" android:layout_below="@+id/ll_integral"/>
+        <LinearLayout android:gravity="center" android:id="@+id/btn_follow" android:background="@drawable/mh_zql_task_dark" android:layout_width="86dp" android:layout_height="36dp" android:layout_marginRight="@dimen/dp_16" android:layout_below="@+id/ll_integral" android:layout_alignParentRight="true">
+            <ImageView android:id="@+id/img_follow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_5" android:src="@mipmap/mh_zql_dynamic_white"/>
+            <TextView android:textSize="@dimen/sp_15" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/tv_followed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="关注"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView android:background="#f5f7f8" android:layout_width="match_parent" android:layout_height="@dimen/dp_10" android:layout_marginTop="@dimen/dp_18"/>
+    <TextView android:textSize="18sp" android:textColor="#ff262728" android:id="@+id/tv_other_task" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_16" android:text="TA发布的任务"/>
+</LinearLayout>

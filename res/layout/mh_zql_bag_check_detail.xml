@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/mh_zql_common_white_header_layout"/>
+    <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:gravity="center" android:id="@+id/tv_count" android:layout_width="match_parent" android:layout_height="46dp" android:text="剩余数：200个"/>
+    <TextView android:background="#f3f3f3" android:layout_width="match_parent" android:layout_height="10dp"/>
+    <RelativeLayout android:id="@+id/ll_user_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:layout_marginBottom="@dimen/dp_16">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_user_icon" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:layout_marginLeft="@dimen/dp_16"/>
+        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_ff303030" android:id="@+id/tv_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_8" android:text="" android:layout_toRightOf="@+id/iv_user_icon"/>
+        <TextView android:textSize="@dimen/sp_13" android:textColor="#9d9c9c" android:id="@+id/tv_apply_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_8" android:text="" android:layout_toRightOf="@+id/iv_user_icon" android:layout_alignBottom="@+id/iv_user_icon"/>
+        <TextView android:textSize="@dimen/sp_13" android:textColor="#9d9c9c" android:id="@+id/tv_submit_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_below="@+id/tv_apply_time" android:layout_alignLeft="@+id/tv_apply_time"/>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_10" android:src="@mipmap/mh_zql_arrow_black" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <TextView android:background="#f3f3f3" android:layout_width="match_parent" android:layout_height="10dp"/>
+    <TextView android:textColor="@color/color_FF333333" android:id="@+id/tv_task_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_file" android:background="@drawable/mh_zql_add_file_shape" android:visibility="gone" android:layout_width="80dp" android:layout_height="80dp" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_10">
+        <TextView android:textColor="@color/color_FF333333" android:ellipsize="middle" android:gravity="center" android:id="@+id/tv_commit_file_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:drawableTop="@mipmap/mh_zql_zip" android:drawablePadding="5dp"/>
+    </LinearLayout>
+    <TextView android:background="#f3f3f3" android:layout_width="match_parent" android:layout_height="10dp" android:layout_marginTop="@dimen/dp_10"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_history" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16">
+            <TextView android:background="@color/color_FF333333" android:layout_width="16dp" android:layout_height="2dp"/>
+            <TextView android:textSize="17sp" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10" android:text="历史提交记录"/>
+            <TextView android:background="@color/color_FF333333" android:layout_width="16dp" android:layout_height="2dp"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcy_log" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:background="@color/color_FF4343" android:layout_width="match_parent" android:layout_height="45dp">
+        <TextView android:textSize="17sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_down" android:layout_width="match_parent" android:layout_height="match_parent" android:text="下载附件" android:layout_weight="1"/>
+        <TextView android:background="@color/white" android:layout_width="0.5dp" android:layout_height="33dp"/>
+        <TextView android:textSize="17sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_check" android:layout_width="match_parent" android:layout_height="match_parent" android:text="审核" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/dp_32" android:layout_marginTop="@dimen/dp_5" android:layout_marginBottom="@dimen/dp_5">
+        <ImageView android:id="@+id/iv_left" android:paddingLeft="@dimen/dp_10" android:paddingRight="@dimen/dp_10" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@mipmap/mh_zql_back"/>
+        <com.youchen.mhlite.widget.ClearEditText android:textSize="@dimen/sp_13" android:textColor="@color/color_FF333333" android:textColorHint="#bdc0c3" android:layout_gravity="center_horizontal" android:id="@+id/et_search" android:background="@drawable/mh_zql_index_edittext_bg" android:paddingLeft="@dimen/dp_11" android:paddingRight="@dimen/dp_11" android:layout_width="wrap_content" android:layout_height="@dimen/dp_33" android:layout_marginTop="@dimen/dp_13" android:layout_marginBottom="@dimen/dp_13" android:hint="请输入搜索关键字" android:singleLine="true" android:drawableLeft="@mipmap/mh_zql_search" android:drawablePadding="@dimen/dp_5" android:layout_weight="1" android:layout_toLeftOf="@+id/tv_cancel" android:layout_toRightOf="@+id/tv_type" android:imeOptions="actionSearch" android:textCursorDrawable="@drawable/mh_zql_common_cursor"/>
+        <TextView android:textSize="@dimen/sp_17" android:textColor="@color/color_FF333333" android:gravity="center" android:id="@+id/btn_search" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="搜索" android:layout_alignParentRight="true"/>
+    </LinearLayout>
+    <View style="@style/line"/>
+    <RelativeLayout android:id="@+id/rl_search_history" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="24dp" android:layout_marginRight="@dimen/dp_16" android:layout_marginBottom="@dimen/dp_8">
+        <TextView android:textSize="@dimen/sp_17" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="搜索历史"/>
+        <ImageView android:id="@+id/iv_delete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_delete" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <com.youchen.mhlite.widget.RecommendViewGroup android:id="@+id/recommendViewGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_4" android:layout_marginRight="@dimen/dp_16"/>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/srl" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" app:srlEnableAutoLoadMore="true">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_search_result" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

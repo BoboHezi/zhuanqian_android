@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/mh_zql_white_shape_3" android:layout_width="321dp" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/sp_18" android:textColor="@color/color_FF333333" android:id="@+id/tv_dialog_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_25" android:layout_marginTop="@dimen/dp_20" android:text="请输入置顶时长"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_25" android:layout_marginTop="@dimen/dp_25" android:layout_marginRight="@dimen/dp_25">
+        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:id="@+id/tv_input_hours" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="置顶"/>
+        <com.youchen.mhlite.widget.ClearEditText android:textSize="@dimen/sp_14" android:textColor="@color/color_FF333333" android:textColorHint="#bcbcbc" android:id="@+id/et_input_hours" android:background="@drawable/mh_zql_task_edt_bg" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="28dp" android:layout_marginLeft="@dimen/dp_8" android:singleLine="true" android:maxLength="1" android:numeric="integer"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_25" android:layout_marginTop="@dimen/dp_12" android:layout_marginRight="@dimen/dp_25">
+        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="金额"/>
+        <RelativeLayout android:background="@drawable/mh_zql_task_edt_bg" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="28dp" android:layout_marginLeft="@dimen/dp_8">
+            <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_FF333333" android:textColorHint="#bcbcbc" android:id="@+id/tv_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_centerVertical="true"/>
+            <TextView android:textSize="11sp" android:textColor="#ff999999" android:id="@+id/tv_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_2" android:text="" android:layout_toRightOf="@+id/tv_amount" android:layout_alignBottom="@+id/tv_amount"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="@dimen/dp_48" android:layout_marginTop="@dimen/dp_12">
+        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF666666" android:gravity="center" android:id="@+id/tv_cancel" android:layout_width="0dp" android:layout_height="match_parent" android:text="取消" android:layout_weight="1"/>
+        <View android:layout_gravity="center" android:background="#ffcccccc" android:layout_width="1px" android:layout_height="23dp"/>
+        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/text_color_1" android:gravity="center" android:id="@+id/tv_reply" android:layout_width="0dp" android:layout_height="match_parent" android:text="确定" android:layout_weight="1"/>
+    </LinearLayout>
+    <TextView android:textSize="13sp" android:textColor="#666" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:text="1.推荐或置顶成功后未到期前可以续期，时间自动累加；"/>
+    <TextView android:textSize="13sp" android:textColor="#666" android:id="@+id/tv_tip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:text=""/>
+    <TextView android:textSize="13sp" android:textColor="#666" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:text="3.推荐或置顶只针对本任务有效；"/>
+    <TextView android:textSize="13sp" android:textColor="#666" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:text="4.任务中途暂停，推荐或置顶时间不会暂停；"/>
+    <TextView android:textSize="13sp" android:textColor="#666" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_marginBottom="25dp" android:text="5.提前下架或置顶未到期任务提前完成，剩余推荐或置顶时间不会保留也不会折算成任务币返还；"/>
+</LinearLayout>

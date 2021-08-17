@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/mh_zql_common_white_header_layout"/>
+    <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:gravity="center" android:id="@+id/tv_total" android:layout_width="match_parent" android:layout_height="48dp" android:text=""/>
+    <TextView android:background="#f3f3f3" android:layout_width="match_parent" android:layout_height="10dp"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcy_log" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

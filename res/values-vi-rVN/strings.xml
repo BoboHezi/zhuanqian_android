@@ -61,4 +61,8 @@
     <string name="picture_video_error">Video bị hỏng</string>
     <string name="picture_video_toast">Video không thể xem trước</string>
     <string name="picture_warning">Không có tập tin phương tiện！</string>
+    <string name="ucrop_gif_tag">gif</string>
+    <string name="ucrop_label_edit_photo">Editar foto</string>
+    <string name="ucrop_label_original">Original</string>
+    <string name="ucrop_menu_crop">Recortar</string>
 </resources>

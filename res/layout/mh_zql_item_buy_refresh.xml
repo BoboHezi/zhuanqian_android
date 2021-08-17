@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/ll_refresh" android:background="@drawable/mh_zql_task_filter_bg" android:paddingTop="@dimen/dp_15" android:paddingBottom="@dimen/dp_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:minWidth="156dp" android:minHeight="48dp">
+        <TextView android:textSize="16sp" android:textColor="@drawable/mh_zql_task_filter_text_bg" android:gravity="center" android:id="@+id/tv_refresh_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5次/10元"/>
+        <TextView android:textSize="12sp" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/tv_coupon_money" android:background="@mipmap/mh_zql_coupon_buy_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="代金券抵扣10元"/>
+    </LinearLayout>
+</LinearLayout>

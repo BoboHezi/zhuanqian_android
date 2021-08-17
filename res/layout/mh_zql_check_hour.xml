@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="321dp" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/sp_18" android:textColor="@color/color_FF333333" android:gravity="center" android:id="@+id/tv_dialog_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" android:text="上架极速审核"/>
+    <RelativeLayout android:id="@+id/ll_pay_money" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="23dp" android:layout_marginRight="@dimen/dp_16" android:layout_marginBottom="@dimen/dp_10">
+        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="上架极速审核"/>
+        <TextView android:textSize="16sp" android:textColor="@color/color_FF4343" android:id="@+id/tv_pay_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_alignParentRight="true"/>
+        <TextView android:textSize="12sp" android:textColor="@color/color_FF999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_8" android:text="一天内不限次数" android:layout_below="@+id/tv_pay_money" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcy_sel_hour" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16"/>
+    <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:layout_gravity="center" android:id="@+id/tv_dialog_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_16" android:layout_marginBottom="@dimen/dp_16" android:text="上线1小时审核，接单人提交做单验证后务必在1小时内审核，否则超过1小时将自动通过，发放佣金给接单人，不接受任何形式的追溯，请确认后上线。"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="@dimen/dp_48" android:layout_marginLeft="@dimen/dp_25" android:layout_marginRight="@dimen/dp_25">
+        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF666666" android:gravity="center" android:id="@+id/tv_cancel" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/common_dialog_cancel" android:layout_weight="1"/>
+        <View android:layout_gravity="center" android:background="#ffcccccc" android:layout_width="1px" android:layout_height="23dp"/>
+        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/text_color_1" android:gravity="center" android:id="@+id/tv_confirm" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/common_dialog_confirm" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

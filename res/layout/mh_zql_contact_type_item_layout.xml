@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/dp_48">
+    <TextView android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="@dimen/dp_48" android:text="双方的第三方第三方第三方" style="@style/tv_style_1"/>
+    <View style="@style/line"/>
+</LinearLayout>

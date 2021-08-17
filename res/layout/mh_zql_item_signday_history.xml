@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/mh_zql_signday_history_shape" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_15" android:layout_marginRight="@dimen/dp_16">
+        <TextView android:textSize="@dimen/sp_17" android:textColor="@color/color_10264B" android:layout_gravity="center_horizontal" android:id="@+id/tv_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_15" android:layout_marginBottom="@dimen/dp_24" android:text=""/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar android:id="@+id/pb_sign_success" android:layout_width="57dp" android:layout_height="57dp" android:layout_marginLeft="@dimen/dp_24" app:cpb_background_progressbar_color="#b3bbc9" app:cpb_background_progressbar_width="8dp" app:cpb_progress="0" app:cpb_progress_max="100" app:cpb_progressbar_color="#4b90ff" app:cpb_progressbar_width="8dp"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_24" android:layout_weight="1">
+                <TextView android:textSize="18sp" android:textColor="@color/color_10264B" android:id="@+id/tv_sign_success_people" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="200"/>
+                <TextView android:textSize="13sp" android:textColor="@color/color_10264B" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="打卡成功（人）"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="18sp" android:textColor="@color/color_10264B" android:id="@+id/tv_sign_fail_people" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="200"/>
+                <TextView android:textSize="13sp" android:textColor="@color/color_10264B" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="打卡失败（人）"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16">
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar android:id="@+id/pb_reward" android:layout_width="57dp" android:layout_height="57dp" android:layout_marginLeft="@dimen/dp_24" app:cpb_background_progressbar_color="#b3bbc9" app:cpb_background_progressbar_width="8dp" app:cpb_progress="0" app:cpb_progress_max="100" app:cpb_progressbar_color="#4b90ff" app:cpb_progressbar_width="8dp"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_24" android:layout_weight="1">
+                <TextView android:textSize="18sp" android:textColor="@color/color_10264B" android:id="@+id/tv_reward_people" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="200"/>
+                <TextView android:textSize="13sp" android:textColor="@color/color_10264B" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="已领奖（人）"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="18sp" android:textColor="@color/color_10264B" android:id="@+id/tv_reward_fail_people" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="200"/>
+                <TextView android:textSize="13sp" android:textColor="@color/color_10264B" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="未领奖（人）"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="16sp" android:textColor="@color/color_10264B" android:layout_gravity="center_horizontal" android:id="@+id/tv_average_reward" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_13" android:layout_marginBottom="@dimen/dp_16" android:text=""/>
+    </LinearLayout>
+</LinearLayout>

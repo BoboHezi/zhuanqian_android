@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/root_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recy_filter_type" android:paddingLeft="@dimen/dp_4" android:paddingRight="@dimen/dp_4" android:paddingBottom="36dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <include layout="@layout/mh_zql_task_filter_bottom_layout"/>
+    </LinearLayout>
+</LinearLayout>

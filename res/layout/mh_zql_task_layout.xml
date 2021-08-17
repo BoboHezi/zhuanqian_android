@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/ll_top" layout="@layout/mh_zql_common_white_header_layout"/>
+    <com.youchen.mhlite.widget.tablayout.CommonTabLayout android:id="@+id/commonTabLayout" android:layout_width="match_parent" android:layout_height="@dimen/dp_48" android:layout_below="@+id/ll_top" app:tl_indicator_color="@color/btn_task_dark" app:tl_indicator_width="65dp" app:tl_tab_space_equal="true" app:tl_textSelectColor="@color/color_FF333333" app:tl_textUnselectColor="@color/color_FF333333" app:tl_textsize="@dimen/sp_14"/>
+    <View android:id="@+id/space_line" android:layout_marginLeft="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16" android:layout_below="@+id/commonTabLayout" style="@style/line"/>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/vp_task" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/space_line"/>
+    <RelativeLayout android:id="@+id/btn_send_task" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20dp" android:layout_marginBottom="50dp" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@mipmap/mh_zql_add_task"/>
+        <TextView android:textSize="@dimen/sp_12" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="34dp" android:text="发布" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</RelativeLayout>

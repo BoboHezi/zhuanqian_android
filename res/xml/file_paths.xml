@@ -2,6 +2,12 @@
 <paths>
     <external-path name="images" />
     <external-path
+        name="youchen"
+        path="." />
+    <external-files-path
+        name="youchen"
+        path="." />
+    <external-path
         name="tt_external_root"
         path="." />
     <external-path

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+    <TextView android:id="@+id/tv_step_number" style="@style/edit_step_number"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_toRightOf="@+id/tv_step_number">
+        <com.youchen.mhlite.widget.CommonTextView android:textSize="@dimen/sp_15" android:textColor="@color/color_FF333333" android:id="@+id/tv_step_title" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <ImageView android:id="@+id/img_qcode" android:layout_width="145dp" android:layout_height="265dp" android:layout_marginTop="16dp" android:scaleType="fitStart"/>
+    </LinearLayout>
+    <include android:layout_width="match_parent" android:layout_height="47dp" android:layout_marginTop="15dp" android:layout_below="@+id/ll_content" layout="@layout/mh_zql_item_edit_step_operate"/>
+</RelativeLayout>

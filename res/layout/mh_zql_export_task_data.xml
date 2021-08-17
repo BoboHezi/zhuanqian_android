@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/mh_zql_common_white_header_layout"/>
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/btn_start_time" android:background="@drawable/mh_zql_bottom_line" android:paddingRight="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="47dp" android:layout_marginLeft="@dimen/dp_16">
+        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开始时间" android:minEms="4"/>
+        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:id="@+id/tv_start_time" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:drawableRight="@mipmap/mh_zql_arrow"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/btn_end_time" android:background="@drawable/mh_zql_bottom_line" android:paddingRight="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="47dp" android:layout_marginLeft="@dimen/dp_16">
+        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="结束时间" android:minEms="4"/>
+        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:id="@+id/tv_end_time" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:drawableRight="@mipmap/mh_zql_arrow"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/mh_zql_bottom_line" android:layout_width="match_parent" android:layout_height="47dp" android:layout_marginLeft="@dimen/dp_16">
+        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="数据类型" android:minEms="4"/>
+        <LinearLayout android:gravity="center_vertical" android:id="@+id/type_apply" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:id="@+id/img_type_apply" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mh_zql_radio_square_btn"/>
+            <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_8" android:text="待审核的数据"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:id="@+id/type_finish" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:id="@+id/img_type_finish" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mh_zql_radio_square_btn"/>
+            <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_8" android:text="已审核的数据"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="47dp" android:layout_marginLeft="@dimen/dp_16">
+        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="导出格式" android:minEms="4"/>
+        <LinearLayout android:gravity="center_vertical" android:id="@+id/export_form" android:layout_width="120dp" android:layout_height="match_parent">
+            <ImageView android:id="@+id/img_export_form" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mh_zql_radio_task_btn"/>
+            <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_8" android:text="导出表格"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:id="@+id/export_web" android:layout_width="120dp" android:layout_height="match_parent">
+            <ImageView android:id="@+id/img_export_web" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mh_zql_radio_task_btn"/>
+            <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_8" android:text="导出网页"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/sp_13" android:textColor="@color/color_FF999999" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_16" android:layout_marginBottom="@dimen/dp_20" android:text="导出Excel文件用于后台数据核对，比如注册单等，导出网页用于验证图核对，比如关注单等，请根据需要选择。"/>
+    <LinearLayout android:background="@color/bg_activity" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/dp_47">
+        <TextView android:textSize="@dimen/sp_17" android:textColor="@color/color_FF333333" android:gravity="center" android:id="@+id/btn_cancel" android:layout_width="0dp" android:layout_height="match_parent" android:text="取消" android:layout_weight="1"/>
+        <TextView android:textSize="@dimen/sp_17" android:textColor="@color/text_color_btn" android:gravity="center" android:id="@+id/btn_sure" android:background="@color/btn_task_dark" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginTop="@dimen/dp_3" android:text="确定" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

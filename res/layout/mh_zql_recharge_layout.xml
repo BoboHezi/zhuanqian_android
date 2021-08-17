@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/mh_zql_common_white_header_layout"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="@dimen/dp_47" android:text="充值金额"/>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/sp_33" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="¥"/>
+                    <com.youchen.mhlite.widget.ClearEditText android:textSize="@dimen/sp_37" android:textColorHint="@color/color_cccccc" android:id="@+id/ed_recharge_amount" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:hint="0.00" android:maxLength="6" android:inputType="numberDecimal" android:textCursorDrawable="@drawable/mh_zql_cursor_bg"/>
+                </LinearLayout>
+                <View android:layout_marginTop="@dimen/dp_16" style="@style/line"/>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcy_pay_method" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                </RelativeLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/ll_agree" android:visibility="gone" android:layout_marginTop="@dimen/dp_16" style="@style/add_task_row">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mh_zql_check_bg"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/color_FF999999" android:layout_gravity="center_vertical" android:id="@+id/tv_agree_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6dp"/>
+                </LinearLayout>
+                <TextView android:enabled="true" android:textSize="@dimen/sp_17" android:textColor="@drawable/mh_zql_common_btn_bg" android:gravity="center" android:id="@+id/tv_recharge" android:background="@drawable/mh_zql_login_btn_bg" android:layout_width="match_parent" android:layout_height="@dimen/dp_40" android:layout_marginLeft="@dimen/dp_27" android:layout_marginTop="@dimen/dp_32" android:layout_marginRight="@dimen/dp_27" android:layout_marginBottom="@dimen/dp_16" android:text="充值"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:padding="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_11">
+                <TextView android:textSize="@dimen/sp_13" android:textColor="@color/color_9a9a9a" android:id="@+id/tv_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="2dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

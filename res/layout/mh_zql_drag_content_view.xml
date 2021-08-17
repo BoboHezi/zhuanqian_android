@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:id="@+id/ll_contact" android:background="@mipmap/mh_zql_drag" android:layout_width="122dp" android:layout_height="51dp" android:minWidth="122dp" android:minHeight="51dp">
+    <ImageView android:id="@+id/img_order_icon" android:layout_width="15dp" android:layout_height="15dp" android:src="@mipmap/mh_zql_contact" android:layout_centerVertical="true"/>
+    <TextView android:textSize="@dimen/sp_15" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="31dp" android:layout_marginLeft="5dp" android:layout_marginTop="-2dp" android:text="联系TA"/>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tl="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:id="@+id/top_bar" android:background="@color/bg_top" android:layout_width="match_parent" android:layout_height="25dp"/>
+    <include android:id="@+id/ll_top_tab" android:visibility="gone" layout="@layout/mh_zql_common_header_layout"/>
+    <RelativeLayout android:gravity="center_horizontal" android:background="@color/bg_top" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/sp_13" android:textColorHint="#99ffffff" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@+id/tv_to_search" android:background="@drawable/mh_zql_index_edittext_bg_1" android:paddingLeft="@dimen/dp_11" android:paddingRight="@dimen/dp_11" android:layout_width="@dimen/dp_328" android:layout_height="@dimen/dp_33" android:layout_marginTop="@dimen/dp_13" android:layout_marginBottom="@dimen/dp_13" android:hint="任务标题、编号、用户ID、昵称" android:drawableLeft="@mipmap/mh_zql_search_1" android:drawablePadding="@dimen/dp_5"/>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:background="@color/bg_top" android:paddingBottom="1dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.youchen.mhlite.widget.tablayout.CommonTabLayout android:layout_gravity="center_horizontal" android:id="@+id/commonTabLayout" android:layout_width="wrap_content" android:layout_height="@dimen/dp_47" android:layout_marginLeft="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16" android:layout_centerHorizontal="true" tl:tl_iconVisible="false" tl:tl_indicator_color="@color/white" tl:tl_indicator_corner_radius="1dp" tl:tl_indicator_height="2dp" tl:tl_indicator_width="30dp" tl:tl_tab_width="80dp" tl:tl_textSelectColor="@color/white" tl:tl_textUnselectColor="@color/white" tl:tl_textsize="@dimen/sp_16"/>
+    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/view_pager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_get_data_error" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_FF666666" android:gravity="center" android:id="@+id/tv_empty_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="数据获取失败,请重试"/>
+        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/white" android:id="@+id/btn_refresh" android:background="@drawable/mh_zql_index_edittext_bg_1" android:padding="@dimen/dp_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" android:text="点击刷新"/>
+    </LinearLayout>
+</LinearLayout>

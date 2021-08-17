@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/rl_common_top" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/dp_47">
+    <LinearLayout android:id="@+id/ll_left" android:layout_width="@dimen/dp_100" android:layout_height="match_parent" android:layout_centerVertical="true">
+        <ImageView android:id="@+id/iv_left" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_10"/>
+        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_left" android:layout_width="wrap_content" android:layout_height="match_parent"/>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/sp_17" android:textColor="@color/color_FF333333" android:ellipsize="end" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="250dp" android:singleLine="true" android:layout_centerInParent="true"/>
+    <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/ll_right" android:paddingRight="@dimen/dp_16" android:layout_width="wrap_content" android:layout_height="match_parent" android:minWidth="@dimen/dp_100" android:layout_alignParentRight="true">
+        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF4343" android:layout_gravity="center_vertical" android:id="@+id/tv_right_two" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp"/>
+        <ImageView android:id="@+id/iv_right" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:textSize="@dimen/sp_17" android:textColor="@color/color_FF4343" android:layout_gravity="center_vertical" android:id="@+id/tv_right" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <View android:layout_alignParentBottom="true" style="@style/line"/>
+</RelativeLayout>

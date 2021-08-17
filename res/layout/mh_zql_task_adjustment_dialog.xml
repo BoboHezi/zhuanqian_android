@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/mh_zql_white_shape" android:layout_width="321dp" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/sp_18" android:textColor="@color/color_FF333333" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_18" android:layout_marginTop="@dimen/dp_18" android:text=""/>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_18" android:layout_marginTop="@dimen/dp_24">
+        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:id="@+id/tv_tip_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" "/>
+        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF4343" android:id="@+id/tv_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+    </LinearLayout>
+    <com.youchen.mhlite.widget.ClearEditText android:textSize="@dimen/sp_14" android:textColor="@color/color_FF333333" android:textColorHint="@color/color_BBBBBB" android:id="@+id/et_price" android:background="@drawable/mh_zql_task_edt_count" android:paddingLeft="@dimen/dp_8" android:paddingRight="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="33dp" android:layout_marginLeft="@dimen/dp_18" android:layout_marginTop="@dimen/dp_12" android:layout_marginRight="@dimen/dp_18" android:maxLength="8" android:inputType="numberDecimal"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="@dimen/dp_12">
+        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="本次调整所需金额（包含服务费）："/>
+        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_FF333333" android:id="@+id/tv_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0元"/>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_FF333333" android:id="@+id/tv_money_tip" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/sp_14" android:text=" "/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="@dimen/dp_48" android:layout_marginTop="@dimen/dp_20">
+        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF666666" android:gravity="center" android:id="@+id/tv_cancel" android:layout_width="0dp" android:layout_height="match_parent" android:text="取消" android:layout_weight="1"/>
+        <View android:layout_gravity="center" android:background="#ffcccccc" android:layout_width="1px" android:layout_height="23dp"/>
+        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/text_color_1" android:gravity="center" android:id="@+id/tv_reply" android:layout_width="0dp" android:layout_height="match_parent" android:text="确定" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

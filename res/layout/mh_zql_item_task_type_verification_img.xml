@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+    <TextView android:id="@+id/tv_step_number" style="@style/tv_step_number"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp">
+        <com.youchen.mhlite.widget.CommonTextView android:textSize="@dimen/sp_15" android:textColor="@color/color_FF333333" android:id="@+id/tv_step_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/img_verification" android:layout_width="145dp" android:layout_height="265dp" android:scaleType="fitStart"/>
+            <TextView android:textSize="13sp" android:textColor="@color/text_color_btn" android:gravity="center" android:background="@mipmap/mh_zql_task_flag" android:layout_width="53dp" android:layout_height="21dp" android:text="验证图"/>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/btn_add_img" android:background="@color/btn_task_dark" android:visibility="gone" android:layout_width="80dp" android:layout_height="80dp" android:layout_marginLeft="11dp" android:layout_toRightOf="@+id/img_verification">
+                <ImageView android:layout_width="43dp" android:layout_height="43dp" android:src="@mipmap/mh_zql_task_detail_camera"/>
+                <TextView android:textSize="13sp" android:textColor="@color/text_color_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="添加图片"/>
+            </LinearLayout>
+            <RelativeLayout android:id="@+id/ll_add_verification" android:visibility="gone" android:layout_width="145dp" android:layout_height="wrap_content" android:layout_marginLeft="11dp" android:layout_toRightOf="@+id/img_verification">
+                <ImageView android:id="@+id/img_add_verification" android:layout_width="145dp" android:layout_height="260dp" android:scaleType="fitStart"/>
+                <ImageView android:id="@+id/btn_close_photo" android:layout_width="30dp" android:layout_height="30dp" android:src="@mipmap/mh_zql_close2" android:layout_alignParentRight="true"/>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_load" android:background="#99000000" android:visibility="gone" android:layout_width="67dp" android:layout_height="67dp" android:layout_centerInParent="true">
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar android:id="@+id/pb_load" android:layout_width="30dp" android:layout_height="30dp" app:cpb_background_progressbar_color="#838383" app:cpb_background_progressbar_width="2dp" app:cpb_progress="0" app:cpb_progress_max="100" app:cpb_progressbar_color="#dcdcdc" app:cpb_progressbar_width="2dp"/>j 
+                    <TextView android:textSize="@dimen/sp_15" android:textColor="@color/white" android:id="@+id/tv_pb" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

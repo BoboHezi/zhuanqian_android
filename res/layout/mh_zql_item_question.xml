@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:paddingLeft="10dp" android:paddingTop="5dp" android:paddingRight="10dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+    <TextView android:textSize="@dimen/sp_15" android:textColor="#000" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="调查"/>
+    <TextView android:textSize="@dimen/sp_15" android:textColor="@color/color_FF4343" android:id="@+id/tv_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="dddddd" android:layout_alignParentRight="true"/>
+    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_FF999999" android:ellipsize="end" android:id="@+id/tv_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="dddddd" android:maxLines="2" android:layout_below="@+id/tv_title"/>
+</RelativeLayout>

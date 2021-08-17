@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/tt_splash_express_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/tt_splash_video_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.bytedance.sdk.openadsdk.core.widget.gif.GifView
+        android:id="@+id/tt_splash_ad_gif"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/tt_splash_video_ad_mute"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="top|left|center_vertical|center_horizontal|center|start"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/tt_splash_mute" />
+
+    <com.bytedance.sdk.openadsdk.core.widget.TTCountdownView
+        android:id="@+id/tt_splash_skip_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="top|right|center_vertical|center_horizontal|center|end"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp" />
+
+    <ImageView
+        android:id="@+id/tt_splash_close_btn"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="top|right|center_vertical|center_horizontal|center|end"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/tt_dislike_icon"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/tt_ad_logo"
+        android:layout_width="30dp"
+        android:layout_height="14dp"
+        android:layout_gravity="bottom|left|center_vertical|center_horizontal|center|start"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/tt_splash_ad_logo"
+        android:gravity="center" />
+
+    <RelativeLayout
+        android:id="@+id/tt_full_splash_bar_layout"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|center_vertical|center_horizontal|center"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/tt_splash_click_bar_style"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/tt_splash_bar_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:shadowColor="#4d000000"
+                android:shadowDx="0"
+                android:shadowDy="0.5"
+                android:shadowRadius="2"
+                android:singleLine="true"
+                android:text="@string/tt_splash_click_bar_text"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="16dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/tt_splash_bar_text"
+                android:background="@drawable/tt_splash_click_bar_go"
+                android:gravity="center_vertical" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

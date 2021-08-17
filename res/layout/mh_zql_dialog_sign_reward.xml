@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@mipmap/mh_zql_sign_reward" android:layout_width="286dp" android:layout_height="356dp">
+        <TextView android:textSize="18sp" android:textColor="#ff4242" android:id="@+id/tv_money_symbol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30dp" android:layout_marginTop="124dp" android:text="¥"/>
+        <TextView android:textSize="28sp" android:textColor="#ff4242" android:id="@+id/tv_money_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="110dp" android:text="" android:layout_toRightOf="@+id/tv_money_symbol"/>
+        <TextView android:textSize="@dimen/sp_17" android:textColor="@color/color_FF333333" android:id="@+id/tv_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="129dp" android:layout_marginTop="110dp" android:text="@string/sign_title"/>
+        <TextView android:textSize="@dimen/sp_17" android:textColor="@color/color_FF999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="现金红包" android:layout_below="@+id/tv_des" android:layout_alignLeft="@+id/tv_des"/>
+        <TextView android:textSize="@dimen/sp_17" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:text="恭喜您，抽到了现金红包" android:layout_above="@+id/ll_money" android:layout_centerHorizontal="true"/>
+        <LinearLayout android:gravity="bottom" android:id="@+id/ll_money" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_10" android:layout_above="@+id/btn_sure" android:layout_centerHorizontal="true">
+            <TextView android:textSize="32sp" android:textColor="@color/white" android:id="@+id/tv_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+            <TextView android:textSize="20sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="元"/>
+        </LinearLayout>
+        <Button android:textSize="16sp" android:textColor="@color/white" android:id="@+id/btn_sure" android:background="@drawable/mh_zql_yellow" android:layout_width="213dp" android:layout_height="32dp" android:layout_marginBottom="25dp" android:text="确定" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</LinearLayout>

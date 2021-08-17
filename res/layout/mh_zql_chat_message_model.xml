@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/mh_zql_common_white_header_layout"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13sp" android:textColor="@color/btn_task_dark" android:background="@color/btn_task_light" android:paddingLeft="@dimen/dp_16" android:paddingTop="@dimen/dp_10" android:paddingRight="@dimen/dp_16" android:paddingBottom="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="只能发送一条消息，避免发送一些没用信息，如在吗，你好等，请提供充详细咨询说明，客服收到后会尽快处理，客服处理时间为：8:00~23:00。"/>
+            <EditText android:textColor="@color/color_FF333333" android:textColorHint="@color/color_FF999999" android:gravity="left" android:id="@+id/ed_reason" android:background="@color/transparent" android:paddingLeft="@dimen/dp_16" android:paddingTop="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/dp_100" android:hint="请输入咨询内容（最少5个字）" android:maxLength="200"/>
+            <LinearLayout android:gravity="right" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_16">
+                <TextView android:textSize="13sp" android:textColor="#ff333333" android:id="@+id/tv_text_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0"/>
+                <TextView android:textSize="13sp" android:textColor="@color/color_FF999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" /200"/>
+            </LinearLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10">
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcy_img" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_video" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                    <ImageView android:id="@+id/img_video" android:layout_width="100dp" android:layout_height="100dp" android:layout_marginTop="@dimen/dp_10" android:layout_marginBottom="@dimen/dp_10" android:src="@mipmap/mh_zql_add_video_des" android:layout_centerHorizontal="true"/>
+                    <ImageView android:id="@+id/btn_del" android:padding="3dp" android:visibility="gone" android:layout_width="@dimen/dp_30" android:layout_height="30dp" android:layout_marginRight="-15dp" android:src="@mipmap/mh_zql_delete_pic" android:layout_alignRight="@+id/img_video"/>
+                </RelativeLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="@dimen/dp_48">
+        <TextView android:textSize="17sp" android:textColor="@color/text_color_btn" android:gravity="center" android:id="@+id/btn_send" android:background="@color/btn_task_dark" android:layout_width="match_parent" android:layout_height="34dp" android:layout_marginLeft="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16" android:text="发送"/>
+    </LinearLayout>
+</LinearLayout>

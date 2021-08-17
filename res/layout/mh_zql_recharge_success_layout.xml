@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/mh_zql_common_white_header_layout"/>
+    <ImageView android:layout_width="109dp" android:layout_height="109dp" android:layout_marginTop="@dimen/dp_58" android:src="@mipmap/mh_zql_success"/>
+    <TextView android:textSize="@dimen/sp_18" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="恭喜您，充值成功！"/>
+</LinearLayout>

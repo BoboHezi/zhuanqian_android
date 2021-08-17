@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/mh_zql_white_shape_2" android:layout_width="321dp" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/sp_18" android:textColor="@color/color_FF333333" android:gravity="center" android:id="@+id/tv_dialog_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20"/>
+    <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:layout_gravity="center" android:id="@+id/tv_dialog_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_25" android:layout_marginTop="@dimen/dp_20" android:layout_marginRight="@dimen/dp_25"/>
+    <LinearLayout android:id="@+id/ll_agree" android:paddingTop="@dimen/dp_20" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_25">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_agree" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mh_zql_check_bg"/>
+        <TextView android:textSize="14sp" android:textColor="@color/color_FF999999" android:id="@+id/tv_agree" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_5" android:text="不再提示"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_copy" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_25" android:layout_marginTop="@dimen/dp_10">
+        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:ellipsize="end" android:id="@+id/tv_contact" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="200dp" android:text="" android:singleLine="true"/>
+        <TextView android:textSize="12sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_copy" android:background="@drawable/mh_zql_task_public" android:layout_width="40dp" android:layout_height="@dimen/dp_20" android:layout_marginLeft="@dimen/dp_10" android:text="复制"/>
+    </LinearLayout>
+    <TextView android:layout_marginTop="25dp" style="@style/line"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/dp_48">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="@dimen/dp_48" android:layout_marginLeft="@dimen/dp_25" android:layout_marginRight="@dimen/dp_25">
+            <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF666666" android:gravity="center" android:id="@+id/tv_cancel" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+            <View android:layout_gravity="center" android:background="#ffcccccc" android:layout_width="1px" android:layout_height="23dp"/>
+            <TextView android:textSize="@dimen/sp_16" android:textColor="@color/text_color_1" android:gravity="center" android:id="@+id/tv_confirm" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+        </LinearLayout>
+        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF666666" android:gravity="center" android:id="@+id/btn_know" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10" android:text="我知道了，谢谢"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@mipmap/mh_zql_bg" android:layout_width="match_parent" android:layout_height="@dimen/dp_40">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="@dimen/sp_17" android:textColor="@color/color_FF333333" android:gravity="center" android:id="@+id/btn_filter_restar" android:layout_width="0dp" android:layout_height="match_parent" android:text="重置" android:layout_weight="1"/>
+        <TextView android:textSize="@dimen/sp_17" android:textColor="@color/text_color_btn" android:gravity="center" android:id="@+id/btn_filter_sure" android:background="@color/btn_task_dark" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginTop="@dimen/dp_3" android:text="确定" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

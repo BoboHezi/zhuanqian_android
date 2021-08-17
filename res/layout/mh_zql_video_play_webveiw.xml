@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/root_ll" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_surfaceView" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <RelativeLayout android:id="@+id/rl_common_top" android:layout_width="match_parent" android:layout_height="@dimen/dp_47">
+        <LinearLayout android:id="@+id/ll_left" android:layout_width="@dimen/dp_100" android:layout_height="match_parent" android:layout_centerVertical="true">
+            <ImageView android:id="@+id/iv_left" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_10" android:src="@mipmap/mh_zql_back_white"/>
+            <TextView android:textSize="@dimen/sp_14" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_left" android:layout_width="wrap_content" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <TextView android:textSize="@dimen/sp_17" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="250dp" android:singleLine="true" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <TextView android:textSize="18sp" android:textColor="@color/white" android:id="@+id/tv_load" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="正在加载..." android:layout_centerInParent="true"/>
+    <RelativeLayout android:id="@+id/ll_progress" android:background="@drawable/mh_zql_white_shape_27" android:visibility="gone" android:layout_width="@dimen/dp_53" android:layout_height="@dimen/dp_53" android:layout_marginLeft="@dimen/dp_30" android:layout_marginBottom="@dimen/dp_30" android:layout_alignParentBottom="true">
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar android:id="@+id/pb_circle" android:layout_width="45dp" android:layout_height="45dp" android:layout_centerInParent="true" app:cpb_background_progressbar_color="#f3f3f3" app:cpb_background_progressbar_width="2dp" app:cpb_progress="0" app:cpb_progress_max="100" app:cpb_progressbar_color="#ff801d" app:cpb_progressbar_width="2dp"/>
+        <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@mipmap/mh_zql_gold_32" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</RelativeLayout>

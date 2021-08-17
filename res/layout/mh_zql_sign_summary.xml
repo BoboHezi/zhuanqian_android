@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="#e7462f" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/mh_zql_common_white_header_layout"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@mipmap/mh_zql_summary" android:layout_width="match_parent" android:layout_height="320dp">
+                <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="104dp">
+                    <ImageView android:layout_gravity="center_horizontal" android:layout_width="27dp" android:layout_height="27dp" android:src="@mipmap/mh_zql_login_logo"/>
+                    <ImageView android:layout_width="42dp" android:layout_height="15dp" android:layout_marginLeft="8dp" android:src="@mipmap/mh_zql_login_money"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10">
+                    <ImageView android:layout_gravity="center_horizontal" android:id="@+id/img_user_header" android:layout_width="24dp" android:layout_height="24dp" android:src="@mipmap/mh_zql_user_default"/>
+                    <TextView android:textSize="15sp" android:textColor="@color/color_FF333333" android:id="@+id/tv_user_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="在新人活动赚了"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_2">
+                    <ImageView android:layout_width="43dp" android:layout_height="7dp" android:layout_marginTop="4dp" android:src="@mipmap/mh_zql_summary_line"/>
+                    <LinearLayout android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+                        <TextView android:textSize="12sp" android:textColor="#ee5b21" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="¥"/>
+                        <TextView android:textSize="20sp" android:textColor="#ee5b21" android:id="@+id/tv_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="43dp" android:layout_height="7dp" android:layout_marginTop="4dp" android:src="@mipmap/mh_zql_summary_line"/>
+                </LinearLayout>
+                <TextView android:textSize="20sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50dp" android:text="注册签到领红包"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/mh_zql_white_shape" android:paddingTop="16dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="16dp">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/mh_zql_sign_title"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:layout_marginBottom="23dp">
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@mipmap/mh_zql_summary_1" android:layout_width="80dp" android:layout_height="107dp">
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_12" android:src="@mipmap/mh_zql_summary_smiley"/>
+                        <TextView android:textSize="22sp" android:textColor="@color/white" android:id="@+id/tv_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text=""/>
+                        <TextView android:textSize="12sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="连续签到(天)"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@mipmap/mh_zql_summary_2" android:layout_width="80dp" android:layout_height="107dp" android:layout_marginLeft="12dp">
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_12" android:src="@mipmap/mh_zql_summary_money"/>
+                        <TextView android:textSize="22sp" android:textColor="@color/white" android:id="@+id/tv_total_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text=""/>
+                        <TextView android:textSize="12sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="累计赚了(元)"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@mipmap/mh_zql_summary_3" android:layout_width="80dp" android:layout_height="107dp" android:layout_marginLeft="12dp">
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_12" android:src="@mipmap/mh_zql_summary_task"/>
+                        <TextView android:textSize="22sp" android:textColor="@color/white" android:id="@+id/tv_total_task" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text=""/>
+                        <TextView android:textSize="12sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="共做任务(个)"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="32dp" android:layout_marginLeft="@dimen/dp_20" android:layout_marginRight="@dimen/dp_20">
+                    <Button android:textSize="17sp" android:textColor="@color/white" android:id="@+id/btn_new_sign" android:background="@mipmap/mh_zql_sumary_share" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="@dimen/dp_10" android:text="新一轮签到" android:layout_weight="1"/>
+                    <Button android:textSize="17sp" android:textColor="@color/white" android:id="@+id/btn_share" android:background="@mipmap/mh_zql_sumary_share" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_10" android:text="分享给好友" android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

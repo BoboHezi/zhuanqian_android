@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/mh_zql_common_white_header_layout"/>
+    <TextView android:textColor="@color/color_FF333333" android:id="@+id/tv_answer_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_30" android:layout_marginRight="@dimen/dp_16"/>
+    <TextView android:textSize="@dimen/sp_16" android:textColor="@color/text_color_btn" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/btn_sure" android:background="@drawable/mh_zql_task_dark" android:layout_width="200dp" android:layout_height="40dp" android:layout_marginTop="@dimen/dp_30" android:layout_marginBottom="@dimen/dp_25" android:text="马上答题"/>
+</LinearLayout>

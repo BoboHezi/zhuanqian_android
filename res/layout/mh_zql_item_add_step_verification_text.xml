@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/mh_zql_white_shape" android:paddingLeft="16dp" android:paddingTop="16dp" android:paddingRight="16dp" android:layout_width="312dp" android:layout_height="wrap_content" android:minWidth="312dp">
+    <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="收集信息"/>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/mh_zql_step_title_ed" android:layout_width="match_parent" android:layout_height="70dp" android:layout_marginTop="10dp">
+        <EditText android:gravity="top" android:id="@+id/ed_des" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="70dp" android:layout_marginLeft="8dp" android:layout_marginRight="13dp" android:hint="适用于收集手机号、用户名、姓名、ID等。输入内容，详细说明你要收集什么。" style="@style/edit_step_content"/>
+    </LinearLayout>
+    <include android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/mh_zql_add_step_operate_view"/>
+</LinearLayout>

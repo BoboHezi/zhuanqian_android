@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="71dp">
+    <ImageView android:id="@+id/img_user_header" android:layout_width="@dimen/dp_48" android:layout_height="@dimen/dp_48" android:layout_marginRight="14dp" android:src="@mipmap/mh_zql_user_default" android:layout_centerVertical="true"/>
+    <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:id="@+id/tv_task_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AK趣步赚钱" android:layout_toRightOf="@+id/img_user_header" android:layout_alignTop="@+id/img_user_header"/>
+    <TextView android:textSize="14sp" android:textColor="@color/color_9D9C9C" android:id="@+id/tv_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:layout_alignBottom="@+id/img_user_header" android:layout_alignParentRight="true"/>
+    <TextView android:textSize="14sp" android:textColor="@color/color_9D9C9C" android:id="@+id/tv_user_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/img_user_header" android:layout_alignBottom="@+id/img_user_header"/>
+    <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:id="@+id/tv_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:text="12.80元" android:layout_alignTop="@+id/img_user_header" android:layout_alignParentRight="true"/>
+    <TextView android:layout_alignParentBottom="true" style="@style/line"/>
+</RelativeLayout>

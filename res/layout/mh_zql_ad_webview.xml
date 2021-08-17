@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/mh_zql_common_white_header_layout"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/swipe_container" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <WebView android:id="@+id/wb_ad" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <TextView android:textSize="15sp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/tv_start_download" android:background="#ff5e0d" android:visibility="gone" android:layout_width="match_parent" android:layout_height="44dp" android:text="立即下载"/>
+    </LinearLayout>
+</LinearLayout>

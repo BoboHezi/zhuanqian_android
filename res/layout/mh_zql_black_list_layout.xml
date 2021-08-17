@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_f4f4f6" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/mh_zql_common_white_header_layout"/>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/swipeRefreshLayout" android:layout_width="match_parent" android:layout_height="match_parent" app:srlEnableAutoLoadMore="true">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler" android:background="#f4f4f6" android:paddingLeft="@dimen/dp_16" android:paddingTop="@dimen/dp_11" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="match_parent" android:nestedScrollingEnabled="false"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

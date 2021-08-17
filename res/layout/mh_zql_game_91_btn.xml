@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/ll_game" android:visibility="gone" android:layout_width="58dp" android:layout_height="79dp">
+    <ImageView android:id="@+id/img_gold" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@mipmap/mh_zql_game_btn_91"/>
+    <ImageView android:id="@+id/img_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2dp" android:src="@mipmap/mh_zql_game_money" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+</RelativeLayout>

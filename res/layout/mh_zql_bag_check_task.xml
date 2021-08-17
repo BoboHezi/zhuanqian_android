@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/mh_zql_common_white_header_layout"/>
+    <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="@dimen/dp_48" android:layout_marginLeft="@dimen/dp_16">
+        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_16" android:text="通过单数"/>
+        <EditText android:textSize="13sp" android:textColor="@color/color_FF333333" android:textColorHint="#ffbbbbbb" android:gravity="center_vertical" android:id="@+id/et_pass_count" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="请输入通过单数" android:maxLength="6" android:inputType="number"/>
+    </LinearLayout>
+    <TextView android:layout_marginLeft="@dimen/dp_16" style="@style/line"/>
+    <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="@dimen/dp_48" android:layout_marginLeft="@dimen/dp_16">
+        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_16" android:text="驳回单数"/>
+        <TextView android:textSize="13sp" android:textColor="@color/color_FF333333" android:textColorHint="#ffbbbbbb" android:gravity="center_vertical" android:id="@+id/et_reject_count" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="" android:maxLength="6" android:inputType="number"/>
+    </LinearLayout>
+    <TextView android:layout_marginLeft="@dimen/dp_16" style="@style/line"/>
+    <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_16" android:text="驳回文字说明"/>
+    <EditText android:textSize="13sp" android:textColor="@color/color_FF333333" android:textColorHint="#ffbbbbbb" android:gravity="center_vertical" android:id="@+id/et_reject_reason" android:background="@color/transparent" android:padding="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="为了更好的解释驳回，请添加相关文字说明" android:maxLength="500"/>
+    <TextView android:background="#f3f3f3" android:layout_width="match_parent" android:layout_height="10dp" android:layout_marginTop="@dimen/dp_10"/>
+    <ImageView android:id="@+id/btn_reject_file" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_16" android:src="@mipmap/mh_zql_add_reject_file"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+    <TextView android:textSize="17sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_commit" android:background="@color/color_FF4343" android:layout_width="match_parent" android:layout_height="45dp" android:text="确认审核"/>
+</LinearLayout>

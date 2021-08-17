@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginLeft="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16">
+        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="姓名" android:minEms="4"/>
+        <EditText android:textColor="@color/color_FF333333" android:textColorHint="#999" android:gravity="center_vertical" android:id="@+id/ed_user_name" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="请输入姓名" android:maxLength="30"/>
+    </LinearLayout>
+    <TextView android:background="#d8d8d8" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginLeft="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginLeft="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16">
+        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="身份证号" android:minEms="4"/>
+        <EditText android:textColor="@color/color_FF333333" android:textColorHint="#999" android:gravity="center_vertical" android:id="@+id/ed_id_cd" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="请输入身份证号" android:maxLength="18"/>
+    </LinearLayout>
+    <TextView android:textSize="12sp" android:textColor="#ffff4343" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16" android:text="@string/real_name_tip"/>
+    <TextView android:textSize="13sp" android:textColor="@color/color_FF333333" android:gravity="right|center_vertical|center_horizontal|center" android:layout_gravity="right" android:id="@+id/btn_go" android:paddingRight="@dimen/dp_16" android:layout_width="@dimen/dp_100" android:layout_height="45dp" android:text="实名必要性" android:drawableRight="@mipmap/mh_zql_arrow"/>
+    <TextView android:textSize="16sp" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/btn_commit" android:background="@drawable/mh_zql_task_public" android:layout_width="match_parent" android:layout_height="@dimen/dp_48" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="20dp" android:layout_marginRight="@dimen/dp_16" android:text="确认提交"/>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/mh_zql_step_window_shape" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="120dp" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:minWidth="120dp">
+    <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:id="@+id/btn_1" android:paddingLeft="20dp" android:layout_width="match_parent" android:layout_height="40dp" android:text="新人须知"/>
+    <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:id="@+id/btn_order" android:paddingLeft="20dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="40dp" android:text="接单规则"/>
+    <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:id="@+id/btn_2" android:paddingLeft="20dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="40dp" android:text="发单规则"/>
+    <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:id="@+id/btn_send_explain" android:paddingLeft="20dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="40dp" android:text="发布悬赏须知"/>
+    <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:id="@+id/btn_reward" android:paddingLeft="20dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="40dp" android:text="悬赏赏金标准"/>
+    <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:id="@+id/btn_3" android:paddingLeft="20dp" android:layout_width="match_parent" android:layout_height="40dp" android:text="免责声明"/>
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_collection" android:paddingLeft="20dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="40dp">
+        <ImageView android:id="@+id/img_collection" android:layout_width="18dp" android:layout_height="18dp" android:src="@mipmap/mh_zql_favorite"/>
+        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:id="@+id/btn_collection" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="5dp" android:text="收藏"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/btn_replay" android:paddingLeft="20dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="40dp">
+        <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@mipmap/mh_zql_more_replay"/>
+        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:paddingLeft="5dp" android:layout_width="match_parent" android:layout_height="40dp" android:text="举报"/>
+    </LinearLayout>
+</LinearLayout>

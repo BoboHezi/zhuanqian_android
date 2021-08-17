@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/mh_zql_common_white_header_layout"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@mipmap/mh_zql_deposit_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dp_16">
+                <TextView android:textSize="@dimen/sp_14" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" android:text="保证金金额(元)"/>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16">
+                    <ImageView android:id="@+id/iv_bond" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_5" android:src="@mipmap/mh_zql_bond_icon"/>
+                    <TextView android:textSize="@dimen/sp_37" android:textColor="@color/white" android:id="@+id/tv_balance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.00"/>
+                </LinearLayout>
+                <TextView android:textSize="13sp" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/to_recharge" android:background="@drawable/mh_zql_recharge_bg" android:layout_width="99dp" android:layout_height="28dp" android:layout_marginTop="@dimen/dp_20" android:layout_marginBottom="@dimen/dp_20" android:text="充值保证金"/>
+            </LinearLayout>
+            <View android:background="@color/color_f4f4f6" android:layout_width="match_parent" android:layout_height="@dimen/dp_10"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dp_16">
+                <TextView android:textSize="16sp" android:textColor="#ff333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="保证金说明"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_18">
+                    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_9a9a9a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1. "/>
+                    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_9a9a9a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="保证金最低金额为1000元，可大于1000元，保证金越高，您发布的任务信誉度越高，有利于您的任务快速完成；"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16">
+                    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_9a9a9a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2. "/>
+                    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_9a9a9a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="已缴纳足额保证金后，在发布任务列表会显示保证金标识，提高任务的信誉度，增加成交机会；"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16">
+                    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_9a9a9a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3. "/>
+                    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_9a9a9a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="部分金融、理财、支付类任务，必须缴纳保证金后才能发布；"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16">
+                    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_9a9a9a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4. "/>
+                    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_9a9a9a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="如果被投诉，平台将根据相关规定对投诉进行仲裁，根据仲裁结果，如果对任务承接方造成了损失会从保证金中进行处罚；"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16">
+                    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_9a9a9a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5. "/>
+                    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_9a9a9a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="保证金可申请退还，退还申请需要15天的审核周期，审核通过后及时退还全额保证金，退还时会收取1%的手续费；"/>
+                </LinearLayout>
+                <LinearLayout android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16">
+                    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_9a9a9a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="6. "/>
+                    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_9a9a9a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="保证金可申请退还，提交申请后15天，经审核无违规行为以及投诉，保证金将全额退还，退还时收取1%的手续费（最低1元）。"/>
+                </LinearLayout>
+                <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_9a9a9a" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:text="注：如申请退还15天后未到账，请在工作日联系客服处理。"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

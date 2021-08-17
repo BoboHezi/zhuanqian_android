@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/mh_zql_sign_day_record_top" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="21sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_24" android:layout_marginBottom="@dimen/dp_24" android:text="我的战绩"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16" android:layout_marginBottom="@dimen/dp_30">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="18sp" android:textColor="@color/white" android:id="@+id/tv_total_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+                <TextView android:textSize="13sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="累计投入（元）"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="18sp" android:textColor="@color/white" android:id="@+id/tv_get_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+                <TextView android:textSize="13sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="累计赚取（元）"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="18sp" android:textColor="@color/white" android:id="@+id/tv_sign_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+                <TextView android:textSize="13sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="成功打卡（天）"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/sp_13" android:textColor="@color/white" android:gravity="center" android:background="@drawable/mh_zql_signday_tip" android:layout_width="match_parent" android:layout_height="@dimen/dp_32" android:text="当日完成报名任务，次日09:00~16:00瓜分奖池"/>
+    <LinearLayout android:orientation="horizontal" android:background="#bfdeff" android:layout_width="match_parent" android:layout_height="38dp" android:layout_marginTop="8dp">
+        <TextView android:textSize="@dimen/sp_15" android:textColor="@color/color_10264B" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="打卡时间" android:layout_weight="1"/>
+        <TextView android:textSize="@dimen/sp_15" android:textColor="@color/color_10264B" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="打卡状态" android:layout_weight="1"/>
+        <TextView android:textSize="@dimen/sp_15" android:textColor="@color/color_10264B" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="奖金" android:layout_weight="1"/>
+    </LinearLayout>
+    <include layout="@layout/mh_zql_common_recycler_view"/>
+</LinearLayout>

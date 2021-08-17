@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:background="@color/white" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_FF333333" android:id="@+id/tv_cancle" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="取消" android:layout_centerVertical="true"/>
+        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="请选择时间" android:layout_centerInParent="true"/>
+        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/colorPrimary" android:id="@+id/tv_select" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="完成" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <View style="@style/line"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:background="@color/white" android:paddingLeft="20dp" android:paddingTop="15dp" android:paddingRight="20dp" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp">
+            <com.youchen.mhlite.widget.DatePickerView android:id="@+id/year_pv" android:layout_width="0dp" android:layout_height="160dp" android:layout_weight="3"/>
+            <TextView android:textSize="18sp" android:textColor="@color/color_FF333333" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="年" android:layout_weight="1"/>
+            <com.youchen.mhlite.widget.DatePickerView android:id="@+id/month_pv" android:layout_width="0dp" android:layout_height="160dp" android:layout_weight="2"/>
+            <TextView android:textSize="18sp" android:textColor="@color/color_FF333333" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="月" android:layout_weight="1"/>
+            <com.youchen.mhlite.widget.DatePickerView android:id="@+id/day_pv" android:layout_width="0dp" android:layout_height="160dp" android:layout_weight="2"/>
+            <TextView android:textSize="18sp" android:textColor="@color/color_FF333333" android:gravity="center" android:id="@+id/day_text" android:layout_width="0dp" android:layout_height="match_parent" android:text="日" android:layout_weight="1"/>
+            <com.youchen.mhlite.widget.DatePickerView android:id="@+id/hour_pv" android:layout_width="0dp" android:layout_height="160dp" android:layout_weight="2"/>
+            <TextView android:textSize="18sp" android:textColor="@color/color_FF333333" android:gravity="center" android:id="@+id/hour_text" android:layout_width="0dp" android:layout_height="match_parent" android:text="时" android:layout_weight="1"/>
+            <com.youchen.mhlite.widget.DatePickerView android:id="@+id/minute_pv" android:layout_width="0dp" android:layout_height="160dp" android:layout_weight="2"/>
+            <TextView android:textSize="18sp" android:textColor="@color/color_FF333333" android:gravity="center" android:id="@+id/minute_text" android:layout_width="0dp" android:layout_height="match_parent" android:text="分" android:layout_weight="1"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

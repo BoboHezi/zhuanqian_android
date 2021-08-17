@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/mh_zql_white_shape" android:paddingLeft="16dp" android:paddingTop="16dp" android:paddingRight="16dp" android:layout_width="312dp" android:layout_height="wrap_content" android:minWidth="312dp">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="复制数据"/>
+        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="步骤说明"/>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/mh_zql_step_title_ed" android:layout_width="match_parent" android:layout_height="93dp" android:layout_marginTop="10dp">
+            <EditText android:gravity="top" android:id="@+id/ed_des" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="70dp" android:layout_marginLeft="8dp" android:layout_marginRight="13dp" android:hint="适用于需要复制数据，如填写邀请码，输入内容，提示会员复制数据，方便填写" style="@style/edit_step_content"/>
+            <LinearLayout android:gravity="right" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/sp_13" android:textColor="@color/color_FF333333" android:id="@+id/tv_text_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0"/>
+                <TextView style="@style/tv_step_word_number"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="填写数据"/>
+        <EditText android:textSize="13sp" android:textColor="@color/color_FF333333" android:textColorHint="@color/color_BBBBBB" android:gravity="center_vertical" android:id="@+id/ed_link" android:background="@drawable/mh_zql_step_title_ed" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="match_parent" android:layout_height="33dp" android:layout_marginTop="10dp" android:hint="如邀请码，钱包地址之类" android:maxLength="100"/>
+        <include android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/mh_zql_add_step_operate_view"/>
+    </LinearLayout>
+    <ImageView android:id="@+id/btn_close" android:padding="4dp" android:layout_width="30dp" android:layout_height="30dp" android:src="@mipmap/mh_zql_close" android:layout_alignParentRight="true"/>
+</RelativeLayout>

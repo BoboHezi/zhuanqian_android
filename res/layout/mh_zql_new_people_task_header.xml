@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/img_top_banner" android:layout_width="match_parent" android:layout_height="360dp" android:scaleType="centerCrop"/>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@mipmap/mh_zql_bg2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="325dp">
+        <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp">
+            <TextView android:background="@color/color_FF333333" android:layout_width="14dp" android:layout_height="1dp"/>
+            <TextView android:textSize="17sp" android:textColor="#ff333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:text="新人福利活动"/>
+            <TextView android:background="@color/color_FF333333" android:layout_width="14dp" android:layout_height="1dp"/>
+        </LinearLayout>
+        <TextView android:textSize="13sp" android:textColor="#ffff4343" android:background="@drawable/mh_zql_red_new_person" android:paddingLeft="@dimen/dp_16" android:paddingTop="4dp" android:paddingRight="@dimen/dp_16" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_12" android:text="完成新人福利，即可参与每日福利活动"/>
+        <TextView android:textSize="13sp" android:textColor="@color/color_FF333333" android:layout_gravity="center_horizontal" android:id="@+id/tv_reward_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="今日已发放每日福利奖励 1288元"/>
+    </LinearLayout>
+    <TextView android:textSize="12sp" android:textColor="@color/white" android:gravity="center" android:background="@drawable/mh_zql_new_person_tip" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="wrap_content" android:layout_height="@dimen/dp_28" android:layout_marginLeft="30dp" android:layout_marginTop="290dp" android:text="0投入  0门槛  提现实时到账 "/>
+    <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="260dp" android:layout_alignParentRight="true" layout="@layout/mh_zql_msg_roll"/>
+</RelativeLayout>

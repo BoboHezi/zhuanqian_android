@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/mh_zql_common_white_header_layout"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="55dp">
+        <TextView android:textSize="16sp" android:textColor="#ff333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:text="团队总人数" android:minEms="6"/>
+        <EditText android:textSize="13sp" android:textColor="#ff333333" android:textColorHint="#bbb" android:gravity="center_vertical" android:id="@+id/ed_team_number" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="请输入您的团队总人数" android:maxLength="15" android:inputType="number"/>
+    </LinearLayout>
+    <TextView android:layout_marginLeft="@dimen/dp_16" style="@style/line"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="55dp">
+        <TextView android:textSize="16sp" android:textColor="#ff333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:text="每天做单人数" android:minEms="6"/>
+        <EditText android:textSize="13sp" android:textColorHint="#bbb" android:gravity="center_vertical" android:id="@+id/ed_doing_number" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="请输入您的每天预估做单人数" android:maxLength="15" android:inputType="number"/>
+    </LinearLayout>
+    <TextView android:layout_marginLeft="@dimen/dp_16" style="@style/line"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="55dp">
+        <TextView android:textSize="16sp" android:textColor="#ff333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:text="每天做单量" android:minEms="6"/>
+        <EditText android:textSize="13sp" android:textColorHint="#bbb" android:gravity="center_vertical" android:id="@+id/ed_finish_number" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="请输入您的每天预估做单量" android:maxLength="15" android:inputType="number"/>
+    </LinearLayout>
+    <TextView android:layout_marginLeft="@dimen/dp_16" style="@style/line"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="55dp">
+        <TextView android:textSize="16sp" android:textColor="#ff333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:text="联系微信号" android:minEms="6"/>
+        <EditText android:textSize="13sp" android:textColorHint="#bbb" android:gravity="center_vertical" android:id="@+id/ed_wx" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="请输入您的微信号"/>
+    </LinearLayout>
+    <TextView android:layout_marginLeft="@dimen/dp_16" style="@style/line"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+    <TextView android:textSize="17sp" android:textColor="@color/text_color_btn" android:gravity="center" android:id="@+id/btn_commit" android:background="@color/btn_task_dark" android:layout_width="match_parent" android:layout_height="@dimen/dp_48" android:text="提交申请"/>
+</LinearLayout>

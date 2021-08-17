@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dp_16" android:layout_marginTop="@dimen/dp_16">
+        <ImageView android:id="@+id/iv_icon" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_my_publish" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_13" android:layout_toRightOf="@+id/iv_icon" android:layout_centerVertical="true">
+            <TextView android:textSize="15sp" android:textColor="#ff303030" android:id="@+id/tv_task_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4dp"/>
+            <TextView android:id="@+id/tv_text_row_1" style="@style/my_publish_item_text"/>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@+id/tv_text_row_2" android:visibility="gone" style="@style/my_publish_item_text"/>
+                <TextView android:textColor="@color/color_4FB2FF" android:id="@+id/tv_text_finish_number" android:visibility="gone" style="@style/my_publish_item_text"/>
+            </LinearLayout>
+            <TextView android:id="@+id/tv_text_row_3" android:visibility="gone" style="@style/my_publish_item_text"/>
+            <TextView android:id="@+id/tv_text_row_4" android:visibility="gone" style="@style/my_publish_item_text"/>
+            <TextView android:id="@+id/tv_text_row_5" android:visibility="gone" style="@style/my_publish_item_text"/>
+            <TextView android:id="@+id/tv_top_time" android:visibility="gone" style="@style/my_publish_item_text"/>
+            <TextView android:textColor="@color/text_color_1" android:id="@+id/tv_auto_refresh_tip" android:visibility="gone" android:layout_marginTop="@dimen/dp_5" android:text="自动刷新进行中" style="@style/my_publish_item_text"/>
+            <RelativeLayout android:id="@+id/btn_open_video" android:paddingTop="8dp" android:paddingBottom="3dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="13sp" android:textColor="@color/color_FF333333" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="做单视频" android:drawableRight="@mipmap/mh_zql_play_video" android:drawablePadding="5dp"/>
+                <TextView android:textSize="13sp" android:textColor="@color/color_FF999999" android:id="@+id/tv_video_status" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="成功" android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+            <TextView android:textSize="13sp" android:textColor="@color/color_FF999999" android:id="@+id/tv_video_reason" android:paddingBottom="3dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10">
+                <TextView android:id="@+id/tv_btn_1" style="@style/my_publish_item_btn"/>
+                <TextView android:id="@+id/tv_btn_2" android:layout_marginLeft="@dimen/dp_4" style="@style/my_publish_item_btn"/>
+                <TextView android:id="@+id/tv_btn_3" android:layout_marginLeft="@dimen/dp_4" style="@style/my_publish_item_btn"/>
+                <TextView android:id="@+id/tv_btn_4" android:visibility="gone" android:layout_marginLeft="@dimen/dp_4" style="@style/my_publish_item_btn"/>
+                <TextView android:id="@+id/tv_btn_5" android:visibility="gone" android:layout_marginLeft="@dimen/dp_4" style="@style/my_publish_item_btn"/>
+                <TextView android:id="@+id/tv_btn_6" android:visibility="gone" android:layout_marginLeft="@dimen/dp_4" style="@style/my_publish_item_btn"/>
+                <TextView android:id="@+id/tv_btn_7" android:visibility="gone" android:layout_marginLeft="@dimen/dp_4" style="@style/my_publish_item_btn"/>
+                <TextView android:id="@+id/tv_btn_8" android:visibility="gone" android:layout_marginLeft="@dimen/dp_4" style="@style/my_publish_item_btn"/>
+                <TextView android:id="@+id/tv_btn_9" android:visibility="gone" android:layout_marginLeft="@dimen/dp_4" style="@style/my_publish_item_btn"/>
+                <TextView android:id="@+id/tv_btn_10" android:visibility="gone" android:layout_marginLeft="@dimen/dp_4" style="@style/my_publish_item_btn"/>
+                <TextView android:id="@+id/tv_btn_11" android:visibility="gone" android:layout_marginLeft="@dimen/dp_4" style="@style/my_publish_item_btn"/>
+                <TextView android:id="@+id/tv_btn_14" android:visibility="gone" android:layout_marginLeft="@dimen/dp_4" style="@style/my_publish_item_btn"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/tv_btn_12" android:visibility="gone" android:layout_marginTop="@dimen/dp_10" style="@style/my_publish_item_btn"/>
+                <TextView android:id="@+id/tv_btn_13" android:visibility="gone" android:layout_marginLeft="@dimen/dp_4" android:layout_marginTop="@dimen/dp_10" style="@style/my_publish_item_btn"/>
+                <TextView android:id="@+id/tv_btn_15" android:visibility="gone" android:layout_marginLeft="@dimen/dp_4" android:layout_marginTop="@dimen/dp_10" android:text="发视频" style="@style/my_publish_item_btn"/>
+                <TextView android:id="@+id/btn_refresh" android:visibility="gone" android:layout_marginLeft="@dimen/dp_4" android:layout_marginTop="@dimen/dp_10" android:text="自动刷新" style="@style/my_publish_item_btn"/>
+                <TextView android:id="@+id/btn_set_refresh" android:visibility="gone" android:layout_marginLeft="@dimen/dp_4" android:layout_marginTop="@dimen/dp_10" android:text="自动刷新" style="@style/my_publish_item_btn"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:layout_marginLeft="@dimen/dp_16" android:layout_alignParentBottom="true" style="@style/line"/>
+</LinearLayout>

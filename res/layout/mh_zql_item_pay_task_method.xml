@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/mh_zql_pay_line" android:paddingRight="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="@dimen/dp_72" android:layout_marginLeft="16dp">
+    <ImageView android:id="@+id/img_method" android:layout_width="40dp" android:layout_height="40dp"/>
+    <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="" android:layout_weight="1"/>
+    <ImageView android:id="@+id/img_sel_pay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mh_zql_radio_task_btn"/>
+</LinearLayout>

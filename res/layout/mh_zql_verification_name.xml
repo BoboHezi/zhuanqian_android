@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="47dp">
+        <com.youchen.mhlite.widget.tablayout.CommonTabLayout android:id="@+id/commonTabLayout" android:layout_width="wrap_content" android:layout_height="@dimen/dp_48" android:layout_centerHorizontal="true" app:tl_indicator_color="@color/btn_task_dark" app:tl_indicator_width="40dp" app:tl_tab_width="120dp" app:tl_textSelectColor="@color/btn_task_dark" app:tl_textUnselectColor="@color/color_FF333333" app:tl_textsize="@dimen/sp_14"/>
+        <LinearLayout android:id="@+id/ll_left" android:layout_width="@dimen/dp_100" android:layout_height="match_parent" android:layout_centerVertical="true">
+            <ImageView android:id="@+id/iv_left" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_10"/>
+            <TextView android:textSize="@dimen/sp_14" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_left" android:layout_width="wrap_content" android:layout_height="match_parent"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView style="@style/line"/>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/vp_page" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

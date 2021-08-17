@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/dp_53">
+        <TextView android:textSize="@dimen/sp_17" android:textColor="@color/color_FF333333" android:gravity="center" android:id="@+id/btn_cancel" android:paddingRight="@dimen/dp_18" android:layout_width="61dp" android:layout_height="match_parent" android:text="取消" android:layout_alignParentRight="true"/>
+        <com.youchen.mhlite.widget.ClearEditText android:textSize="@dimen/sp_13" android:textColor="@color/color_FF333333" android:textColorHint="@color/color_BBBBBB" android:layout_gravity="center_horizontal" android:id="@+id/et_search" android:background="@drawable/mh_zql_index_edittext_bg" android:paddingLeft="@dimen/dp_11" android:paddingRight="@dimen/dp_11" android:layout_width="match_parent" android:layout_height="@dimen/dp_33" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_13" android:layout_marginBottom="@dimen/dp_13" android:hint="用户ID、手机号码" android:singleLine="true" android:drawableLeft="@mipmap/mh_zql_search" android:drawablePadding="@dimen/dp_5" android:layout_toLeftOf="@+id/btn_cancel" android:imeOptions="actionSearch" android:textCursorDrawable="@drawable/mh_zql_common_cursor"/>
+        <View android:layout_alignParentBottom="true" style="@style/line"/>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcy_user" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

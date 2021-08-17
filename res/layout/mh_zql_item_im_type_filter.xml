@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/mh_zql_bottom_line" android:layout_width="match_parent" android:layout_height="40dp">
+    <TextView android:textSize="15sp" android:textColor="@color/color_FF333333" android:gravity="center" android:id="@+id/typ_title" android:layout_width="match_parent" android:layout_height="40dp" android:text="用户ID"/>
+</LinearLayout>

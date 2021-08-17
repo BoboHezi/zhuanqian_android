@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/bg_activity" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/mh_zql_common_header_layout"/>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/srl" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" app:srlEnableLoadMore="false">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcy_super_task" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <TextView android:textSize="17sp" android:textColor="@color/text_color_btn" android:gravity="center" android:id="@+id/btn_sure" android:background="@color/btn_task_dark" android:layout_width="match_parent" android:layout_height="48dp" android:text="确定"/>
+</LinearLayout>

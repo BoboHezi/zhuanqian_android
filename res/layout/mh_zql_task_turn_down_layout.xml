@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/color_f4f4f6" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/mh_zql_common_white_header_layout"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:background="@color/white" android:padding="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/iv_user_icon" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_13" android:layout_toRightOf="@+id/iv_user_icon">
+                    <TextView android:textSize="16sp" android:textColor="#ff333333" android:id="@+id/tv_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="关注小龙"/>
+                    <TextView android:textSize="13sp" android:textColor="#ff999999" android:id="@+id/tv_user_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_8" android:text="ID：335213"/>
+                    <TextView android:textSize="13sp" android:textColor="#ff999999" android:id="@+id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_8" android:text="ID：335213"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_8">
+                        <TextView android:textSize="16sp" android:textColor="#ff333333" android:id="@+id/tv_task_name" android:layout_width="0dp" android:layout_height="wrap_content" android:text="微信关注公众号有奖金" android:layout_weight="1"/>
+                        <TextView android:textSize="16sp" android:textColor="#ffff4343" android:id="@+id/tv_task_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+3.33元"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:padding="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="117dp">
+                    <EditText android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:textColorHint="@color/color_ffbbbbbb" android:gravity="top" android:id="@+id/tv_reply_content" android:background="@color/white" android:layout_width="match_parent" android:layout_height="0dp" android:hint="请输入任务驳回原因" android:maxLength="50" android:layout_weight="1" android:textCursorDrawable="@drawable/mh_zql_common_cursor"/>
+                    <TextView android:textSize="@dimen/sp_12" android:textColor="@color/color_FF333333" android:layout_gravity="right" android:id="@+id/tv_reply_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0/50" android:maxLength="50"/>
+                </LinearLayout>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recy_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    <TextView android:textSize="13sp" android:textColor="#ff999999" android:id="@+id/tv_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="127dp" android:text="提交审核后台数据便于快速处理，\10请上传后台数据截图。" android:lineSpacingExtra="5dp"/>
+                </RelativeLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/ll_complaint" android:background="@color/transparent" android:layout_marginTop="26dp" style="@style/add_task_row">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mh_zql_check_bg"/>
+                    <TextView android:textSize="15sp" android:textColor="@color/color_FF333333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6dp" android:text="是否投诉该用户"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/recy_complaint" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/dp_48">
+        <TextView android:textSize="@dimen/sp_17" android:textColor="@color/text_color_btn" android:gravity="center" android:id="@+id/tv_tab_1" android:background="@color/btn_task_dark" android:layout_width="328dp" android:layout_height="35dp" android:text="确认驳回" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</LinearLayout>

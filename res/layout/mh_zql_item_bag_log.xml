@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="@dimen/dp_16" android:paddingRight="11dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="17sp" android:textColor="#ff333333" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" android:text="提交记录2"/>
+    <TextView android:textSize="13sp" android:textColor="#ff333333" android:id="@+id/tv_check_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:text="通过20单/驳回8单"/>
+    <TextView android:textSize="13sp" android:textColor="#ff333333" android:id="@+id/tv_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="提交信息：此次1000单全部提交，具体查看附件。"/>
+    <TextView android:textSize="12sp" android:textColor="@color/color_FF999999" android:id="@+id/tv_commit_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="提交时间：2021/04/08  14:20"/>
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_commit_file_info" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginTop="@dimen/dp_10">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/mh_zql_add_file_shape" android:layout_width="80dp" android:layout_height="80dp">
+            <TextView android:textColor="@color/color_FF333333" android:ellipsize="middle" android:gravity="center" android:id="@+id/tv_commit_file_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:drawableTop="@mipmap/mh_zql_zip" android:drawablePadding="5dp"/>
+        </LinearLayout>
+        <TextView android:textSize="16sp" android:textColor="@color/text_color_btn" android:gravity="center" android:id="@+id/btn_down_commit_file" android:background="@drawable/mh_zql_link_pre" android:layout_width="96dp" android:layout_height="24dp" android:layout_marginLeft="40dp" android:text="下载附件" android:layout_toRightOf="@+id/ll_qrcode" android:layout_alignTop="@+id/ll_qrcode"/>
+    </LinearLayout>
+    <TextView android:textSize="12sp" android:textColor="@color/color_FF999999" android:id="@+id/tv_reject_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="提交时间：2021/04/08  14:20"/>
+    <TextView android:textSize="13sp" android:textColor="@color/color_FF4343" android:id="@+id/tv_reject_reason" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text=""/>
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_reject_file_info" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginTop="@dimen/dp_10">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/mh_zql_add_file_shape" android:layout_width="80dp" android:layout_height="80dp">
+            <TextView android:textColor="@color/color_FF333333" android:ellipsize="middle" android:gravity="center" android:id="@+id/tv_reject_file_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:drawableTop="@mipmap/mh_zql_zip" android:drawablePadding="5dp"/>
+        </LinearLayout>
+        <TextView android:textSize="16sp" android:textColor="@color/text_color_btn" android:gravity="center" android:id="@+id/btn_down_reject_file" android:background="@drawable/mh_zql_link_pre" android:layout_width="96dp" android:layout_height="24dp" android:layout_marginLeft="40dp" android:text="下载附件" android:layout_toRightOf="@+id/ll_qrcode" android:layout_alignTop="@+id/ll_qrcode"/>
+    </LinearLayout>
+</LinearLayout>

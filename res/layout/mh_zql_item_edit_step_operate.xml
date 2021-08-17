@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/mh_zql_bottom_line" android:layout_width="match_parent" android:layout_height="47dp">
+    <TextView android:layout_marginLeft="15dp" style="@style/line"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginLeft="15dp">
+        <TextView android:textSize="15sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:id="@+id/btn_del" android:layout_width="80dp" android:layout_height="match_parent" android:text="删除" android:drawableLeft="@mipmap/mh_zql_step_del" android:drawablePadding="6dp"/>
+        <TextView android:textSize="15sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:id="@+id/btn_down" android:layout_width="80dp" android:layout_height="match_parent" android:text="下移" android:drawableLeft="@mipmap/mh_zql_step_down" android:drawablePadding="6dp"/>
+        <TextView android:textSize="15sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:id="@+id/btn_up" android:layout_width="80dp" android:layout_height="match_parent" android:text="上移" android:drawableLeft="@mipmap/mh_zql_step_up" android:drawablePadding="6dp"/>
+        <TextView android:textSize="15sp" android:textColor="@color/color_FF333333" android:gravity="center_vertical" android:id="@+id/btn_edit" android:layout_width="80dp" android:layout_height="match_parent" android:text="编辑" android:drawableLeft="@mipmap/mh_zql_edit" android:drawablePadding="6dp"/>
+    </LinearLayout>
+    <TextView android:background="@color/color_ffdbdbdb" android:layout_width="match_parent" android:layout_height="2dp"/>
+</LinearLayout>

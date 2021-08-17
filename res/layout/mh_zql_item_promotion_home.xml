@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16">
+        <ImageView android:id="@+id/img_user_header" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginTop="@dimen/dp_18" android:layout_marginRight="@dimen/dp_12" android:src="@mipmap/mh_zql_user_default"/>
+        <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/color_FF333333" android:id="@+id/tv_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:text="一只漂流的鱼" android:layout_toRightOf="@+id/img_user_header"/>
+        <TextView android:textSize="13sp" android:textColor="#ffbcbfc2" android:id="@+id/tv_pb_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_2" android:text="发布于：2020/04/10 10:24" android:layout_toRightOf="@+id/img_user_header" android:layout_below="@+id/tv_user_name"/>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_5" android:layout_marginTop="15.5dp" android:src="@mipmap/mh_zql_store_realname" android:layout_toRightOf="@+id/tv_user_name"/>
+        <ImageView android:id="@+id/img_top" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.5dp" android:src="@mipmap/mh_zql_promotion_top" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:id="@+id/tv_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="12dp" android:layout_marginRight="@dimen/dp_16" android:text="一只漂流的鱼"/>
+    <TextView android:textSize="13sp" android:textColor="#ff67696b" android:id="@+id/tv_pay_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="6dp" android:text="付款方式：预付/周结"/>
+    <com.lzy.ninegrid.NineGridView android:id="@+id/img_nine_gd" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="6dp" android:layout_marginRight="@dimen/dp_16" app:ngv_gridSpacing="5dp" app:ngv_mode="1" app:ngv_singleImageSize="90dp"/>
+    <TextView android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16" style="@style/line"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="52dp">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/btn_share" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textSize="13sp" android:textColor="#ffbcbfc2" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="分享" android:drawableLeft="@mipmap/mh_zql_promotion_list_share" android:drawablePadding="@dimen/dp_2"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/btn_comment" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textSize="13sp" android:textColor="#ffbcbfc2" android:gravity="center_vertical" android:id="@+id/tv_comment_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:drawableLeft="@mipmap/mh_zql_promotion_list_comment" android:drawablePadding="@dimen/dp_2"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/btn_look" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textSize="13sp" android:textColor="#ffbcbfc2" android:gravity="center_vertical" android:id="@+id/tv_look_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:drawableLeft="@mipmap/mh_zql_promotion_list_eye" android:drawablePadding="@dimen/dp_2"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:background="#f5f7f8" android:layout_width="match_parent" android:layout_height="10dp"/>
+</LinearLayout>

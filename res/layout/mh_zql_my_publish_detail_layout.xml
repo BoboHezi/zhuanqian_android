@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/mh_zql_common_white_header_layout"/>
+    <include android:id="@+id/ll_no_data_layout" android:visibility="gone" layout="@layout/mh_zql_no_data_layout"/>
+    <RelativeLayout android:id="@+id/ll_contact_root" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_content" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center" android:id="@+id/ll_check_number" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/dp_48">
+                    <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_ff303030" android:layout_gravity="center_vertical" android:id="@+id/tv_audited" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_ff303030" android:id="@+id/tv_pending_review" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_25"/>
+                </LinearLayout>
+                <TextView android:background="@color/bg_activity" android:layout_width="match_parent" android:layout_height="10dp"/>
+                <RelativeLayout android:id="@+id/ll_user_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:layout_marginBottom="@dimen/dp_11">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_user_icon" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:layout_marginLeft="@dimen/dp_16"/>
+                    <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_ff303030" android:id="@+id/tv_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_8" android:text="" android:layout_toRightOf="@+id/iv_user_icon"/>
+                    <TextView android:textSize="@dimen/sp_13" android:textColor="#9d9c9c" android:id="@+id/tv_apply_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_8" android:text="" android:layout_toRightOf="@+id/iv_user_icon" android:layout_alignBottom="@+id/iv_user_icon"/>
+                    <TextView android:textSize="@dimen/sp_13" android:textColor="#9d9c9c" android:id="@+id/tv_submit_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_below="@+id/tv_apply_time" android:layout_alignLeft="@+id/tv_apply_time"/>
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_10" android:src="@mipmap/mh_zql_arrow_black" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                </RelativeLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/ll_reply_content" android:background="@color/white" android:padding="@dimen/dp_16" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_16">
+                    <TextView android:textSize="16sp" android:textColor="#ff333333" android:id="@+id/tv_reply_content" android:background="@drawable/mh_zql_order_task_detail_reason_bg" android:padding="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView android:textSize="16sp" android:textColor="#ff333333" android:id="@+id/tv_examine" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:paddingBottom="@dimen/dp_10" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:text=""/>
+                <TextView android:background="@color/bg_activity" android:layout_width="match_parent" android:layout_height="10dp"/>
+                <LinearLayout android:gravity="center" android:background="@color/white" android:layout_width="match_parent" android:layout_height="45dp">
+                    <View android:layout_gravity="center_vertical" android:background="#3a3a3a" android:layout_width="@dimen/dp_16" android:layout_height="2dp"/>
+                    <TextView android:textSize="17sp" android:textColor="#ff333333" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_8" android:layout_marginRight="@dimen/dp_8" android:text="验证图"/>
+                    <View android:layout_gravity="center_vertical" android:background="#3a3a3a" android:layout_width="@dimen/dp_16" android:layout_height="2dp"/>
+                </LinearLayout>
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recy_ver_pic" android:paddingLeft="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+                </RelativeLayout>
+                <TextView style="@style/line"/>
+                <TextView android:textSize="@dimen/sp_16" android:textColor="@color/color_FF333333" android:id="@+id/tv_verify_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dp_16"/>
+                <TextView android:background="@color/bg_activity" android:layout_width="match_parent" android:layout_height="10dp"/>
+                <LinearLayout android:gravity="center" android:background="@color/white" android:layout_width="match_parent" android:layout_height="45dp">
+                    <View android:layout_gravity="center_vertical" android:background="#3a3a3a" android:layout_width="@dimen/dp_16" android:layout_height="2dp"/>
+                    <TextView android:textSize="17sp" android:textColor="#ff333333" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="22dp" android:layout_marginLeft="@dimen/dp_8" android:layout_marginRight="@dimen/dp_8" android:text="历史记录"/>
+                    <View android:layout_gravity="center_vertical" android:background="#3a3a3a" android:layout_width="@dimen/dp_16" android:layout_height="2dp"/>
+                </LinearLayout>
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recy_sub_user" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcy_reject" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recy_modify" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <include android:layout_width="122dp" android:layout_height="51dp" android:layout_marginLeft="10dp" android:layout_marginBottom="74dp" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" layout="@layout/mh_zql_drag_content_view"/>
+    </RelativeLayout>
+    <include android:id="@+id/my_publish_detail_bottom" android:visibility="gone" layout="@layout/mh_zql_my_publish_detail_bottom"/>
+</LinearLayout>

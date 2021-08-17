@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:background="@color/white" android:paddingLeft="12dp" android:layout_width="match_parent" android:layout_height="46dp">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/mh_zql_headline"/>
+        <TextView android:background="@color/color_cccccc" android:layout_width="1dp" android:layout_height="16dp" android:layout_marginLeft="4dp"/>
+        <AdapterViewFlipper android:id="@+id/view_flipper" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </LinearLayout>
+    <TextView android:textColor="@color/btn_task_dark" android:id="@+id/tv_tip" android:background="@color/btn_task_light" android:paddingLeft="@dimen/dp_16" android:paddingTop="@dimen/dp_13" android:paddingRight="@dimen/dp_16" android:paddingBottom="@dimen/dp_13" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="保号到期后在途赏金自动到账，保号期内不允许找回账号，取消购物订单，取消关注等，否则悬赏主驳回保号单，取消赏金。如有悬赏主恶意驳回保号单，请发起申诉，平台严肃处理。  "/>
+</LinearLayout>

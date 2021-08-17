@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/mh_zql_common_white_header_layout"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="12dp">
+        <TextView android:textSize="16sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_bag_name" android:background="@mipmap/mh_zql_bag_circle" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginRight="12dp" android:text="包"/>
+        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:id="@+id/tv_bag_level" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="包工头" android:layout_toRightOf="@+id/tv_bag_name"/>
+        <TextView android:textSize="13sp" android:textColor="@color/color_FF999999" android:id="@+id/tv_apply_tip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="" android:layout_toRightOf="@+id/tv_bag_name" android:layout_below="@+id/tv_bag_level"/>
+    </RelativeLayout>
+    <TextView android:textSize="16sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/btn_apply" android:background="@drawable/mh_zql_bag_btn" android:layout_width="290dp" android:layout_height="40dp" android:layout_marginTop="25dp" android:text="申请为包工头"/>
+    <TextView android:layout_marginLeft="18dp" android:layout_marginTop="26dp" android:layout_marginBottom="26dp" style="@style/line"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="12dp">
+        <TextView android:textSize="16sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_bag_reward" android:background="@mipmap/mh_zql_bag_circle" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginRight="12dp" android:text="悬"/>
+        <TextView android:textSize="16sp" android:textColor="@color/color_FF333333" android:id="@+id/tv_bag_reward_level" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="悬赏主" android:layout_toRightOf="@+id/tv_bag_reward"/>
+        <TextView android:textSize="13sp" android:textColor="@color/color_FF999999" android:id="@+id/tv_reward_tip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="" android:layout_toRightOf="@+id/tv_bag_reward" android:layout_below="@+id/tv_bag_reward_level"/>
+    </RelativeLayout>
+    <TextView android:textSize="16sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/btn_reward" android:background="@drawable/mh_zql_bag_btn" android:layout_width="290dp" android:layout_height="40dp" android:layout_marginTop="25dp" android:text="发布悬赏"/>
+    <TextView android:textSize="14sp" android:textColor="#ffff643d" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/btn_look_task" android:layout_width="200dp" android:layout_height="@dimen/dp_50" android:layout_marginTop="30dp" android:text="查看众包任务  &gt;"/>
+</LinearLayout>
