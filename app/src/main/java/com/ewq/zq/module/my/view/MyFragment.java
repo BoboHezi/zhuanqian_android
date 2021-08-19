@@ -1,13 +1,21 @@
 package com.ewq.zq.module.my.view;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.ewq.zq.R;
 import com.ewq.zq.base.BaseFragment;
+import com.ewq.zq.module.login.view.ZqLoginActivity;
 
-public class MyFragment extends BaseFragment {
+import butterknife.BindView;
+
+public class MyFragment extends BaseFragment implements View.OnClickListener {
 
     private static MyFragment myFragment;
+    @BindView(R.id.img_me_user_icon)
+    ImageView userIcon;
 
     private MyFragment() {
         super();
@@ -27,7 +35,7 @@ public class MyFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-
+        userIcon.setOnClickListener(this);
     }
 
     @Override
@@ -38,5 +46,12 @@ public class MyFragment extends BaseFragment {
     @Override
     protected void setListener() {
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == userIcon) {
+            startActivity(new Intent(getActivity(), ZqLoginActivity.class));
+        }
     }
 }

@@ -60,6 +60,10 @@
         <activity
             android:name=".activity.TaskDetailActivity"
             android:theme="@style/Theme.MyApplication.NoActionBar" />
+
+        <activity
+            android:name=".module.login.view.ZqLoginActivity"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
     </application>
 
 </manifest>
