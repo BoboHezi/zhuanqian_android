@@ -9,9 +9,7 @@ import android.text.style.ImageSpan;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,6 +18,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.ewq.zq.R;
 import com.ewq.zq.module.home.model.TaskHomeBean;
+import com.ewq.zq.rv.QuickTaskCell;
+import com.ewq.zq.rv.UnifyRVAdapter;
+import com.ewq.zq.rv.base.RVBaseCell;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +29,7 @@ public class QuickTaskGroup extends FrameLayout {
 
     private final RecyclerView tilesRecyclerView;
 
-    private final List<TaskHomeBean> tasks;
+    private final List<RVBaseCell> tasks;
 
     public QuickTaskGroup(@NonNull Context context) {
         this(context, null);
@@ -44,13 +45,12 @@ public class QuickTaskGroup extends FrameLayout {
         tilesRecyclerView = child.findViewById(R.id.tasks_recycler);
         tilesRecyclerView.setLayoutManager(new GridLayoutManager(context, 2));
         tilesRecyclerView.addItemDecoration(new FourSpacesItemDecoration(10, 20, 2));
-        tilesRecyclerView.setAdapter(new TaskAdapter());
-        //tilesRecyclerView.addItemDecoration(new FourSpacesItemDecoration(1, 1, 2));
         tasks = getFakeData();
-        tilesRecyclerView.getAdapter().notifyDataSetChanged();
+        UnifyRVAdapter adapter = new UnifyRVAdapter(tasks);
+        tilesRecyclerView.setAdapter(adapter);
     }
 
-    private List<TaskHomeBean> getFakeData() {
+    private List<RVBaseCell> getFakeData() {
         String title = "H微信白给E";
         SpannableString titleSpan = new SpannableString(title);
         Drawable d = getResources().getDrawable(R.mipmap.yd_xo_withdrawal_wx);
@@ -79,55 +79,20 @@ public class QuickTaskGroup extends FrameLayout {
         span = new ImageSpan(d, ImageSpan.ALIGN_BASELINE);
         subSpan.setSpan(span, 18, 19, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-        List<TaskHomeBean> tasks = new ArrayList<>();
-        tasks.add(new TaskHomeBean(titleSpan, subSpan, 34f));
-        tasks.add(new TaskHomeBean(titleSpan, subSpan, 34f));
-        tasks.add(new TaskHomeBean(titleSpan, subSpan, 34f));
-        tasks.add(new TaskHomeBean(titleSpan, subSpan, 34f));
-        tasks.add(new TaskHomeBean(titleSpan, subSpan, 34f));
-        tasks.add(new TaskHomeBean(titleSpan, subSpan, 34f));
+        List<RVBaseCell> tasks = new ArrayList<>();
+        tasks.add(new QuickTaskCell(new TaskHomeBean(titleSpan, subSpan, 30f)));
+        tasks.add(new QuickTaskCell(new TaskHomeBean(titleSpan, subSpan, 31f)));
+        tasks.add(new QuickTaskCell(new TaskHomeBean(titleSpan, subSpan, 32f)));
+        tasks.add(new QuickTaskCell(new TaskHomeBean(titleSpan, subSpan, 33f)));
+        tasks.add(new QuickTaskCell(new TaskHomeBean(titleSpan, subSpan, 34f)));
+        tasks.add(new QuickTaskCell(new TaskHomeBean(titleSpan, subSpan, 35f)));
         return tasks;
     }
 
-    class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskHolder> {
-
-        @NonNull
-        @Override
-        public TaskHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new TaskHolder(LayoutInflater.from(getContext())
-                    .inflate(R.layout.holder_quick_task, parent, false));
-        }
-
-        @Override
-        public void onBindViewHolder(@NonNull TaskHolder holder, int position) {
-            TaskHomeBean bean = tasks.get(position);
-            holder.title.setText(bean.getTitle());
-            holder.subTitle.setText(bean.getSubTitle());
-        }
-
-        @Override
-        public int getItemCount() {
-            return tasks.size();
-        }
-
-        class TaskHolder extends RecyclerView.ViewHolder {
-
-            TextView title;
-            TextView subTitle;
-
-            public TaskHolder(@NonNull View itemView) {
-                super(itemView);
-
-                title = itemView.findViewById(R.id.title);
-                subTitle = itemView.findViewById(R.id.sub_title);
-            }
-        }
-    }
-
     class FourSpacesItemDecoration extends RecyclerView.ItemDecoration {
-        private int horizontalSpace;
-        private int verticalSpace;
-        private int mSpan;
+        private final int horizontalSpace;
+        private final int verticalSpace;
+        private final int mSpan;
 
         public FourSpacesItemDecoration(int horizontal, int vertical, int span) {
             horizontalSpace = horizontal;

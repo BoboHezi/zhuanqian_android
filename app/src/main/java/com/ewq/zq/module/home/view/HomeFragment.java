@@ -1,6 +1,7 @@
 package com.ewq.zq.module.home.view;
 
 import android.os.Bundle;
+import android.text.SpannableString;
 import android.view.LayoutInflater;
 import android.view.View;
 
@@ -11,6 +12,10 @@ import com.ewq.tools.log.Logger;
 import com.ewq.zq.R;
 import com.ewq.zq.base.BaseFragment;
 import com.ewq.zq.module.home.model.TaskHomeBean;
+import com.ewq.zq.rv.SimpleCell;
+import com.ewq.zq.rv.TaskCell;
+import com.ewq.zq.rv.UnifyRVAdapter;
+import com.ewq.zq.rv.base.RVBaseCell;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 
 import java.util.ArrayList;
@@ -50,26 +55,25 @@ public class HomeFragment extends BaseFragment {
         if (!contentInitFlag && contentRecycleView != null) {
             contentInitFlag = true;
             contentRecycleView.setLayoutManager(new LinearLayoutManager(mContext, RecyclerView.VERTICAL, false));
-            ArrayList<TaskHomeBean> beans = new ArrayList<>(10);
-            beans.add(new TaskHomeBean());
-            beans.add(new TaskHomeBean());
-            beans.add(new TaskHomeBean());
-            beans.add(new TaskHomeBean());
-            beans.add(new TaskHomeBean());
-            beans.add(new TaskHomeBean());
-            beans.add(new TaskHomeBean());
-            beans.add(new TaskHomeBean());
-            beans.add(new TaskHomeBean());
-            HomeContentAdapter adapter = new HomeContentAdapter(mContext, beans);
-            contentRecycleView.setAdapter(adapter);
-
+            ArrayList<RVBaseCell> cells = new ArrayList<>(10);
+            cells.add(new SimpleCell(new QuickTaskGroup(mContext)));
+            cells.add(new SimpleCell(new QuickTileGroup(mContext)));
             LayoutInflater inflater = LayoutInflater.from(mContext);
-            View header1 = new QuickTaskGroup(mContext);
-            View header2 = new QuickTileGroup(mContext);
-            View title = inflater.inflate(R.layout.home_header_title, contentRecycleView, false);
-            adapter.addHeader(header1);
-            adapter.addHeader(header2);
-            adapter.addHeader(title);
+            View titleView = inflater.inflate(R.layout.home_header_title, contentRecycleView, false);
+            RecyclerView.LayoutParams lp = (RecyclerView.LayoutParams) titleView.getLayoutParams();
+            lp.width = 720;
+            titleView.setLayoutParams(lp);
+            cells.add(new SimpleCell(titleView));
+            cells.add(new TaskCell(new TaskHomeBean(new SpannableString("title"), new SpannableString("sub title"), 23)));
+            cells.add(new TaskCell(new TaskHomeBean(new SpannableString("title"), new SpannableString("sub title"), 12)));
+            cells.add(new TaskCell(new TaskHomeBean(new SpannableString("title"), new SpannableString("sub title"), 34)));
+            cells.add(new TaskCell(new TaskHomeBean(new SpannableString("title"), new SpannableString("sub title"), 23)));
+            cells.add(new TaskCell(new TaskHomeBean(new SpannableString("title"), new SpannableString("sub title"), 45)));
+            cells.add(new TaskCell(new TaskHomeBean(new SpannableString("title"), new SpannableString("sub title"), 12)));
+            cells.add(new TaskCell(new TaskHomeBean(new SpannableString("title"), new SpannableString("sub title"), 56)));
+            cells.add(new TaskCell(new TaskHomeBean(new SpannableString("title"), new SpannableString("sub title"), 56)));
+            UnifyRVAdapter adapter = new UnifyRVAdapter(cells);
+            contentRecycleView.setAdapter(adapter);
         }
     }
 

@@ -10,7 +10,9 @@ import com.ewq.tools.log.Logger;
 import com.ewq.zq.R;
 import com.ewq.zq.base.BaseFragment;
 import com.ewq.zq.module.home.model.TaskHomeBean;
-import com.ewq.zq.module.home.view.HomeContentAdapter;
+import com.ewq.zq.rv.TaskCell;
+import com.ewq.zq.rv.UnifyRVAdapter;
+import com.ewq.zq.rv.base.RVBaseCell;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 
 import java.util.ArrayList;
@@ -30,8 +32,8 @@ public class TasksFragment extends BaseFragment {
 
     private boolean refreshLayoutInitFlag;
 
-    private ArrayList<TaskHomeBean> beans;
-    private TYPE mType;
+    private ArrayList<RVBaseCell> beans;
+    private final TYPE mType;
 
     public TasksFragment(TYPE type) {
         super();
@@ -49,7 +51,7 @@ public class TasksFragment extends BaseFragment {
         contentRecyclerView.setLayoutManager(new LinearLayoutManager(mContext,
                 RecyclerView.VERTICAL, false));
         beans = getFakeData();
-        HomeContentAdapter adapter = new HomeContentAdapter(mContext, beans);
+        UnifyRVAdapter adapter = new UnifyRVAdapter(beans);
         contentRecyclerView.setAdapter(adapter);
     }
 
@@ -58,17 +60,16 @@ public class TasksFragment extends BaseFragment {
 
     }
 
-    private ArrayList<TaskHomeBean> getFakeData() {
-        ArrayList<TaskHomeBean> beans = new ArrayList<>(10);
-        beans.add(new TaskHomeBean());
-        beans.add(new TaskHomeBean());
-        beans.add(new TaskHomeBean());
-        beans.add(new TaskHomeBean());
-        beans.add(new TaskHomeBean());
-        beans.add(new TaskHomeBean());
-        beans.add(new TaskHomeBean());
-        beans.add(new TaskHomeBean());
-        beans.add(new TaskHomeBean());
+    private ArrayList<RVBaseCell> getFakeData() {
+        ArrayList<RVBaseCell> beans = new ArrayList<>(10);
+        beans.add(new TaskCell(new TaskHomeBean()));
+        beans.add(new TaskCell(new TaskHomeBean()));
+        beans.add(new TaskCell(new TaskHomeBean()));
+        beans.add(new TaskCell(new TaskHomeBean()));
+        beans.add(new TaskCell(new TaskHomeBean()));
+        beans.add(new TaskCell(new TaskHomeBean()));
+        beans.add(new TaskCell(new TaskHomeBean()));
+        beans.add(new TaskCell(new TaskHomeBean()));
         return beans;
     }
 

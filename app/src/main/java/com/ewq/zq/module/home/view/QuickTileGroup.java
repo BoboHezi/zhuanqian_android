@@ -1,16 +1,11 @@
 package com.ewq.zq.module.home.view;
 
-import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.Resources;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,15 +14,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.ewq.zq.R;
 import com.ewq.zq.module.home.model.TileBean;
+import com.ewq.zq.rv.QuickTileCell;
+import com.ewq.zq.rv.UnifyRVAdapter;
+import com.ewq.zq.rv.base.RVBaseCell;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import eli.avocado.utils.StringUtils;
-
 public class QuickTileGroup extends FrameLayout {
     private final RecyclerView tilesRecyclerView;
-    private final List<TileBean> tiles;
+    private final List<RVBaseCell> tiles;
 
     public QuickTileGroup(Context context) {
         this(context, null);
@@ -44,67 +40,28 @@ public class QuickTileGroup extends FrameLayout {
 
         tilesRecyclerView.setLayoutManager(
                 new LinearLayoutManager(context, RecyclerView.HORIZONTAL, false));
-        tilesRecyclerView.setAdapter(new TileAdapter());
-
-        tiles = new ArrayList<>();
-        Resources res = getResources();
-        tiles.add(new TileBean(res.getDrawable(R.mipmap.yd_xo_union_finish),
-                "每日抽奖", "com.ewq.zq/com.ewq.zq.activity.LotteryActivity"));
-        tiles.add(new TileBean(res.getDrawable(R.mipmap.yd_xo_union_money),
-                "热门", ""));
-        tiles.add(new TileBean(res.getDrawable(R.mipmap.yd_xo_system_note),
-                "1小时审核", ""));
-        tiles.add(new TileBean(res.getDrawable(R.mipmap.yd_xo_union_no_money),
-                "推广赚钱", ""));
-        tiles.add(new TileBean(res.getDrawable(R.mipmap.yd_xo_red_package),
-                "签到红包", ""));
-        tiles.add(new TileBean(res.getDrawable(R.mipmap.yd_xo_sign_flag),
-                "每日打卡", ""));
-        tiles.add(new TileBean(res.getDrawable(R.mipmap.yd_xo_coupon_refresh),
-                "悬赏红包", ""));
-        tilesRecyclerView.getAdapter().notifyDataSetChanged();
+        tiles = getFakeData();
+        UnifyRVAdapter adapter = new UnifyRVAdapter(tiles);
+        tilesRecyclerView.setAdapter(adapter);
     }
 
-    class TileAdapter extends RecyclerView.Adapter<TileAdapter.TileHolder> {
-
-        @NonNull
-        @Override
-        public TileAdapter.TileHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new TileAdapter.TileHolder(LayoutInflater.from(getContext()).inflate(R.layout.holder_quick_tile, parent, false));
-        }
-
-        @Override
-        public void onBindViewHolder(@NonNull TileAdapter.TileHolder holder, int position) {
-            TileBean bean = tiles.get(position);
-            holder.icon.setImageDrawable(bean.getIcon());
-            holder.title.setText(bean.getTitle());
-            if (!StringUtils.isEmpty(bean.getAction())) {
-                holder.itemView.setOnClickListener(v -> {
-                    Intent intent = new Intent().addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    ComponentName cn = new ComponentName(bean.getAction().split("/")[0],
-                            bean.getAction().split("/")[1]);
-                    intent.setComponent(cn);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    getContext().startActivity(intent);
-                });
-            }
-        }
-
-        @Override
-        public int getItemCount() {
-            return tiles != null ? tiles.size() : 0;
-        }
-
-        class TileHolder extends RecyclerView.ViewHolder {
-            ImageView icon;
-            TextView title;
-
-            public TileHolder(@NonNull View itemView) {
-                super(itemView);
-
-                icon = itemView.findViewById(R.id.icon);
-                title = itemView.findViewById(R.id.title);
-            }
-        }
+    private List<RVBaseCell> getFakeData() {
+        Resources res = getResources();
+        List<RVBaseCell> tasks = new ArrayList<>();
+        tasks.add(new QuickTileCell(new TileBean(res.getDrawable(R.mipmap.yd_xo_union_finish),
+                "每日抽奖", "com.ewq.zq/com.ewq.zq.activity.LotteryActivity")));
+        tasks.add(new QuickTileCell(new TileBean(res.getDrawable(R.mipmap.yd_xo_union_money),
+                "热门", "")));
+        tasks.add(new QuickTileCell(new TileBean(res.getDrawable(R.mipmap.yd_xo_system_note),
+                "1小时审核", "")));
+        tasks.add(new QuickTileCell(new TileBean(res.getDrawable(R.mipmap.yd_xo_union_no_money),
+                "推广赚钱", "")));
+        tasks.add(new QuickTileCell(new TileBean(res.getDrawable(R.mipmap.yd_xo_red_package),
+                "签到红包", "")));
+        tasks.add(new QuickTileCell(new TileBean(res.getDrawable(R.mipmap.yd_xo_sign_flag),
+                "每日打卡", "")));
+        tasks.add(new QuickTileCell(new TileBean(res.getDrawable(R.mipmap.yd_xo_coupon_refresh),
+                "悬赏红包", "")));
+        return tasks;
     }
 }

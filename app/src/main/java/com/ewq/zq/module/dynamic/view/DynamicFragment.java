@@ -33,7 +33,7 @@ public class DynamicFragment extends BaseFragment implements NavigationLayout.On
     @BindView(R.id.nav_block)
     FrameLayout slideBlock;
     private boolean navChildInitFlag;
-    private ConcurrentHashMap<Integer, Fragment> mFragments = new ConcurrentHashMap<>();
+    private final ConcurrentHashMap<Integer, Fragment> mFragments = new ConcurrentHashMap<>();
 
     private DynamicFragment() {
         super();

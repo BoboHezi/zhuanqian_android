@@ -10,9 +10,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.ewq.tools.log.Logger;
 import com.ewq.zq.R;
-import com.ewq.zq.adapter.ShopListAdapter;
 import com.ewq.zq.base.BaseFragment;
 import com.ewq.zq.module.dynamic.model.ShopBean;
+import com.ewq.zq.rv.ShopCell;
+import com.ewq.zq.rv.SimpleCell;
+import com.ewq.zq.rv.UnifyRVAdapter;
+import com.ewq.zq.rv.base.RVBaseCell;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 
 import java.util.ArrayList;
@@ -26,10 +29,10 @@ public class ShopListFragment extends BaseFragment {
     RecyclerView contentRecyclerView;
     @BindView(R.id.refreshLayout)
     SmartRefreshLayout refreshLayout;
-    private TYPE mType;
+    private final TYPE mType;
     private boolean refreshLayoutInitFlag;
 
-    private ArrayList<ShopBean> beans;
+    private ArrayList<RVBaseCell> beans;
 
     public ShopListFragment(TYPE type) {
         super();
@@ -46,9 +49,7 @@ public class ShopListFragment extends BaseFragment {
         contentRecyclerView.setLayoutManager(new LinearLayoutManager(mContext,
                 RecyclerView.VERTICAL, false));
         beans = getFakeData();
-        View header = LayoutInflater.from(mContext).
-                inflate(R.layout.header_shop_list, contentRecyclerView, false);
-        ShopListAdapter adapter = new ShopListAdapter(mContext, beans, header);
+        UnifyRVAdapter adapter = new UnifyRVAdapter(beans);
         contentRecyclerView.setAdapter(adapter);
     }
 
@@ -57,19 +58,24 @@ public class ShopListFragment extends BaseFragment {
 
     }
 
-    private ArrayList<ShopBean> getFakeData() {
+    private ArrayList<RVBaseCell> getFakeData() {
         Drawable header = getResources().getDrawable(R.mipmap.yd_xo_bag_identify);
-        ArrayList<ShopBean> beans = new ArrayList<>(10);
-        beans.add(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false));
-        beans.add(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false));
-        beans.add(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false));
-        beans.add(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false));
-        beans.add(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false));
-        beans.add(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false));
-        beans.add(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false));
-        beans.add(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false));
-        beans.add(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false));
-        return beans;
+        ArrayList<RVBaseCell> dates = new ArrayList<>();
+        View titleView = LayoutInflater.from(mContext).
+                inflate(R.layout.header_shop_list, contentRecyclerView, false);
+        RecyclerView.LayoutParams lp = (RecyclerView.LayoutParams) titleView.getLayoutParams();
+        lp.width = 720;
+        titleView.setLayoutParams(lp);
+        dates.add(new SimpleCell(titleView));
+        dates.add(new ShopCell(new ShopBean(header, "趣步悬赏主", "ID:323341  ", "", false)));
+        dates.add(new ShopCell(new ShopBean(header, "趣步悬赏主", "ID:323342  ", "", false)));
+        dates.add(new ShopCell(new ShopBean(header, "趣步悬赏主", "ID:323343  ", "", false)));
+        dates.add(new ShopCell(new ShopBean(header, "趣步悬赏主", "ID:323344  ", "", false)));
+        dates.add(new ShopCell(new ShopBean(header, "趣步悬赏主", "ID:323345  ", "", false)));
+        dates.add(new ShopCell(new ShopBean(header, "趣步悬赏主", "ID:323346  ", "", false)));
+        dates.add(new ShopCell(new ShopBean(header, "趣步悬赏主", "ID:323347  ", "", false)));
+        dates.add(new ShopCell(new ShopBean(header, "趣步悬赏主", "ID:323348  ", "", false)));
+        return dates;
     }
 
     @Override
