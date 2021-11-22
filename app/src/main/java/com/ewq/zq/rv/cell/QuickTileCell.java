@@ -1,4 +1,4 @@
-package com.ewq.zq.rv;
+package com.ewq.zq.rv.cell;
 
 import android.content.ComponentName;
 import android.content.Intent;

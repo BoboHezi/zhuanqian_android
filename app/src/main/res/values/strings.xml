@@ -260,4 +260,6 @@
     <string name="refresh_footer_pulling">上拉加载更多</string>
     <string name="refresh_footer_ing">等待头部刷新完成…</string>
     <string name="refresh_footer_release">释放立即加载</string>
+    <string name="error_message">网络错误，请先检查网络</string>
+    <string name="empty_message">暂时没有数据</string>
 </resources>

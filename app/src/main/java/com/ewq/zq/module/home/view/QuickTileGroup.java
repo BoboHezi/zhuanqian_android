@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.ewq.zq.R;
 import com.ewq.zq.module.home.model.TileBean;
-import com.ewq.zq.rv.QuickTileCell;
+import com.ewq.zq.rv.cell.QuickTileCell;
 import com.ewq.zq.rv.UnifyRVAdapter;
 import com.ewq.zq.rv.base.RVBaseCell;
 

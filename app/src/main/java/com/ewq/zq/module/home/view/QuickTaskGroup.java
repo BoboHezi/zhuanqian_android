@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.ewq.zq.R;
 import com.ewq.zq.module.home.model.TaskHomeBean;
-import com.ewq.zq.rv.QuickTaskCell;
+import com.ewq.zq.rv.cell.QuickTaskCell;
 import com.ewq.zq.rv.UnifyRVAdapter;
 import com.ewq.zq.rv.base.RVBaseCell;
 

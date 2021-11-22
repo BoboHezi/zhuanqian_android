@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.ewq.zq.R;
 import com.ewq.zq.module.dynamic.model.ShopBean;
-import com.ewq.zq.rv.SimpleShopCell;
+import com.ewq.zq.rv.cell.SimpleShopCell;
 import com.ewq.zq.rv.UnifyRVAdapter;
 import com.ewq.zq.rv.base.RVBaseCell;
 
